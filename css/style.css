@@ -62,3 +62,9 @@ h3 {
 .block:last-child {
 	border: none;
 }
+
+.footer {
+	margin: 50px auto;
+	background-color: #fff;
+	width: 90%;
+}
