@@ -1,0 +1,51 @@
+body {
+	font-size: 16pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 1440px;
+}
+
+.content {
+	margin: 80px 50px;
+}
+
+p.images img {
+	width: 30px;
+}
+
+.tag {
+	color: brown;
+}
+
+.tagname {
+	color: brown;
+}
+
+.tagattribute {
+	color: red;
+}
+
+.tagattributevalue {
+	color: blue;
+}
+
+.tagtab {
+	margin-left: 20px;
+}
+
+.code {
+	background-color: #E7E9EB;
+	padding: 5px 10px 40px;
+}
+
+code {
+	background-color: #fff;
+	display: block;
+	padding: 40px;
+	border-left: 4px solid #4CAF50;
+	overflow-wrap: break-word;
+}

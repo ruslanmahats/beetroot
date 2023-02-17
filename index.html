@@ -5,60 +5,157 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<link rel="stylesheet" href="/styles/main.css">
+	<title>HTML5 Семантичні елементи</title>
 </head>
 
 <body>
-	<header>
-		<section>
-			<h1>HTML5 Семантичні елементи</h1>
-			<p>Семантичний елемент чітко описує його значення як для браузера, так і для розробника.</p>
-			<p>Приклади <strong>не семантичних</strong> елементів: &lt;div&gt; і &lt;span&gt; - нічого не говорить про його
-				вміст.</p>
-			<p>Приклади <strong>семантичних</strong> елементів: &lt;form&gt;, &lt;table&gt; і &lt;article&gt; - чітко
-				визначає його зміст.
-			</p>
-		</section>
-		<section>
-			<h2>Підтримка браузерів</h2>
-			<p>
-				<img src="" alt="">
-				<img src="" alt="">
-				<img src="" alt="">
-				<img src="" alt="">
-				<img src="" alt="">
-			</p>
-			<p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.</p>
-			<p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідоміелементи".</p>
-			<p>
-				Прочитайте про це в <a href="https://www.blogger.com/blog/page/edit/2590532390801722394/850003172824707311#"
-					target="_blank">підтримці браузера HTML5<a>.
-
-			</p>
-		</section>
-		<section>
-			<h2>Нові семантичні елементи в HTML5</h2>
-			<p>
-				HTML5 пропонує нові семантичні елементи для визначення різних частин
-				веб-сторінки:
-			</p>
-			<ul>
-				<li>&lt;section&gt;</li>
-				<li>&lt;article&gt;</li>
-				<li>&lt;header&gt;</li>
-				<li>&lt;footer&gt;</li>
-			</ul>
-		</section>
-	</header>
-	<main>
-		<section></section>
-		<section></section>
-		<section></section>
-		<section></section>
-	</main>
-	<footer>
-		<p></p>
-	</footer>
+	<div class="wrapper">
+		<div class="content">
+			<header>
+				<section>
+					<h1>HTML5 Семантичні елементи</h1>
+					<p>Семантичний елемент чітко описує його значення як для браузера, так і для розробника.</p>
+					<p>Приклади <strong>не семантичних</strong> елементів: &lt;div&gt; і &lt;span&gt; - нічого не говорить
+						про
+						його
+						вміст.</p>
+					<p>Приклади <strong>семантичних</strong> елементів: &lt;form&gt;, &lt;table&gt; і &lt;article&gt; - чітко
+						визначає його зміст.
+					</p>
+				</section>
+				<section>
+					<h2>Підтримка браузерів</h2>
+					<p class="images">
+						<img src="/assets/images/chrome_icon.png" alt="Chrome Browser" title="Chrome Browser">
+						<img src="/assets/images/ie_icon.png" alt="IE Browser" title="IE Browser">
+						<img src="/assets/images/firefox_icon.png" alt="Firefox Browser" title="Firefox Browser">
+						<img src="/assets/images/safari_icon.png" alt="Safari Browser" title="Safari Browser">
+						<img src="/assets/images/opera_icon.png" alt="Opera Browser" title="Opera Browser">
+					</p>
+					<p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.</p>
+					<p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідоміелементи".</p>
+					<p>
+						Прочитайте про це в <a
+							href="https://www.blogger.com/blog/page/edit/2590532390801722394/850003172824707311#"
+							target="_blank">підтримці браузера HTML5<a>.
+					</p>
+				</section>
+				<section>
+					<h2>Нові семантичні елементи в HTML5</h2>
+					<p>
+						HTML5 пропонує нові семантичні елементи для визначення різних частин
+						веб-сторінки:
+					</p>
+					<nav>
+						<ul>
+							<li><a href="#section">&lt;section&gt;</a></li>
+							<li><a href="#article">&lt;article&gt;</a></li>
+							<li><a href="#header">&lt;header&gt;</a></li>
+							<li><a href="#footer">&lt;footer&gt;</a></li>
+						</ul>
+					</nav>
+				</section>
+			</header>
+			<main>
+				<section>
+					<h2 id="section">HTML5 &lt;section&gt; елемент</h2>
+					<p>Елемент &lt;section&gt; визначає розділ в документі.</p>
+					<p>Згідно з документацією в3к'с HTML5: "розділ представляє собою тематичну угруповання контенту,
+						зазвичай з заголовком".</p>
+					<p>Домашня сторінка зазвичай може бути розділена на розділи для
+						ознайомлення, змісту і контактної інформації.</p>
+					<div class="code">
+						<h3>Приклад</h3>
+						<code>
+								<span class="tag"><</span><span class="tagname">section</span><span class="tag">></span>
+								<div class="tagtab">
+								<span class="tag"><</span><span class="tagname">h1</span><span class="tag">></span>WWF<span class="tag"><</span><span class="tag">/</span><span class="tagname">h1</span><span class="tag">></span>
+								<br>
+								<span class="tag"><</span><span class="tagname">p</span><span class="tag">></span>The World Wide Fund for Nature (WWF) is ...<span class="tag"><</span><span class="tag">/</span><span class="tagname">p</span><span class="tag">></span>
+								</div>
+								<span class="tag"><</span><span class="tag">/</span><span class="tagname">section</span><span class="tag">></span>
+							</code>
+				</section>
+				<section>
+					<h2 id="article">HTML5 &lt;article&gt; елемент</h2>
+					<p>Елемент &lt;article&gt; визначає незалежний, автономний вміст.</p>
+					<p>Стаття повинна мати сенс самостійно, і вона повинна мати можливість
+						читати його незалежно від іншої частини веб-сайту.
+					</p>
+					<p>Приклади того, де можна використовувати елемент &lt;article&gt;:</p>
+					<ul>
+						<li>Повідомлення на форумі</li>
+						<li>Блог</li>
+						<li>Газетна стаття</li>
+					</ul>
+					<div class="code">
+						<h3>Приклад</h3>
+						<code>
+							<span class="tag"><</span><span class="tagname">article</span><span class="tag">></span>
+							<div class="tagtab">
+							<span class="tag"><</span><span class="tagname">h1</span><span class="tag">></span>What Does WWF Do?<span class="tag"><</span><span class="tag">/</span><span class="tagname">h1</span><span class="tag">></span>
+							<br>
+							<span class="tag"><</span><span class="tagname">p</span><span class="tag">></span>WWF's mission is to stop the degradatio of our planet's natural environment, and build a future in which humans live in harmony with nature.<span class="tag"><</span><span class="tag">/</span><span class="tagname">p</span><span class="tag">></span>
+							</div>
+							<span class="tag"><</span><span class="tag">/</span><span class="tagname">article</span><span class="tag">></span>
+						</code>
+				</section>
+				<section>
+					<h2 id="header">HTML5 &lt;header&gt; елемент</h2>
+					<p>Елемент &lt;header&gt; задає заголовок для документа або розділу.</p>
+					<p>Елемент &lt;header&gt; повинен використовуватися в якості контейнера для
+						вступного змісту.</p>
+					<p>В одному документі може бути кілька елементів &lt;header&gt;</p>
+					<p>У наступному прикладі визначається заголовок для статті:</p>
+					<div class="code">
+						<h3>Приклад</h3>
+						<code>
+							<span class="tag"><</span><span class="tagname">article</span><span class="tag">></span>
+							<div class="tagtab">
+							<span class="tag"><</span><span class="tagname">header</span><span class="tag">></span>
+							</div>
+							<div class="tagtab">
+							<div class="tagtab">
+							<span class="tag"><</span><span class="tagname">h1</span><span class="tag">></span>What Does WWF Do?<span class="tag"><</span><span class="tag">/</span><span class="tagname">h1</span><span class="tag">></span>
+							<br>
+							<span class="tag"><</span><span class="tagname">p</span><span class="tag">></span>WWF's mission:<span class="tag"><</span><span class="tag">/</span><span class="tagname">p</span><span class="tag">></span>
+							</div>
+							<span class="tag"><</span><span class="tag">/</span><span class="tagname">header</span><span class="tag">></span>
+							<br>
+							<span class="tag"><</span><span class="tagname">p</span><span class="tag">></span>WWF's mission is to stop the degradatio of our planet's natural environment, and build a future in which humans live in harmony with nature.<span class="tag"><</span><span class="tag">/</span><span class="tagname">p</span><span class="tag">></span>
+							</div>
+							
+							<span class="tag"><</span><span class="tag">/</span><span class="tagname">article</span><span class="tag">></span>
+						</code>
+					</div>
+				</section>
+				<section>
+					<h2 id="footer">HTML5 &lt;footer&gt; елемент</h2>
+					<p>Елемент &lt;footer&gt; вказує нижній колонтитул для документа або розділу.</p>
+					<p>Нижній колонтитул зазвичай містить автора документа, інформацію про
+						авторське право, посилання на умови використання, контактні дані і т.д.</p>
+					<p>В одному документі може бути кілька елементів &lt;footer&gt;.</p>
+					<div class="code">
+						<h3>Приклад</h3>
+						<code>
+							<span class="tag"><</span><span class="tagname">footer</span><span class="tag">></span>
+							<div class="tagtab">
+								<span class="tag"><</span><span class="tagname">p</span><span class="tag">></span>Posted by: Hege Refsnes<span class="tag"><</span><span class="tag">/</span><span class="tagname">p</span><span class="tag">></span>
+							<br>
+								<span class="tag"><</span><span class="tagname">p</span><span class="tag">></span>Contact information: <span class="tag"><</span><span class="tagname">a</span> <span class="tagattribute">href</span><span class="tagattributevalue">="mailto:someone@html5css.com"</span><span class="tag">></span>mailto:someone@html5css.com<span class="tag"><</span><span class="tag">/</span>a<span class="tag">></span>.<span class="tag"><</span><span class="tag">/</span><span class="tagname">p</span><span class="tag">></span>
+							</div>
+								<span class="tag"><</span><span class="tag">/</span><span class="tagname">footer</span><span class="tag">></span>
+						</code>
+					</div>
+				</section>
+			</main>
+			<footer>
+				<p><a href="#"> >>> перейти на початок сторінки</a></p>
+				<p>&#169; Created by Ruslan Mahats</p>
+			</footer>
+			</di>
+		</div>
 </body>
 
 </html>
