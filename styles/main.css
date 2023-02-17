@@ -3,6 +3,15 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+h1,
+h2 {
+	margin: 60px 0px;
+}
+
+h1 {
+	font-size: 2em;
+}
+
 .wrapper {
 	margin: 0 auto;
 	min-width: 300px;
