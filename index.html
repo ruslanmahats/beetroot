@@ -5,11 +5,66 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<link rel="stylesheet" href="/styles/main.css">
+	<title>Форма реєстрації</title>
 </head>
 
 <body>
+	<div class="wrapper">
+		<form action="#">
 
+			<label class="label" for="fullname">Повне ім'я</label>
+			<input name="fullname" id="fullname" type="text" required>
+			<br>
+			<br>
+			<label class="label" for="email">Email</label>
+			<input name="email" id="email" type="email" required>
+			<br>
+			<br>
+			<label class="label" for="password">Пароль</label>
+			<input name="password" id="password" type="password" required>
+			<br>
+			<br>
+			<label class="label" for="confirmpassword">Пароль ще раз</label>
+			<input name="confirmpassword" id="confirmpassword" type="password" required>
+			<br>
+			<br>
+			<span class="label">Стать</span>
+			<label><input name="gender" id="male" type="radio" value="male" required checked> чоловіча</label>
+			<label><input name="gender" id="female" type="radio" value="female"> жіноча</label>
+			<br>
+			<br>
+			<label class="label" for="age">Вік</label>
+			<input name="age" id="age" type="number" size="3" min="18" required>
+			<br>
+			<br>
+			<label class="label" for="course">Курс</label>
+			<select name="course" id="course" required>
+				<option value=""> -=Виберіть курс=- </option>
+				<option value="fre">Front-End</option>
+				<option value="be">Back-End</option>
+				<option value="pm">Project Management</option>
+				<option value="qa">QA Manual</option>
+			</select>
+			<br>
+			<br>
+			<label class="label" for="fulladress">Повна адреса</label>
+			<textarea name="fulladress" id="fulladress" placeholder="Країна, регіон, місто/селище, вулиця" rows="5"
+				cols="22" required></textarea>
+			<br>
+			<br>
+			<label class="agree">
+				<input name="agree" id="agree" type="checkbox" required> Я погоджуюся з обробкою персональних даних
+			</label>
+			<br>
+			<br>
+			<div class="buttons">
+				<button type="reset">Очистити форму</button>
+				<button type="submit">Зареєструватись</button>
+			</div>
+
+		</form>
+	</div>
 </body>
 
 </html>

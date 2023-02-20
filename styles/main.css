@@ -1,0 +1,48 @@
+ form {
+ 	display: inline-block;
+ 	background-color: #efefef;
+ 	padding: 50px;
+ 	font-family: Arial, Helvetica, sans-serif;
+ 	font-size: 16px;
+ }
+
+ .label {
+ 	width: 200px;
+ 	display: inline-block;
+ }
+
+ input,
+ select,
+ option,
+ select,
+ textarea {
+ 	padding: 3px;
+ 	font-size: 16px;
+ }
+
+ button {
+ 	font-size: 16px;
+ 	padding: 5px 7px;
+ }
+
+ textarea,
+ textarea::placeholder {
+ 	font-family: Arial, Helvetica, sans-serif;
+ 	font-size: 16px;
+ }
+
+ button:first-child {
+ 	margin-right: 20px;
+ }
+
+ .agree {
+ 	font-size: 14px;
+ }
+
+ .buttons {
+ 	text-align: center;
+ }
+
+ #age {
+ 	width: 3em;
+ }
