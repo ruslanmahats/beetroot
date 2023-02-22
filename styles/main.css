@@ -1,0 +1,284 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	/*outline: none;*/
+}
+
+a:focus,
+a:active {
+	/* outline: none;*/
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+	/* color: inherit; */
+	text-decoration: none;
+	/* display: inline-block; */
+}
+
+a:hover {
+	/* color: inherit; */
+	text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul,
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button,
+input[type="submit"] {
+	display: inline-block;
+	box-shadow: none;
+	background-color: transparent;
+	background: none;
+	cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* My styles  */
+
+body {
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	color: #070707;
+}
+
+h1,
+h2 {
+	margin-block-start: 0;
+	margin-inline-end: 0;
+}
+
+main,
+header,
+footer {
+	text-align: center;
+
+}
+
+nav {
+	margin: 28px 0;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+nav ul li a {
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.02em;
+	color: #828282;
+}
+
+nav ul li a.home {
+	color: #070707;
+}
+
+nav ul li a:visited {
+	color: #828282;
+}
+
+nav ul li a.home:visited {
+	color: #070707;
+}
+
+nav ul li a:hover {
+	color: #070707;
+}
+
+nav ul li a:active {
+	color: #828282;
+}
+
+hr {
+	border: 1px solid #828282;
+	margin: 0;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 65px;
+	margin: 12px 0 50px;
+	text-align: left;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 46px;
+}
+
+h2.m20 {
+	margin: 0 0 20px 0;
+}
+
+h2.m50 {
+	margin: 0 0 50px 0;
+}
+
+p {
+	margin: 30px 0;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+p.m20 {
+	margin: 20px 0 30px;
+}
+
+p:first-child {
+	margin: 20px 0 0 0;
+}
+
+.portfolio p {
+	margin: 40px 0 70px 0;
+	text-decoration: underline;
+}
+
+.portfolio p:last-child {
+	margin: 40px 0 0 0;
+}
+
+.mainphotowrapper,
+.wrapper,
+.header-wrapper {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.mainphotowrapper img {
+	width: 100%;
+}
+
+.wrapper {
+	padding: 100px 0;
+}
+
+main section:nth-child(even) {
+	background-color: #F6F6F6;
+}
+
+.send {
+	margin: 40px 0 30px;
+	background-color: black;
+	padding: 10px 16px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.1em;
+	color: white;
+	border-radius: 22px;
+	width: 180px;
+	text-align: center;
+}
+
+.likeme {
+	font-size: 14px;
+	line-height: 19px;
+	width: 200px;
+	color: #828282;
+	margin: 0 auto;
+}
+
+.socialicons {
+	width: 310px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 60px;
+}
+
+.skillicons {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px auto 0;
+}
