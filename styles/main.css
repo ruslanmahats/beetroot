@@ -11,16 +11,6 @@
 	box-sizing: border-box;
 }
 
-:focus,
-:active {
-	/*outline: none;*/
-}
-
-a:focus,
-a:active {
-	/* outline: none;*/
-}
-
 /* Links */
 
 a,
@@ -122,7 +112,7 @@ legend {
 	display: block;
 }
 
-/* My styles  */
+/* MAIN styles  */
 
 body {
 	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
