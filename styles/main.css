@@ -212,7 +212,6 @@ p:first-child {
 
 .portfolio p {
 	margin: 40px 0 70px 0;
-	text-decoration: underline;
 }
 
 .portfolio p:last-child {
@@ -271,4 +270,19 @@ main section:nth-child(even) {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px auto 0;
+}
+
+.portfolio .wrapper p a {
+	color: #070707;
+	text-decoration: underline;
+}
+
+.portfolio .wrapper p a:hover {
+	color: #828282;
+	text-decoration: none;
+}
+
+.portfolio .wrapper p a:active {
+	color: #070707;
+	text-decoration: underline;
 }
