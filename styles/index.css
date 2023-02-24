@@ -137,6 +137,10 @@ main section:nth-child(even) {
 	text-align: center;
 }
 
+.send:hover {
+	opacity: .8;
+}
+
 .likeme {
 	font-size: 14px;
 	line-height: 19px;
@@ -152,11 +156,6 @@ main section:nth-child(even) {
 	margin: 0 auto 60px;
 }
 
-.skillicons {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px auto 0;
-}
 
 .portfolio .wrapper p a {
 	color: #070707;
@@ -171,4 +170,34 @@ main section:nth-child(even) {
 .portfolio .wrapper p a:active {
 	color: #070707;
 	text-decoration: underline;
+}
+
+.skillicons {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px auto 0;
+}
+
+.skillicons-image {
+	width: 80px;
+	height: 80px;
+}
+
+.skillicons-rating {
+	font-size: 40px;
+	line-height: 26px;
+}
+
+.skillicons-rating-opacity {
+	opacity: .2;
+}
+
+.skillicons-name {
+	margin: 25px 0 60px 0;
+	font-family: 'Open Sans';
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	color: #828282;
 }
