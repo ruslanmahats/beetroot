@@ -130,14 +130,22 @@ main form label:nth-child(2) {
 
 .fake-checkbox::before {
 	content: url(/assets/icons/fake-checkbox-icon.svg);
-	display: inline-block;
+	display: block;
 	position: absolute;
-
+	width: 19px;
+	height: 19px;
+	top: 0;
+	left: 0;
 }
 
 .checkbox:checked+.fake-checkbox::before {
 	content: url(/assets/icons/fake-checkbox-icon-active.svg);
-	display: inline-block;
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	top: 0;
+	left: 0;
 }
 
 .checkbox:checked+.fake-checkbox+.linethrought>.checkbox-label-name {
