@@ -1,1 +1,156 @@
-@import "/styles/reset.css"
+/* * ---GENERAL--- * */
+
+@import "/styles/reset.css";
+@import "/styles/weather-icons.min.css";
+
+@font-face {
+	font-family: 'Lucida Sans Unicode';
+	src: url('../assets/fonts/LucidaSansUnicode.eot');
+	src: url('../assets/fonts/LucidaSansUnicode.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/LucidaSansUnicode.woff2') format('woff2'),
+		url('../assets/fonts/LucidaSansUnicode.woff') format('woff'),
+		url('../assets/fonts/LucidaSansUnicode.ttf') format('truetype'),
+		url('../assets/fonts/LucidaSansUnicode.svg#LucidaSansUnicode') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Lucida Sans Unicode';
+	font-size: 16px;
+	border: 25px solid #2B81AC;
+	background-color: #3399CC;
+	min-height: 100vh;
+	color: #fff;
+	min-width: 610px;
+	vertical-align: middle;
+}
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+	min-width: 560px;
+	padding: 0 25px;
+}
+
+main {
+	background-color: #fff;
+}
+
+/* * ------------- * */
+
+/* * ---HEADER--- * */
+
+header h1 {
+	font-size: 21px;
+	margin: 66px 0 40px;
+}
+
+.fz-27 {
+	font-size: 27px;
+}
+
+/* * ------------- * */
+
+/* * ---FORECAST-TABLE--- * */
+
+ul {
+	font-size: 0;
+	border: 2px solid #fff;
+}
+
+li {
+	display: inline-block;
+	padding: 26px 0;
+	font-size: 22px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	width: 25%;
+}
+
+li p.weather {
+	margin: 5px 0 0 0;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+ul:hover li {
+	opacity: .7;
+	transition: all .1s ease-in;
+}
+
+ul:hover li:hover {
+	opacity: 1;
+	transition: all .1s ease-in;
+}
+
+li:first-of-type {
+	background-color: #3399CC;
+	width: 50%;
+}
+
+li:nth-of-type(2) {
+	background-color: #666699;
+}
+
+li:nth-of-type(3) {
+	background-color: #996699;
+}
+
+li:nth-of-type(4) {
+	background-color: #C24747;
+}
+
+li:nth-of-type(5) {
+	background-color: #E2674A;
+}
+
+li:nth-of-type(6) {
+	background-color: #FFCC66;
+}
+
+li:nth-of-type(7) {
+	background-color: #99CC99;
+}
+
+li:nth-of-type(8) {
+	background-color: #669999;
+}
+
+li:nth-of-type(9) {
+	background-color: #CC6699;
+	width: 50%;
+}
+
+li:nth-of-type(10) {
+	background-color: #339966;
+}
+
+li:last-of-type {
+	background-color: #666699;
+	width: 100%;
+}
+
+.temperature {
+	display: inline-block;
+	margin-right: 13px;
+}
+
+.fz-42 {
+	font-size: 42px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 60px;
+}
+
+/* * ------------- * */
+
+/* * ---FOOTER--- * */
+
+footer {
+	margin: 37px 0;
+}
+
+/* * ------------- * */
