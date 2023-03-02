@@ -1,1 +1,161 @@
+/* * ---GENERAL--- * */
+
 @import "/styles/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@700&display=swap');
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('/assets/fonts/Gotham-Bold.eot');
+	src: url('/assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/Gotham-Bold.woff2') format('woff2'),
+		url('/assets/fonts/Gotham-Bold.woff') format('woff'),
+		url('/assets/fonts/Gotham-Bold.ttf') format('truetype'),
+		url('/assets/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font: 16px 'Montserrat', sans-serif;
+	box-sizing: border-box;
+}
+
+.ff-poppins {
+	font: 700 16px 'Poppins', sans-serif;
+}
+
+.ff-gotham {
+	font: 700 20px 'Gotham', sans-serif;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.but {
+	display: inline-block;
+	padding: 13px 40px;
+	background-color: #FF9900;
+	border-radius: 4px;
+	color: #fff;
+}
+
+.but:hover {
+	opacity: .8;
+}
+
+/* * ------------- * */
+
+/* * ---HEADER--- * */
+
+.header-main {
+	display: flex;
+	justify-content: space-between;
+	margin: 17px 0;
+}
+
+.header-main-container,
+.header-nav,
+.header-but,
+.header-but-white,
+.header-but-orange {
+	display: inline-block;
+}
+
+/* * ------------- * */
+
+/* * ---HEADER-NAVIGATION--- * */
+
+.navigation {
+	display: flex;
+}
+
+.header-nav {
+	padding: 13px 10px;
+	font: 400 16px 'Montserrat', sans-serif;
+}
+
+.header-link {
+	color: #2F281E;
+}
+
+.header-link:visited {
+	color: #2F281E;
+}
+
+.header-link:hover {
+	color: #FF9900;
+}
+
+/* * ------------- * */
+
+/* * ---HEADER-BUTTONS--- * */
+
+.header-but {
+	font: 600 16px 'Montserrat', sans-serif;
+	margin-right: 32px;
+}
+
+.header-but:last-of-type {
+	font: 600 16px 'Montserrat', sans-serif;
+	margin-right: 0;
+}
+
+.header-but-orange,
+.header-but-white {
+	padding: 13px 25px;
+	border-radius: 4px;
+}
+
+.header-but-white {
+	background-color: #fff;
+	color: #2F281E;
+	border: 1px solid #BCD0E5;
+}
+
+.header-but-white:hover {
+	background-color: rgba(188, 208, 229, .1);
+}
+
+.header-but-orange {
+	background-color: #FF9900;
+	color: #fff;
+	border: 1px solid #FF9900;
+}
+
+.header-but-orange:hover {
+	opacity: .8;
+}
+
+/* * ------------- * */
+
+/* * ---SECTION-HERO--- * */
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 83px;
+}
+
+.hero-text {
+	width: 500px;
+}
+
+.hero-text h1 {
+	width: 500px;
+	font: 700 44px/54px 'Montserrat', sans-serif;
+}
+
+.hero-text p {
+	width: 500px;
+	font: 400 18px/28px 'Montserrat', sans-serif;
+}
+
+.hero-text p:first-of-type {
+	margin: 30px 0 20px;
+}
+
+/* * ------------- * */
