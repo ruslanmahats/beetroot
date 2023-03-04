@@ -6,14 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="../styles/index.css">
+	<link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-	<div class="wrapper">
 
+	<div class="wrapper">
 		<header class="header-main">
-			<img src="../assets/icons/logo.svg" alt="Productly">
+
+			<img src="./assets/icons/logo.svg" alt="Productly">
 			<nav>
 				<ul class="navigation">
 					<li class="header-nav"><a href="#" class="header-link">Product</a></li>
@@ -26,10 +27,14 @@
 				<li class="header-but"><a href="#" class="header-but-white">Sign In</a></li>
 				<li class="header-but"><a href="#" class="header-but-orange">Sign Up</a></li>
 			</ul>
+
 		</header>
+	</div>
 
-		<main>
 
+
+	<main>
+		<div class="wrapper">
 			<section class="hero">
 				<div class="hero-text">
 					<h1>The Design Thinking superpowers</h1>
@@ -39,16 +44,45 @@
 					<a href="#" class="but ff-poppins">Get started</a>
 				</div>
 				<div class="hero-image">
-					<img src="../assets/images/image-sect-1.png" alt="The Design Thinking superpowers">
+					<img src="./assets/images/image-sect-1.png" alt="The Design Thinking superpowers">
 				</div>
 			</section>
+		</div>
 
-			<section></section>
+		<div class="wrapper-tools">
+			<section class="section-tools">
+				<h2>We design tools to unveil your superpowers</h2>
+				<div class="tools flex-container">
+	
+					<div class="tools-item">
+						<img src="./assets/icons/tools-icon-pointer.svg" alt="Optimisation for Marketers">
+						<h3>First click tests</h3>
+						<p>While most people enjoy casino gambling.</p>
+					</div>
+	
+					<div class="tools-item">
+						<img src="./assets/icons/tools-icon-wave.svg" alt="Optimisation for Marketers">
+						<h3>Design surveys</h3>
+						<p>Sports betting, lottery and bingo playing for the fun.</p>
+					</div>
+	
+					<div class="tools-item">
+						<img src="./assets/icons/tools-icon-heart.svg" alt="Optimisation for Marketers">
+						<h3>Preference tests</h3>
+						<p>The Myspace page defines the individual.</p>
+					</div>
+	
+					<div class="tools-item">
+						<img src="./assets/icons/tools-icon-clock.svg" alt="Optimisation for Marketers">
+						<h3>Five second tests</h3>
+						<p>Personal choices and the overall personality of the person.</p>
+					</div>
+				</div>
+				<a href="#" class="but ff-poppins">Sign up Now</a>
+			</section>
+		</div>
 
-			<section></section>
-
-			<section></section>
-
+		<div class="wrapper">
 			<section class="section">
 				<div class="section-text w-486">
 					<p>Optimisation for</p>
@@ -67,9 +101,10 @@
 					<img src="../assets/images/section-marketers.png" alt="Optimisation for Marketers">
 				</div>
 			</section>
+		</div>
 
-		</main>
-	</div>
+	</main>
+
 
 	<footer class="footer">
 		<div class="wrapper flex-container">
@@ -102,7 +137,7 @@
 				<h3>Knowing you're always on the best energy deal.</h3>
 				<form action="#">
 					<label>
-						<input type="tel" placeholder="Enter your phone Number">
+						<input type="tel" placeholder="Enter your phone Number" name="phone" required>
 					</label>
 					<button type="submit" class="but ff-poppins block">Sign up Now</button>
 				</form>

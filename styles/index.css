@@ -17,8 +17,17 @@
 }
 
 body {
-	font: 16px 'Montserrat', sans-serif;
+	font: 500 16px 'Montserrat', sans-serif;
 	box-sizing: border-box;
+	color: #544837;
+}
+
+h1,
+h2,
+h3,
+h4,
+.header-link {
+	color: #2F281E;
 }
 
 .ff-poppins {
@@ -46,6 +55,15 @@ body {
 
 .but:hover {
 	opacity: .8;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.block {
+	display: block;
 }
 
 /* * ------------- * */
@@ -160,12 +178,56 @@ body {
 
 /* * ------------- * */
 
+/* * ---SECTION-TOOLS--- * */
+
+.wrapper-tools {
+	background: bottom center / 100% no-repeat url("../assets/images/tools-bg.png");
+}
+
+.section-tools {
+	margin: 100px auto 0;
+	text-align: center;
+	width: 1200px;
+}
+
+.section-tools h2 {
+	margin: 0 auto 30px;
+	font: 700 36px/44px 'Montserrat', sans-serif;
+	max-width: 540px;
+	text-align: center;
+}
+
+.tools {
+	padding: 20px 0 0;
+}
+
+.tools-item {
+	max-width: 270px;
+	text-align: left;
+}
+
+.tools-item h3 {
+	margin: 30px 0 16px;
+	font: 600 22px/27px 'Montserrat', sans-serif;
+}
+
+.tools-item p {
+	line-height: 26px;
+}
+
+.section-tools a.but {
+	margin: 70px 0 74px;
+}
+
+/* * ------------- * */
+
 /* * ---SECTIONS--- * */
 
 .section {
 	display: flex;
 	justify-content: space-between;
 	margin: 100px 0 0;
+	align-items: center;
 }
 
 .w-486 {
@@ -218,11 +280,6 @@ body {
 	border-top: 1px solid rgba(188, 208, 229, 0.5);
 }
 
-.flex-container {
-	display: flex;
-	justify-content: space-between;
-}
-
 .footer h3 {
 	font: 700 20px/30px 'Gotham', sans-serif;
 }
@@ -233,10 +290,6 @@ body {
 
 .footer-links {
 	width: 135px;
-}
-
-.block {
-	display: block;
 }
 
 .footer-links ul {
