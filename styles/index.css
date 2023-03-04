@@ -1,16 +1,16 @@
 /* * ---GENERAL--- * */
 
-@import "/styles/reset.css";
+@import "../styles/reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@700&display=swap');
 
 @font-face {
 	font-family: 'Gotham';
-	src: url('/assets/fonts/Gotham-Bold.eot');
-	src: url('/assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
-		url('/assets/fonts/Gotham-Bold.woff2') format('woff2'),
-		url('/assets/fonts/Gotham-Bold.woff') format('woff'),
-		url('/assets/fonts/Gotham-Bold.ttf') format('truetype'),
-		url('/assets/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+	src: url('../assets/fonts/Gotham-Bold.eot');
+	src: url('../assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Gotham-Bold.woff2') format('woff2'),
+		url('../assets/fonts/Gotham-Bold.woff') format('woff'),
+		url('../assets/fonts/Gotham-Bold.ttf') format('truetype'),
+		url('../assets/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -156,6 +156,44 @@ body {
 
 .hero-text p:first-of-type {
 	margin: 30px 0 20px;
+}
+
+/* * ------------- * */
+
+/* * ---SECTIONS--- * */
+
+.section {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	margin: 100px 0 0;
+}
+
+.section .section-text p {
+	font: 500 16px/26px 'Montserrat', sans-serif;
+	margin: 12px 0 30px;
+}
+
+.section .section-text p:first-of-type {
+	margin: 0;
+}
+
+.section .section-text p:nth-of-type(2) {
+	margin: 20px 0 40px;
+}
+
+.section .section-text p:last-of-type {
+	margin-bottom: 0;
+}
+
+.section .section-text h2 {
+	margin: 0 0 20px 0;
+	font: 700 36px/44px 'Montserrat', sans-serif;
+}
+
+.section .section-text h4 {
+	margin: 0 0 20px 0;
+	font-weight: 700;
 }
 
 /* * ------------- * */
