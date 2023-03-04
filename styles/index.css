@@ -30,7 +30,7 @@ body {
 }
 
 .wrapper {
-	max-width: 1200px;
+	width: 1200px;
 	margin: 0 auto;
 }
 
@@ -40,6 +40,8 @@ body {
 	background-color: #FF9900;
 	border-radius: 4px;
 	color: #fff;
+	border: none;
+	line-height: 24px;
 }
 
 .but:hover {
@@ -145,12 +147,10 @@ body {
 }
 
 .hero-text h1 {
-	width: 500px;
 	font: 700 44px/54px 'Montserrat', sans-serif;
 }
 
 .hero-text p {
-	width: 500px;
 	font: 400 18px/28px 'Montserrat', sans-serif;
 }
 
@@ -165,8 +165,19 @@ body {
 .section {
 	display: flex;
 	justify-content: space-between;
-	gap: 30px;
 	margin: 100px 0 0;
+}
+
+.w-486 {
+	width: 486px;
+}
+
+.w-505 {
+	width: 505px;
+}
+
+.w-525 {
+	width: 525px;
 }
 
 .section .section-text p {
@@ -194,6 +205,64 @@ body {
 .section .section-text h4 {
 	margin: 0 0 20px 0;
 	font-weight: 700;
+}
+
+/* * ------------- * */
+
+
+/* * ---FOOTER--- * */
+
+.footer {
+	margin: 100px 0 70px;
+	padding: 70px 0 0;
+	border-top: 1px solid rgba(188, 208, 229, 0.5);
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer h3 {
+	font: 700 20px/30px 'Gotham', sans-serif;
+}
+
+.footer-form h3 {
+	width: 280px;
+}
+
+.footer-links {
+	width: 135px;
+}
+
+.block {
+	display: block;
+}
+
+.footer-links ul {
+	margin: 30px 0;
+}
+
+.footer-links li {
+	margin: 15px 0;
+	line-height: 26px;
+}
+
+.footer-links a {
+	color: #544837;
+	line-height: 24px;
+}
+
+.footer-form input {
+	width: 340px;
+	padding: 15px 10px;
+	border: 1px solid #BCD0E5;
+	margin: 25px 0;
+}
+
+::placeholder {
+	color: #BCD0E5;
+	line-height: 20px;
 }
 
 /* * ------------- * */
