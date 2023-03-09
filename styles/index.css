@@ -1,1 +1,93 @@
-@import "/styles/reset.css";
+/* * ---GENERAL--- * */
+
+@import "../styles/reset.css";
+@import "../styles/fonts.css";
+
+.wrapper {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+
+
+/* * ------------- * */
+
+/* * ---HEADER--- * */
+
+.header-main {
+	display: flex;
+	justify-content: space-between;
+	margin: 13px 0 83px;
+	flex-wrap: wrap;
+	gap: 30px 50px;
+}
+
+.language {
+	font: 600 22px/28px 'Tourney', cursive;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.navigation-main {
+	display: inline;
+	font: 400 22px/28px 'Staatliches', cursive;
+	letter-spacing: 0.03em;
+}
+
+.navigation-main a {
+	color: black;
+}
+
+.navigation-main a:hover {
+	opacity: .5;
+}
+
+.navigation-main {
+	flex-grow: 2;
+}
+
+/* * ------------- * */
+
+/* * ---MAIN--- * */
+
+.header-h2 {
+	font: 400 36px/48px 'Francois One', sans-serif;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	margin: 70px 0 0;
+}
+
+.article {
+	counter-reset: section;
+}
+
+.header-h2::after {
+	counter-increment: section;
+	content: " Chapter " counter(section) "";
+	font: 300 0.5em 'Farro', sans-serif;
+	letter-spacing: 0.04em;
+	text-transform: none;
+	vertical-align: top;
+}
+
+.article p {
+	font: 400 28px/48px 'PT Sans', 'Hind', sans-serif;
+	margin: 40px 0;
+}
+
+.article p mark {
+	background-color: lightgrey;
+}
+
+/* * ------------- * */
