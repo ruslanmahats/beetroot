@@ -3,7 +3,8 @@
 @import url('../styles/fonts.css');
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Gilroy', sans-serif;
+	font-weight: 500;
 	font-size: 16px;
 	color: #070707;
 }
@@ -31,6 +32,8 @@ nav ul li {
 }
 
 nav ul li a {
+	font-family: 'Gilroy', sans-serif;
+	font-weight: bold;
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
@@ -129,7 +132,7 @@ main section:nth-child(even) {
 	margin: 40px 0 30px;
 	background-color: black;
 	padding: 10px 16px;
-	font-weight: 700;
+	font-weight: bold;
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.1em;
@@ -195,8 +198,8 @@ main section:nth-child(even) {
 
 .skillicons-name {
 	margin: 25px 0 60px 0;
-	font-family: 'Open Sans';
-	font-weight: 700;
+	font-family: 'Gilroy', sans-serif;
+	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
