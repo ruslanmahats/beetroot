@@ -9,30 +9,58 @@
 	<link rel="stylesheet" href="./styles/index.css">
 </head>
 
-<body>
+<body class="bg">
 	<div class="wrapper">
 		<header class="header-main">
 			<span class="language">eng</span>
 			<nav class="navigation-main">
-				<a href="#">Documentation</a> / <a href="#">Who's using</a>
+				<a href="#">Documentation</a> / <a href="./pages/who-is-using.html">Who's using</a>
 			</nav>
 			<div class="logo-main">
 				<img src="./assets/images/logo-black.svg" alt="KONSTRU T">
 			</div>
 		</header>
-		<main>
+
+		<main class="main flex">
+
+			<nav class="side-menu">
+				<ul>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#components">Core components</a></li>
+					<li><a href="#fundamentals">React fundamentals</a></li>
+					<li><a href="#handling">Handling text input</a></li>
+				</ul>
+			</nav>
+
 			<article class="article">
 
 				<section>
-					<h2 class="header-h2">Introduction</h2>
+					<h2 class="header-h2" id="introduction">Introduction</h2>
 					<p>Welcome to the very start of your React Native journey! If you're looking for environment setup
 						instructions, they've moved to <u>their own section</u>. Continue reading for an introduction to the
 						documentation,
 						Native Components, React, and more!</p>
+
+					<h2 class="header-h2">TEST TEST TEST</h2>
+
+					<section>
+						<h2 class="header-h2">TEST TEST TEST</h2>
+						<p>React Native is an open source framework for building Android and iOS applications using React and
+							the
+							app platform’s native capabiles. With React Native, you use JavaScript to access your platform’s
+							APIs
+							as well as to describe the appearance and behavior of your UI using React components: <em>bundles
+								of
+								reusable, nestable code</em>. You can learn more about React in the next section. But first,
+							let’s
+							cover
+							how components work in React Native.</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h2 class="header-h2">Core components</h2>
+					<h2 class="header-h2" id="components">Core components</h2>
 					<p>React Native is an open source framework for building Android and iOS applications using React and the
 						app platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs
 						as well as to describe the appearance and behavior of your UI using React components: <em>bundles of
@@ -42,7 +70,7 @@
 				</section>
 
 				<section>
-					<h2 class="header-h2">React fundamentals</h2>
+					<h2 class="header-h2" id="fundamentals">React fundamentals</h2>
 					<p>React Native runs on <u>React</u>, a popular open source library for building user interfaces with
 						JavaScript. To make the most of React Native, it helps to understand React itself. This section can
 						get you started or can serve as a refresher course.</p>
@@ -66,7 +94,7 @@
 				</section>
 
 				<section>
-					<h2 class="header-h2">Handling text input</h2>
+					<h2 class="header-h2" id="handling">Handling text input</h2>
 					<p>TextInput is a Core Component that allows the user to enter text. It has an <em>onChangeText</em> prop
 						that
 						takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a

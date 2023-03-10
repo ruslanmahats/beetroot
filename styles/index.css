@@ -6,6 +6,14 @@
 @import "../assets/fonts/fontawesome/css/brands.css";
 @import "../assets/fonts/fontawesome/css/solid.css";
 
+.bg {
+	background-image: url(../assets/images/bg-picture.png);
+	background-repeat: no-repeat;
+	background-position-y: 150px;
+	background-position-x: right;
+	background-attachment: fixed;
+}
+
 .wrapper {
 	max-width: 1200px;
 	width: 90%;
@@ -32,9 +40,12 @@ b {
 .header-main {
 	display: flex;
 	justify-content: space-between;
-	margin: 13px 0 83px;
+	padding: 13px 0 83px;
 	flex-wrap: wrap;
 	gap: 30px 50px;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
 }
 
 .language {
@@ -65,6 +76,38 @@ b {
 
 /* * ---MAIN--- * */
 
+.flex {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.side-menu {
+	flex: 0 0 385px;
+	position: sticky;
+	top: 150px;
+	left: 0;
+	align-self: flex-start;
+}
+
+.side-menu li {
+	margin: 0 0 70px 0;
+}
+
+.side-menu a {
+	display: inline-block;
+	margin: 0 0 10px 0;
+	border-bottom: 1px solid #BDBDBD;
+	font: 400 36px/48px 'Francois One', sans-serif;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #222;
+}
+
+.side-menu a:hover {
+	opacity: .5;
+}
+
 .header-h2 {
 	font: 400 36px/48px 'Francois One', sans-serif;
 	letter-spacing: 0.04em;
@@ -72,13 +115,26 @@ b {
 	margin: 70px 0 0;
 }
 
-.article {
-	counter-reset: section;
+.header-h2::before {
+	content: '';
+	width: 100px;
+	border-top: 8px solid #222;
+	display: block;
+	margin-bottom: 20px;
 }
 
-.header-h2::after {
-	counter-increment: section;
-	content: " Chapter " counter(section) "";
+.article {
+	counter-reset: chapter;
+	flex: 1 1 auto;
+}
+
+.article>section>.header-h2:first-of-type {
+	margin-top: 0;
+}
+
+.article>section>.header-h2:first-of-type::after {
+	counter-increment: chapter;
+	content: " Chapter " counter(chapter) "";
 	font: 300 0.5em 'Farro', sans-serif;
 	letter-spacing: 0.04em;
 	text-transform: none;
@@ -92,6 +148,111 @@ b {
 
 .article p mark {
 	background-color: lightgrey;
+}
+
+/* * ------------- * */
+
+/* * ---WHO IS USING--- * */
+
+.header-h1 {
+	font: 700 36px/48px 'Roboto', sans-serif;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	position: relative;
+	padding-left: 120px;
+}
+
+.header-h1::before {
+	content: '';
+	display: inline-block;
+	width: 100px;
+	height: 8px;
+	background-color: #222;
+	margin-right: 20px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+}
+
+.firm-container {
+	display: flex;
+}
+
+.firm-card {
+	width: 270px;
+	height: 180px;
+	background-color: chartreuse;
+}
+
+.firm-card:hover .card {
+	width: 270px;
+	height: 180px;
+	transform: rotateX(180deg);
+	background-color: red;
+	transition: .5s;
+}
+
+/* * ------------- * */
+
+/* * ---FLIP CARD--- * */
+
+.flip-board {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	border-top: 1px solid #BFBFBF;
+	border-bottom: 1px solid #BFBFBF;
+	padding: 20px 0;
+	margin: 40px 0;
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 270px;
+	height: 180px;
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.flip-card-front {
+	background-color: #E6E6E6;
+	color: black;
+}
+
+.flip-card-back {
+	background-color: #1A1A1A;
+	color: white;
+	transform: rotateX(180deg);
 }
 
 /* * ------------- * */
