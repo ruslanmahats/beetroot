@@ -157,7 +157,6 @@ b {
 .header-h1 {
 	font: 700 36px/48px 'Roboto', sans-serif;
 	letter-spacing: 0.04em;
-	text-transform: uppercase;
 	position: relative;
 	padding-left: 120px;
 }
