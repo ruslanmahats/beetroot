@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Create an Account</title>
-	<link rel="stylesheet" href="./styles/index.css">
+	<title>Profile</title>
+	<link rel="stylesheet" href="../styles/index.css">
 </head>
 
 <body>
@@ -108,8 +108,24 @@
 
 	<div class="popup">
 		<div class="container">
-			<form action="#" class="grid-form register-template">
-				<legend class="grid-item full">Create an Account</legend>
+			<form action="#" class="grid-form profile-template">
+				<legend class="grid-item full">Profile</legend>
+	
+				<div class="grid-item full label">
+					<div class="avatar-container">
+						<div class="avatar">
+							<img src="../assets/images/avatar.jpg" alt="Avatar">
+						</div>
+						<div class="avatar-input">
+							<input id="avatar" type="file" name="avatar">
+							<label for="avatar"><img src="../assets/icons/icon_cam.svg" alt="cam"></label>
+							<span class="button-can"><img src="../assets/icons/icon_can.svg" alt="can"></span>
+							<span class="hint">Up to 1 MB (300x300 px)</span>
+						</div>
+					</div>
+				</div>
+	
+	
 				<label class="grid-item half label">
 					First Name
 					<input type="text" name="firstname" required>
@@ -118,19 +134,7 @@
 					Last Name
 					<input type="text" name="lastname" required>
 				</label>
-				<label class="grid-item full label">
-					E-mail
-					<input type="email" name="email" required>
-					<span class="hint">We'll never share your email with anyone else.</span>
-				</label>
-
-				<div class="grid-item full label radio">
-					<input id="radiomale" type="radio" name="gender" value="male" checked required>
-					<label for="radiomale">Male</label>
-					<input id="radiofemale" type="radio" name="gender" value="female">
-					<label for="radiofemale">Female</label>
-				</div>
-
+	
 				<label class="grid-item half label">
 					Country
 					<div class="select">
@@ -146,20 +150,19 @@
 					City
 					<input type="text" name="city">
 				</label>
-
-				<button type="submit" class="grid-item full button w-full">Sign Up</button>
-
+	
+				<label class="grid-item half label">
+					Zip Code
+					<input type="text" name="zip" pattern="(^\d{5}$)|(^\d{9}$)|(^\d{5}-\d{4}$)">
+				</label>
+				<label class="grid-item half label">
+					Phone Number
+					<input type="tel" name="phone" pattern="^\+?[0-9]{2}-?[0-9]{3}-?[0-9]{7}$">
+				</label>
+	
+				<button type="submit" class="grid-item half button w-150">Update</button>
+	
 			</form>
-
-			<div class="terms">
-				By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a
-					href="#">Privacy Policy</a>.
-			</div>
-			<div class="have-acc">
-				<span>Have an account?</span>
-				<span><a href="#">Log In</a></span>
-			</div>
-
 		</div>
 	</div>
 
