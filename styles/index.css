@@ -253,6 +253,14 @@ select:hover {
 	box-sizing: border-box;
 }
 
+.register-template input[type='radio']+label:hover::before {
+	border: 1px solid #007BFF;
+}
+
+.register-template input[type='radio']:checked+label:hover::before {
+	border: 6px solid #007BFF;
+}
+
 /* * ---------------- * */
 
 /* * ---AVATAR--- * */
@@ -329,7 +337,8 @@ select:hover {
 	transform: translate(50%, -50%);
 }
 
-.avatar-input label:hover, .button-can:hover {
+.avatar-input label:hover,
+.button-can:hover {
 	border: 1px solid #007BFF;
 }
 
