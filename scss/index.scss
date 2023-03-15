@@ -1,9 +1,65 @@
 @import "../scss/_reset.scss";
 
-body {
-	background-color: #661d1d;
-	.user-class div {
-		background-color: #000000;
-		color: #fff;
+.header {
+
+	&__container {
+	}
+
+	&__logo {
 	}
 }
+.wrapper {
+}
+.logo {
+}
+.main {
+}
+.section {
+
+	&__container {
+	}
+
+	&__text-top {
+	}
+
+	&__title-h1 {
+	}
+}
+.experience {
+
+	&__list {
+	}
+
+	&__list-item {
+	}
+
+	&__list-icon {
+	}
+
+	&__list-h3 {
+	}
+
+	&__list-text {
+	}
+
+	&__list-link {
+	}
+}
+.footer {
+
+	&__container {
+	}
+
+	&__logo {
+	}
+
+	&__icons {
+	}
+
+	&__icons-list {
+	}
+
+	&__icons-item {
+	}
+}
+
