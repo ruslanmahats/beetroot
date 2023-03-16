@@ -334,10 +334,214 @@ textarea {
   padding: 0.2em 0;
 }
 
-body {
-  background-color: #661d1d;
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts/Quicksand/Quicksand-SemiBold.woff2") format("woff2"), url("../assets/fonts/Quicksand/Quicksand-SemiBold.woff") format("woff"), url("../assets/fonts/Quicksand/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
-body .user-class div {
-  background-color: #000000;
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../assets/fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../assets/fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../assets/fonts/NunitoSans/NunitoSans-SemiBold.woff2") format("woff2"), url("../assets/fonts/NunitoSans/NunitoSans-SemiBold.woff") format("woff"), url("../assets/fonts/NunitoSans/NunitoSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  color: #16133d;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  font: 500 35px/35px "Quicksand", sans-serif;
+}
+
+.logo-image {
+  margin-right: 12px;
+}
+
+.header {
+  border-bottom: 1px solid #efeef3;
+}
+.header__container {
+  padding: 22px 0 23px;
+}
+.header__logo-text {
+  vertical-align: middle;
+}
+
+.main {
+  margin: 100px 0 0;
+}
+
+.section__text-top {
+  font: 400 16px/21px "Roboto", sans-serif;
+  color: #7690a8;
+  text-transform: uppercase;
+}
+.section__title-h1 {
+  font: 600 40px/52px "Nunito Sans", sans-serif;
+  margin-top: 15px;
+  letter-spacing: 0.2px;
+}
+
+.experience__list {
+  margin: 40px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+.experience__list-item {
+  font-family: "Roboto", sans-serif;
+  max-width: 370px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #e5eaf4;
+  border-radius: 8px;
+}
+.experience__list-item:hover {
+  border: 1px solid #3db370;
+}
+.experience__list-item:hover .experience__list-icon {
+  border: 1px solid rgba(61, 179, 112, 0.1);
+}
+.experience__list-item .experience__list-icon svg path.col-d1e7ff-e1f4f5 {
+  fill: #d1e7ff;
+}
+.experience__list-item .experience__list-icon svg path.col-e8f3ff-f4feff {
+  fill: #e8f3ff;
+}
+.experience__list-item .experience__list-icon svg path.col-b9dcff-caeff2 {
+  fill: #b9dcff;
+}
+.experience__list-item .experience__list-icon svg path.col-007ffc-52c29d {
+  fill: #007ffc;
+}
+.experience__list-item .experience__list-icon svg path.col-white {
+  fill: #fff;
+}
+.experience__list-item:hover .experience__list-icon svg path.col-d1e7ff-e1f4f5 {
+  fill: #e1f4f5;
+}
+.experience__list-item:hover .experience__list-icon svg path.col-e8f3ff-f4feff {
+  fill: #f4feff;
+}
+.experience__list-item:hover .experience__list-icon svg path.col-b9dcff-caeff2 {
+  fill: #caeff2;
+}
+.experience__list-item:hover .experience__list-icon svg path.col-007ffc-52c29d {
+  fill: #52c29d;
+}
+.experience__list-icon {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(21, 101, 216, 0.1);
+  border-radius: 16px;
+  position: relative;
+}
+.experience__list-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.experience__list-h3 {
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.experience__list-text {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 28px;
+}
+.experience__list-link {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3db370;
+}
+.experience__list-link:hover {
+  opacity: 0.5;
+}
+
+.footer {
+  background-color: #16133d;
+  margin-top: 100px;
+}
+.footer__container {
+  padding: 40px 0;
+}
+.footer__logo-text {
+  vertical-align: middle;
   color: #fff;
+}
+.footer__icons {
+  margin: 40px 0 0;
+}
+.footer__icons-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 10px;
+}
+.footer__icons-links {
+  display: block;
+  height: 38px;
+  width: 38px;
+  background-color: #efeef3;
+  border-radius: 5px;
+  position: relative;
+}
+.footer__icons-links svg.icon {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: #0d0d0d;
+}
+.footer__icons-links:hover svg.icon {
+  fill: #3db370;
 }

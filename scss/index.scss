@@ -1,65 +1,201 @@
 @import "../scss/_reset.scss";
+@import "../scss/fonts";
+
+body {
+	color: #16133d;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.logo {
+	font: 500 35px/35px "Quicksand", sans-serif;
+}
+
+.logo-image {
+	margin-right: 12px;
+}
 
 .header {
+	border-bottom: 1px solid #efeef3;
 
 	&__container {
+		padding: 22px 0 23px;
 	}
 
-	&__logo {
+	&__logo-text {
+		vertical-align: middle;
 	}
 }
-.wrapper {
-}
-.logo {
-}
+
 .main {
+	margin: 100px 0 0;
 }
+
 .section {
-
-	&__container {
-	}
-
 	&__text-top {
+		font: 400 16px/21px "Roboto", sans-serif;
+		color: #7690a8;
+		text-transform: uppercase;
 	}
 
 	&__title-h1 {
+		font: 600 40px/52px "Nunito Sans", sans-serif;
+		margin-top: 15px;
+		letter-spacing: 0.2px;
 	}
 }
-.experience {
 
+.experience {
 	&__list {
+		margin: 40px 0 0;
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
 	}
 
 	&__list-item {
+		font-family: "Roboto", sans-serif;
+		max-width: 370px;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #e5eaf4;
+		border-radius: 8px;
+	}
+
+	&__list-item:hover {
+		border: 1px solid #3db370;
+	}
+
+	&__list-item:hover &__list-icon {
+		border: 1px solid rgba(61, 179, 112, 0.1);
+	}
+
+	&__list-item &__list-icon svg path.col-d1e7ff-e1f4f5 {
+		fill: #d1e7ff;
+	}
+
+	&__list-item &__list-icon svg path.col-e8f3ff-f4feff {
+		fill: #e8f3ff;
+	}
+
+	&__list-item &__list-icon svg path.col-b9dcff-caeff2 {
+		fill: #b9dcff;
+	}
+
+	&__list-item &__list-icon svg path.col-007ffc-52c29d {
+		fill: #007ffc;
+	}
+
+	&__list-item &__list-icon svg path.col-white {
+		fill: #fff;
+	}
+
+	&__list-item:hover &__list-icon svg path.col-d1e7ff-e1f4f5 {
+		fill: #e1f4f5;
+	}
+
+	&__list-item:hover &__list-icon svg path.col-e8f3ff-f4feff {
+		fill: #f4feff;
+	}
+
+	&__list-item:hover &__list-icon svg path.col-b9dcff-caeff2 {
+		fill: #caeff2;
+	}
+
+	&__list-item:hover &__list-icon svg path.col-007ffc-52c29d {
+		fill: #52c29d;
 	}
 
 	&__list-icon {
+		width: 64px;
+		height: 64px;
+		border: 1px solid rgba(21, 101, 216, 0.1);
+		border-radius: 16px;
+		position: relative;
+	}
+
+	&__list-icon svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	&__list-h3 {
+		margin-top: 30px;
+		font-size: 24px;
+		line-height: 22px;
+		letter-spacing: 0.2px;
 	}
 
 	&__list-text {
+		margin-top: 15px;
+		font-size: 16px;
+		line-height: 28px;
 	}
 
 	&__list-link {
+		margin-top: 30px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		color: #3db370;
+	}
+
+	&__list-link:hover {
+		opacity: 0.5;
 	}
 }
+
 .footer {
+	background-color: #16133d;
+	margin-top: 100px;
 
 	&__container {
+		padding: 40px 0;
 	}
 
-	&__logo {
+	&__logo-text {
+		vertical-align: middle;
+		color: #fff;
 	}
 
 	&__icons {
+		margin: 40px 0 0;
 	}
 
 	&__icons-list {
+		display: flex;
+		justify-content: start;
+		gap: 10px;
 	}
 
-	&__icons-item {
+	&__icons-links {
+		display: block;
+		height: 38px;
+		width: 38px;
+		background-color: #efeef3;
+		border-radius: 5px;
+		position: relative;
+	}
+
+	&__icons-links svg.icon {
+		display: inline-block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		fill: #0d0d0d;
+	}
+
+	&__icons-links:hover svg.icon {
+		fill: #3db370;
 	}
 }
-
