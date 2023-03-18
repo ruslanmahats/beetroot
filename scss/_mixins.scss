@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+@mixin header-subtitle() {
+	color: $color-subtitle;
+	font-family: $font-subtitle;
+	font-size: $fz-subtitle;
+	font-weight: $fw-subtitle;
+	text-transform: uppercase;
+	line-height: 24px;
+}
+
+@mixin text-style($ff, $fz, $lh, $fw, $tt, $col) {
+	font-family: $ff;
+	font-size: $fz;
+	line-height: $lh;
+	font-weight: $fw;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin corner-icon($b-vertical, $b-horisontal, $v-position, $h-position) {
+	.corner-#{$v-position}-#{$h-position} {
+		border-#{$b-vertical}: 1px solid $color-decor;
+		border-#{$b-horisontal}: 1px solid $color-decor;
+		#{$v-position}: 0;
+		#{$h-position}: 0;
+	}
+}

@@ -1,0 +1,175 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.section {
+	&__member {
+		margin-top: 40px;
+		display: flex;
+	}
+}
+.member {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		width: 50%;
+		text-align: center;
+		padding: 65px 0;
+
+		&:first-child {
+			padding-right: 85px;
+			border-right: 1px solid $color-decor;
+		}
+
+		&:nth-child(2) {
+			padding-left: 85px;
+		}
+	}
+
+	&__photo-container {
+		position: relative;
+		width: 430px;
+		height: 430px;
+	}
+
+	&__photo-corners {
+		display: inline-block;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+	}
+
+	&__photo {
+		display: inline-block;
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1px solid $color-decor;
+		object-fit: cover;
+	}
+
+	&__name {
+		font: 900 36px/42px "Roboto", sans-serif;
+		margin-top: 5px;
+		color: $color-h2;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 1px;
+			background-color: $color-decor;
+			margin: 30px auto 30px;
+		}
+	}
+
+	&__position {
+		font: 400 24px/36px "Raleway", sans-serif;
+		margin-top: 5px;
+		color: $color-h2;
+	}
+
+	&__socials {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+		gap:5px;
+	}
+
+	&__social-items {
+		line-height: 0;
+	}
+
+	&__social-link {
+		display: inline-block;
+		border: 2px solid #ccc;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		svg {
+			display: inline-block;
+			width: 20px;
+			height: 12px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			fill: #ccc;
+		}
+		&:hover {
+			border: 2px solid $color-decor;
+			svg {
+				fill: $color-decor;
+			}
+		}
+	}
+
+	&__text {
+		font: 500 14px/24px "Raleway", sans-serif;
+		color: $color-text;
+		margin-top: 49px;
+	}
+
+	&__aftertext-decoration {
+		display: inline-block;
+		width: 20px;
+		height: 4px;
+		background-color: $color-decor;
+		margin: 0 auto;
+		position: relative;
+		margin-top: 20px;
+
+		&::before {
+			content: "";
+			width: 10px;
+			height: 4px;
+			background-color: $color-decor;
+			display: inline-block;
+			vertical-align: middle;
+			position: absolute;
+			top: 0px;
+			left: -15px;
+		}
+
+		&::after {
+			content: "";
+			width: 10px;
+			height: 4px;
+			background-color: $color-decor;
+			display: inline-block;
+			vertical-align: middle;
+			position: absolute;
+			top: 0px;
+			right: -15px;
+		}
+	}
+
+	&__profile-link-container {
+	}
+
+	&__profile-link {
+		display: inline-block;
+		font: 700 14px/14px "Open Sans", sans-serif;
+		margin-top: 25px;
+		padding: 5px 10px;
+		color: $color-h2;
+		margin-top: 25px;
+		border: 1px solid $color-decor;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+@include corner-icon(top, left, top, left);
+@include corner-icon(bottom, left, bottom, left);
+@include corner-icon(top, right, top, right);
+@include corner-icon(bottom, right, bottom, right);
