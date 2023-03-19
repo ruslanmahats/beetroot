@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "Red Hat Display";
+	src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.woff2") format("woff2"),
+		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.woff") format("woff"),
+		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.woff2") format("woff2"),
+		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.woff") format("woff"),
+		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-SemiBold.woff2") format("woff2"),
+		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-SemiBold.woff") format("woff"),
+		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url("../assets/fonts/Lato/Lato-Regular.woff2") format("woff2"),
+		url("../assets/fonts/Lato/Lato-Regular.woff") format("woff"),
+		url("../assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
