@@ -1,12 +1,6 @@
-@use "reset";
-@use "fonts";
-@use "variables" as *;
-@use "mixins" as *;
-@use "section-header";
-@use "section-member";
-
-.wrapper {
-	max-width: 1170px;
-	margin: 122px auto;
-	padding: 0 70px;
-}
+@use "_reset";
+@use "_fonts";
+@use "_variables" as *;
+@use "_mixins" as *;
+@use "side-menu";
+@use "top-menu";

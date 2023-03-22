@@ -1,2 +1,27 @@
-@use "./variables" as *;
+@use "_variables" as *;
 
+@mixin phone {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin font($col, $fw, $fz, $ff, $lh: null, $ls: null, $tt: null) {
+	color: $col;
+	font-weight: $fw;
+	font-size: $fz;
+	font-family: $ff;
+	line-height: $lh;
+	letter-spacing: $ls;
+	text-transform: $tt;
+}

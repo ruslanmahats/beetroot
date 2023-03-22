@@ -1,39 +1,29 @@
 @font-face {
-	font-family: "Red Hat Display";
-	src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.woff2") format("woff2"),
-		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.woff") format("woff"),
-		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf") format("truetype");
+	font-family: "Montserrat";
+	src: url("../assets/fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+		url("../assets/fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
+		url("../assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Red Hat Display";
-	src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.woff2") format("woff2"),
-		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.woff") format("woff"),
-		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.ttf") format("truetype");
+	font-family: "Montserrat";
+	src: url("../assets/fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"),
+		url("../assets/fonts/Montserrat/Montserrat-Medium.woff") format("woff"),
+		url("../assets/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Red Hat Display";
-	src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-SemiBold.woff2") format("woff2"),
-		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-SemiBold.woff") format("woff"),
-		url("../assets/fonts/Red_Hat_Display/RedHatDisplay-SemiBold.ttf") format("truetype");
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Lato";
-	src: url("../assets/fonts/Lato/Lato-Regular.woff2") format("woff2"),
-		url("../assets/fonts/Lato/Lato-Regular.woff") format("woff"),
-		url("../assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
-	font-weight: normal;
+	font-family: "Montserrat";
+	src: url("../assets/fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"),
+		url("../assets/fonts/Montserrat/Montserrat-Bold.woff") format("woff"),
+		url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
