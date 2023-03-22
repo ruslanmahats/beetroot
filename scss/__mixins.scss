@@ -1,2 +1,89 @@
-@use "./variables" as *;
+@use "_variables" as *;
 
+@mixin font-h1 {
+	font-weight: 600;
+	font-size: $fz-48;
+}
+
+@mixin font-h2 {
+	font-weight: 400;
+	font-size: $fz-33;
+}
+
+@mixin font-h3 {
+	font-weight: 400;
+	font-size: $fz-23;
+}
+
+@mixin font-h4 {
+	font-weight: 400;
+	font-size: $fz-19;
+}
+
+@mixin font-h5 {
+	font-weight: 400;
+	font-size: $fz-base;
+}
+
+@mixin font-h6 {
+	font-weight: 400;
+	font-size: $fz-base;
+}
+
+@mixin font-h7 {
+	font-weight: 700;
+	font-size: $fz-base;
+}
+
+@mixin font-h8 {
+	font-weight: 400;
+	font-size: $fz-13;
+}
+
+@mixin font-h9 {
+	font-weight: 400;
+	font-size: $fz-12;
+}
+
+@mixin font-par {
+	font-weight: 400;
+	font-size: $fz-base;
+	line-height: 32px;
+	margin: 16px 0;
+}
+
+@mixin fontStyleMenu {
+	font-family: $ff-one;
+	font-weight: 400;
+	font-size: $fz-14;
+	line-height: 17px;
+	text-transform: uppercase;
+	letter-spacing: $ls-two;
+	color: $color-base-1;
+}
+
+@mixin font($ff: $ff-two, $fw: normal, $fz: $fz-base, $lh: 1, $tt: none, $ls: normal, $col) {
+	font-family: $ff;
+	font-weight: $fw;
+	font-size: $fz;
+	line-height: $lh;
+	text-transform: $tt;
+	letter-spacing: $ls;
+	color: $col;
+}
+
+@mixin phone {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}

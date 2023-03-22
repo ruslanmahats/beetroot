@@ -1,0 +1,187 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+html {
+	font-size: $fz-base;
+}
+
+body {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	max-width: 1238px;
+	margin: 0 auto;
+	padding: 0 10px;
+	@include tablet {
+		padding: 0 34px;
+	}
+	@include desktop {
+		padding: 0 34px;
+	}
+}
+
+.menu {
+	position: fixed;
+	top: -100%;
+	left: 0;
+	background-color: $color-base-2;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+	transition: all 0.5s ease-in;
+	overflow: auto;
+	&--active {
+		top: 60px;
+		transition: all 0.5s ease-in;
+	}
+	@include desktop {
+		position: unset;
+		margin: 0 84px 0 0;
+		padding: 0;
+		z-index: 12;
+		overflow: initial;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		text-align: center;
+		padding: 20px 0 80px;
+		@include desktop {
+			flex-direction: row;
+			gap: 42px;
+			padding: 0;
+		}
+	}
+	&__link {
+		padding: 20px 0;
+		display: inline-block;
+		@include font($ff-one, 400, $fz-23, 23px, uppercase, 0.1em, $color-base-1);
+		@include tablet {
+			padding: 20px 0;
+			@include font($ff-one, 400, $fz-23, 23px, uppercase, 0.1em, $color-base-1);
+		}
+		@include desktop {
+			@include fontStyleMenu;
+			position: relative;
+			padding: 0;
+		}
+		@include desktop {
+			&--underline::after {
+				content: "";
+				display: inline-block;
+				height: 1px;
+				width: 40px;
+				position: absolute;
+				left: 50%;
+				bottom: -5px;
+				transform: translate(-50%, 0);
+				background-color: $color-base-1;
+			}
+			&:hover::after {
+				content: "";
+				display: inline-block;
+				height: 1px;
+				width: 40px;
+				position: absolute;
+				left: 50%;
+				bottom: -5px;
+				transform: translate(-50%, 0);
+				background-color: $color-base-1;
+			}
+		}
+	}
+}
+.search-form {
+	&__btn {
+		width: 17px;
+		height: 16px;
+		background-color: transparent;
+		background-image: url(../assets/icons/search.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		border: none;
+	}
+}
+
+.preview-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.button {
+	padding: 10px 45px;
+	background-color: $color-grey-700;
+	@include font($ff-one, 700, $fz-base, 26px, none, 0.1em, $color-base-2);
+	&:hover {
+		background-color: $color-base-1;
+	}
+}
+
+.link-arrow {
+	@include font($ff-one, 400, $fz-base, 27px, none, 0.1em, $color-grey-700);
+}
+
+.burger {
+	&__menu {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		@include desktop {
+			display: none;
+		}
+		&:before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: $color-base-1;
+			left: 0;
+			transition: all 0.2s ease-in;
+		}
+		&:before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+
+		&--active::before {
+			transform: rotate(45deg);
+			top: 9px;
+			transition: all 0.2s ease-in;
+		}
+
+		&--active::after {
+			transform: rotate(-45deg);
+			bottom: 9px;
+			transition: all 0.2s ease-in;
+		}
+
+		& span {
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: $color-base-1;
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+			transition: all 0.2s ease-in;
+		}
+
+		&--active span {
+			transform: scale(0);
+			transition: all 0.2s ease-in;
+		}
+	}
+}

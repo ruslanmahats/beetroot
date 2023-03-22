@@ -1,0 +1,125 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.footer {
+	background-color: $color-grey-100;
+	padding: 50px 0 50px;
+	margin-top: 70px;
+	@include tablet {
+		padding: 50px 0 50px;
+		margin-top: 70px;
+	}
+	@include desktop {
+		padding: 90px 0 30px;
+		margin-top: 90px;
+	}
+
+	&__inner {
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 40px;
+		flex-direction: column;
+		@include tablet {
+			flex-direction: column;
+		}
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+
+	&__need {
+		@include font($ff-two, 400, 32px, 42px, none, 0.05em, $color-base-1);
+		@include tablet {
+			@include font($ff-two, 400, $fz-48, 64px, none, 0.05em, $color-base-1);
+		}
+		@include desktop {
+			@include font($ff-two, 400, $fz-48, 64px, none, 0.05em, $color-base-1);
+		}
+	}
+
+	&__tel {
+		margin-top: 30px;
+	}
+
+	&__tel-link {
+		@include font($ff-one, 400, 18px, 30px, none, 0.1em, $color-base-1);
+		@include tablet {
+			@include font($ff-one, 400, $fz-base, 26px, none, 0.1em, $color-base-1);
+		}
+		@include desktop {
+			@include font($ff-one, 400, $fz-base, 26px, none, 0.1em, $color-base-1);
+		}
+	}
+
+	&__email {
+		margin-top: 15px;
+	}
+
+	&__email-link {
+		@include font($ff-one, 400, 18px, 30px, none, 0.1em, $color-base-1);
+		@include tablet {
+			@include font($ff-one, 400, $fz-base, 26px, none, 0.1em, $color-base-1);
+		}
+		@include desktop {
+			@include font($ff-one, 400, $fz-base, 26px, none, 0.1em, $color-base-1);
+		}
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: space-between;
+		gap: 23px;
+	}
+
+	&__copyright {
+		margin-top: 40px;
+		text-align: center;
+		@include font($ff-one, 400, 16, 26px, none, 0.1em, $color-base-1);
+		@include tablet {
+			margin-top: 40px;
+			@include font($ff-one, 400, $fz-12, 20px, none, 0.1em, $color-base-1);
+		}
+		@include desktop {
+			margin-top: 25px;
+			@include font($ff-one, 400, $fz-12, 20px, none, 0.1em, $color-base-1);
+		}
+	}
+}
+
+.socials {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		gap: 23px;
+		flex-wrap: wrap;
+	}
+
+	&__link {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border: 1px solid $color-grey-700;
+		position: relative;
+		& svg {
+			display: inline-block;
+			width: 30px;
+			height: 24px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			fill: $color-grey-700;
+		}
+		&:hover {
+			background-color: $color-grey-700;
+			svg use {
+				fill: $color-base-2;
+			}
+		}
+	}
+}
+.copyright {
+	@include font($ff-one, 400, $fz-12, 20px, none, 0.1em, $color-base-1);
+}

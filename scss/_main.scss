@@ -1,2 +1,491 @@
-@use "./variables" as *;
-@use "./mixins" as *;
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.main {
+	margin-top: 60px;
+	@include tablet {
+		margin-top: 60px;
+	}
+	@include desktop {
+		margin-top: 0;
+	}
+}
+.section {
+	margin-top: 70px;
+	@include tablet {
+		margin-top: 70px;
+	}
+	@include desktop {
+		margin-top: 90px;
+	}
+
+	&__title-h1 {
+		padding: 70px 0 0;
+		@include font($ff-two, 600, 30px, 50px, none, 0.05em, $color-base-1);
+		@include tablet {
+			padding: 30px 0 0;
+			@include font($ff-two, 600, 36px, 50px, none, 0.05em, $color-base-1);
+		}
+		@include desktop {
+			padding: 100px 0 0;
+			@include font($ff-two, 600, $fz-48, 64px, none, 0.05em, $color-base-1);
+		}
+		&--first {
+			width: 100%;
+			@include tablet {
+				width: 100%;
+			}
+			@include desktop {
+				max-width: 770px;
+			}
+		}
+	}
+	&__title-h2 {
+		@include font-h1;
+		font-family: $ff-two;
+		line-height: 64px;
+		color: $color-base-1;
+		text-align: center;
+		@include tablet {
+			text-align: left;
+		}
+		@include desktop {
+			text-align: left;
+		}
+	}
+}
+.main {
+	&__section {
+		&--first {
+			height: 500px;
+			background-image: url(../assets/images/bg-image.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			margin-top: 0;
+			@include tablet {
+				height: 320px;
+			}
+			@include desktop {
+				height: 600px;
+			}
+		}
+	}
+}
+.blog-preview {
+	&__item {
+		margin-top: 50px;
+		display: flex;
+		gap: 37px;
+		flex-direction: column-reverse;
+		@include tablet {
+			flex-direction: row;
+			gap: 20px;
+		}
+		@include desktop {
+			flex-direction: row;
+			gap: 30px;
+		}
+		&:nth-child(even) {
+			flex-direction: column-reverse;
+			@include tablet {
+				flex-direction: row-reverse;
+			}
+			@include desktop {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	&__image-container {
+		width: 100%;
+		@include tablet {
+			max-width: 340px;
+			width: 100%;
+		}
+		@include desktop {
+			max-width: 570px;
+			width: 100%;
+		}
+	}
+
+	&__text-container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		@include tablet {
+			width: 100%;
+		}
+		@include desktop {
+			max-width: 450px;
+			width: 100%;
+		}
+	}
+
+	&__text-info {
+		width: 100%;
+		@include tablet {
+			width: 100%;
+		}
+		@include desktop {
+			max-width: 450px;
+			width: 100%;
+		}
+	}
+
+	&__category {
+		@include font($ff-one, 400, $fz-base, 27px, none, 0.1em, $color-grey-500);
+	}
+
+	&__title {
+		max-width: 370px;
+		margin-top: 30px;
+	}
+
+	&__link--title {
+		@include font($ff-two, 500, $fz-23, 38px, none, 0.1em, $color-base-1);
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__date {
+		@include font($ff-one, 400, $fz-base, 27px, none, 0.1em, $color-grey-500);
+		margin-top: 15px;
+	}
+
+	&__text {
+		@include font($ff-one, 400, $fz-base, 27px, none, 0.05em, $color-grey-700);
+		margin-top: 40px;
+		@include tablet {
+			margin-top: 40px;
+		}
+		@include desktop {
+			margin-top: 50px;
+		}
+	}
+
+	&__link {
+		margin-left: 20px;
+		display: none;
+		@include tablet {
+			display: inline;
+			&:hover {
+				color: $color-base-1;
+				span {
+					margin-right: 20px;
+					display: inline-block;
+				}
+			}
+			& span {
+				display: none;
+			}
+		}
+		@include desktop {
+			display: inline;
+			&:hover {
+				color: $color-base-1;
+				span {
+					margin-right: 20px;
+					display: inline-block;
+				}
+			}
+			& span {
+				display: none;
+			}
+		}
+	}
+}
+
+.link-arrow {
+	svg path {
+		fill: $color-grey-500;
+	}
+	&:hover svg path {
+		fill: $color-base-1;
+	}
+}
+
+.latest-preview {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	flex-direction: column;
+	@include tablet {
+		flex-direction: column;
+		margin-top: 50px;
+	}
+	@include desktop {
+		flex-direction: row;
+		margin-top: 50px;
+	}
+	&__item {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		@include tablet {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+			flex-direction: row;
+		}
+		@include desktop {
+			max-width: 370px;
+			width: 100%;
+			flex-direction: column;
+			justify-content: start;
+			gap: 30px;
+		}
+		&:nth-child(even) {
+			flex-direction: column;
+			@include tablet {
+				flex-direction: row-reverse;
+			}
+			@include desktop {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__image-container {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		@include tablet {
+			max-width: 340px;
+			max-height: 240px;
+		}
+		@include desktop {
+			max-width: 370px;
+			max-height: 260px;
+			width: 100%;
+		}
+	}
+
+	&__info {
+		margin-top: 25px;
+		display: flex;
+		justify-content: space-between;
+		@include font($ff-one, 400, 12px, 20px, none, 0.1em, $color-grey-500);
+	}
+
+	&__title {
+		margin-top: 25px;
+	}
+
+	&__link--title {
+		@include font($ff-two, 500, 22px, 36px, none, 0.1em, $color-base-1);
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__text {
+		@include font($ff-one, 400, 16px, 26px, none, 0.1em, $color-grey-700);
+		margin-top: 20px;
+	}
+}
+.section {
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__title-h3 {
+		@include font($ff-two, 600, 28px, 36px, none, 0.1em, $color-base-1);
+		@include tablet {
+			@include font($ff-two, 600, 28px, 46px, none, 0.1em, $color-base-1);
+		}
+		@include desktop {
+			@include font($ff-two, 600, 28px, 46px, none, 0.1em, $color-base-1);
+		}
+	}
+
+	&__view-all--link {
+		span {
+			margin-right: 20px;
+		}
+		&:hover {
+			color: $color-base-1;
+			span {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.popular-preview {
+	margin-top: 30px;
+	@include tablet {
+		margin-top: 46px;
+	}
+	@include desktop {
+		margin-top: 46px;
+	}
+	&__inner {
+		display: flex;
+		gap: 30px;
+		flex-direction: column;
+		@include tablet {
+			flex-direction: row;
+		}
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+	&__item {
+		width: 100%;
+		@include tablet {
+			max-width: 570px;
+			width: 100%;
+		}
+		@include desktop {
+			max-width: 570px;
+			width: 100%;
+		}
+	}
+
+	&__image-container {
+		width: 100%;
+		position: relative;
+		@include tablet {
+			max-width: 570px;
+			max-height: 260px;
+			width: 100%;
+		}
+		@include desktop {
+			max-width: 570px;
+			max-height: 260px;
+			width: 100%;
+		}
+	}
+
+	&__info {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		@include font($ff-one, 400, 16px, 26px, none, 0.1em, $color-grey-500);
+		@include tablet {
+			@include font($ff-one, 400, 12px, 20px, none, 0.1em, $color-grey-500);
+		}
+		@include desktop {
+			@include font($ff-one, 400, 12px, 20px, none, 0.1em, $color-grey-500);
+		}
+	}
+
+	&__title {
+		margin-top: 10px;
+		@include tablet {
+			margin-top: 20px;
+		}
+		@include desktop {
+			margin-top: 20px;
+		}
+	}
+
+	&__link--title {
+		@include font($ff-two, 500, 24px, 40px, none, 0.1em, $color-base-1);
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__text {
+		@include font($ff-one, 400, 16px, 26px, none, 0.1em, $color-grey-700);
+		margin-top: 10px;
+		@include tablet {
+			margin-top: 20px;
+		}
+		@include desktop {
+			margin-top: 20px;
+		}
+	}
+
+	&__button {
+		text-align: center;
+		margin-top: 60px;
+		@include tablet {
+			margin-top: 65px;
+		}
+		@include desktop {
+			margin-top: 50px;
+		}
+	}
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	gap: 35px;
+	flex-direction: column;
+	@include tablet {
+		flex-direction: column;
+		gap: 50px;
+	}
+	@include desktop {
+		flex-direction: row;
+		gap: none;
+	}
+
+	&__block {
+		width: 100%;
+		@include tablet {
+			width: 100%;
+		}
+		@include desktop {
+			max-width: 470px;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		@include font($ff-two, 400, 24px, 40px, none, 0.1em, $color-base-1);
+		@include tablet {
+			@include font($ff-two, 400, 23px, 38px, none, 0.1em, $color-base-1);
+		}
+		@include desktop {
+			@include font($ff-two, 400, 23px, 38px, none, 0.1em, $color-base-1);
+		}
+	}
+
+	&__link {
+		&:hover {
+			color: $color-base-1;
+			span {
+				margin-right: 20px;
+				display: inline-block;
+			}
+		}
+		& span {
+			display: none;
+		}
+	}
+
+	&__text {
+		text-align: left;
+		@include tablet {
+			text-align: right;
+		}
+		@include desktop {
+			text-align: left;
+		}
+		p {
+			@include font($ff-two, 400, 18px, 32px, none, 0.05em, $color-grey-700);
+			@include tablet {
+				@include font($ff-two, 400, 19px, 32px, none, 0.05em, $color-grey-700);
+			}
+			@include desktop {
+				@include font($ff-two, 400, 19px, 32px, none, 0.05em, $color-grey-700);
+			}
+		}
+		p + p {
+			margin-top: 32px;
+		}
+	}
+}

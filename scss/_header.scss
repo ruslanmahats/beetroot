@@ -1,2 +1,64 @@
-@use "./variables" as *;
-@use "./mixins" as *;
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $color-base-2;
+	width: 100%;
+	z-index: 10;
+	@include tablet {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: $color-base-2;
+		width: 100%;
+		z-index: 10;
+	}
+	@include desktop {
+		position: unset;
+	}
+
+	&__inner {
+		height: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $color-base-2;
+		flex-wrap: wrap;
+		@include tablet {
+			height: 60px;
+		}
+		@include desktop {
+			height: 100px;
+		}
+	}
+	&__logo {
+	}
+
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__menu {
+	}
+
+	&__search-form {
+		margin-right: 40px;
+		@include tablet {
+			margin-right: 40px;
+		}
+		@include desktop {
+			margin-right: 0px;
+		}
+	}
+}
+
+.header {
+	&__burger {
+	}
+}
