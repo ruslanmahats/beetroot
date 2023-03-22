@@ -34,17 +34,12 @@
 			height: 100px;
 		}
 	}
-	&__logo {
-	}
 
 	&__navigation {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
 		align-items: center;
-	}
-
-	&__menu {
 	}
 
 	&__search-form {
@@ -55,10 +50,5 @@
 		@include desktop {
 			margin-right: 0px;
 		}
-	}
-}
-
-.header {
-	&__burger {
 	}
 }
