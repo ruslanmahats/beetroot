@@ -3,14 +3,8 @@
 .hide {
 	position: relative;
 	width: 86px;
-	@include desktop {
-		width: 220px;
-	}
 	&--active {
 		width: 220px;
-		@include desktop {
-			width: 86px;
-		}
 	}
 }
 .side-bar {
@@ -23,17 +17,13 @@
 	overflow: auto;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+	background-color: $col-text-5;
 	&::-webkit-scrollbar {
 		display: none;
 	}
-	@include desktop {
-		width: 220px;
-	}
+
 	&--active {
 		width: 220px;
-		@include desktop {
-			width: 86px;
-		}
 	}
 
 	&__section {
@@ -56,17 +46,9 @@
 		right: 0px;
 		transform: translate(50%, 0);
 		cursor: pointer;
-		@include desktop {
-			transform: rotate(180deg);
-			right: 15px;
-		}
 		&--active {
 			transform: rotate(180deg);
 			right: 15px;
-			@include desktop {
-				right: 0px;
-				transform: translate(50%, 0);
-			}
 		}
 	}
 
@@ -77,12 +59,7 @@
 		justify-content: center;
 		align-content: start;
 		gap: 5px;
-		@include desktop {
-			display: none;
-			&--active {
-				display: flex;
-			}
-		}
+
 		&--active {
 			display: none;
 		}

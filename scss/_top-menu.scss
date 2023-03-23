@@ -1,2 +1,110 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+.top-bar {
+	position: fixed;
+	top: 30px;
+	right: 25px;
+	height: 80px;
+	width: calc(100% - 86px - 50px);
+	min-width: fit-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+	padding: 0 20px;
+	border-radius: 10px;
+	background-color: $col-text-5;
+	&--active {
+		width: calc(100% - 220px - 50px);
+	}
+
+	&__left {
+	}
+
+	&__icon-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__icon-item {
+	}
+
+	&__icon-link {
+		svg {
+			width: 26px;
+			height: 26px;
+			fill: $col-text-2;
+		}
+
+		&:hover svg {
+			width: 26px;
+			height: 26px;
+			fill: $col-elm-1;
+		}
+	}
+
+	&__icon {
+	}
+
+	&__right {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 50px;
+		height: 80px;
+	}
+
+	&__lang-link {
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&__lang-switcher {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		height: auto;
+	}
+
+	&__lang-icon svg {
+		width: 26px;
+		height: 26px;
+	}
+
+	&__lang-cur {
+		@include font($col-text-2, $fw-1, $fz-1, $ff-base, $lh-1, $ls: null, $tt: null);
+	}
+
+	&__avatar {
+		width: 36px;
+		height: 36px;
+		position: relative;
+	}
+
+	&__avatar-image {
+		border-radius: 50%;
+	}
+
+	&__status {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		bottom: 0px;
+		right: 0px;
+		border-radius: 50%;
+	}
+	&__avatar-link {
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+.status--online {
+	background-color: $col-elm-4;
+}

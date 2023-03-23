@@ -364,18 +364,8 @@ textarea {
   position: relative;
   width: 86px;
 }
-@media (min-width: 1200px) {
-  .hide {
-    width: 220px;
-  }
-}
 .hide--active {
   width: 220px;
-}
-@media (min-width: 1200px) {
-  .hide--active {
-    width: 86px;
-  }
 }
 
 .side-bar {
@@ -389,22 +379,13 @@ textarea {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-color: #fff;
 }
 .side-bar::-webkit-scrollbar {
   display: none;
 }
-@media (min-width: 1200px) {
-  .side-bar {
-    width: 220px;
-  }
-}
 .side-bar--active {
   width: 220px;
-}
-@media (min-width: 1200px) {
-  .side-bar--active {
-    width: 86px;
-  }
 }
 .side-bar__section {
   margin-top: 30px;
@@ -428,27 +409,11 @@ textarea {
           transform: translate(50%, 0);
   cursor: pointer;
 }
-@media (min-width: 1200px) {
-  .side-bar__hide-link {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-    right: 15px;
-  }
-}
 .side-bar__hide-link--active {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   right: 15px;
-}
-@media (min-width: 1200px) {
-  .side-bar__hide-link--active {
-    right: 0px;
-    -webkit-transform: translate(50%, 0);
-        -ms-transform: translate(50%, 0);
-            transform: translate(50%, 0);
-  }
 }
 .side-bar__section-divider {
   width: 100%;
@@ -462,16 +427,6 @@ textarea {
   -ms-flex-line-pack: start;
       align-content: start;
   gap: 5px;
-}
-@media (min-width: 1200px) {
-  .side-bar__section-divider {
-    display: none;
-  }
-  .side-bar__section-divider--active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 .side-bar__section-divider--active {
   display: none;
@@ -623,4 +578,118 @@ textarea {
 }
 .logo__text--active {
   display: block;
+}
+
+.top-bar {
+  position: fixed;
+  top: 30px;
+  right: 25px;
+  height: 80px;
+  width: calc(100% - 86px - 50px);
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.top-bar--active {
+  width: calc(100% - 220px - 50px);
+}
+.top-bar__icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.top-bar__icon-link svg {
+  width: 26px;
+  height: 26px;
+  fill: #4f4f4f;
+}
+.top-bar__icon-link:hover svg {
+  width: 26px;
+  height: 26px;
+  fill: #9e8cfc;
+}
+.top-bar__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  height: 80px;
+}
+.top-bar__lang-link:hover {
+  opacity: 0.5;
+}
+.top-bar__lang-switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  height: auto;
+}
+.top-bar__lang-icon svg {
+  width: 26px;
+  height: 26px;
+}
+.top-bar__lang-cur {
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 1.125em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.22em;
+}
+.top-bar__avatar {
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+.top-bar__avatar-image {
+  border-radius: 50%;
+}
+.top-bar__status {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+}
+.top-bar__avatar-link:hover {
+  opacity: 0.5;
+}
+
+.status--online {
+  background-color: #6fcf97;
 }
