@@ -1,6 +1,18 @@
 @use "_variables" as *;
 @use "_mixins" as *;
-
+.hide {
+	position: relative;
+	width: 86px;
+	@include desktop {
+		width: 220px;
+	}
+	&--active {
+		width: 220px;
+		@include desktop {
+			width: 86px;
+		}
+	}
+}
 .side-bar {
 	position: fixed;
 	top: 0;
@@ -13,6 +25,15 @@
 	scrollbar-width: none;
 	&::-webkit-scrollbar {
 		display: none;
+	}
+	@include desktop {
+		width: 220px;
+	}
+	&--active {
+		width: 220px;
+		@include desktop {
+			width: 86px;
+		}
 	}
 
 	&__section {
@@ -31,10 +52,22 @@
 		display: inline-block;
 		width: 20px;
 		position: absolute;
-		top: 50%;
+		top: 36px;
 		right: 0px;
-		transform: translate(50%, -50%);
+		transform: translate(50%, 0);
 		cursor: pointer;
+		@include desktop {
+			transform: rotate(180deg);
+			right: 15px;
+		}
+		&--active {
+			transform: rotate(180deg);
+			right: 15px;
+			@include desktop {
+				right: 0px;
+				transform: translate(50%, 0);
+			}
+		}
 	}
 
 	&__section-divider {
@@ -44,6 +77,15 @@
 		justify-content: center;
 		align-content: start;
 		gap: 5px;
+		@include desktop {
+			display: none;
+			&--active {
+				display: flex;
+			}
+		}
+		&--active {
+			display: none;
+		}
 
 		& span {
 			margin-top: 4px;
@@ -60,11 +102,14 @@
 
 	&__section-name {
 		display: none;
+		@include font($col-text-2, $fw-1, $fz-base, $ff-base, $lh-1, $ls: null, $tt: uppercase);
+		&--active {
+			display: block;
+			margin: 0 0 5px 15px;
+		}
 	}
 
 	&__list {
-		&--dash {
-		}
 	}
 
 	&__item {
@@ -73,9 +118,18 @@
 	&__item-link {
 		display: inline-block;
 		width: 100%;
+		&--active {
+			display: flex;
+			justify-content: start;
+			align-items: center;
+		}
 		&:hover {
 			background-color: $col-elm-1;
 			box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
+
+			.side-bar__item-name {
+				color: $col-elm-7;
+			}
 			.side-bar__icon {
 				svg {
 					fill: $col-elm-7;
@@ -85,9 +139,11 @@
 	}
 
 	&__icon {
-		display: block;
+		display: inline-block;
 		position: relative;
 		height: 46px;
+		width: 86px;
+		line-height: 0;
 		svg {
 			position: absolute;
 			top: 50%;
@@ -96,6 +152,10 @@
 			width: 26px;
 			height: 26px;
 			fill: $col-text-2;
+		}
+		&--active {
+			width: 26px;
+			margin: 0 15px 0 20px;
 		}
 	}
 
@@ -111,6 +171,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		&--active {
+			right: 0px;
+			transform: translate(50%, 0);
+		}
 		&--mail {
 			background-color: $col-elm-4;
 		}
@@ -124,14 +188,32 @@
 
 	&__item-name {
 		display: none;
+		@include font($col-text-2, $fw-1, $fz-base, $ff-base, $lh-1);
+		&--active {
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 }
 .logo {
+	&--active {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		text-align: left;
+	}
 	&__icon {
+		&--active {
+			margin: 0 7px 0 15px;
+		}
 	}
 
 	&__text {
+		@include font($col-text-1, $fw-2, $fz-1, $ff-base, $lh-1);
 		display: none;
+		&--active {
+			display: block;
+		}
 	}
 }
 .hide-link {

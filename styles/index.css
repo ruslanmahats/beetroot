@@ -360,6 +360,24 @@ textarea {
   font-style: normal;
   font-display: swap;
 }
+.hide {
+  position: relative;
+  width: 86px;
+}
+@media (min-width: 1200px) {
+  .hide {
+    width: 220px;
+  }
+}
+.hide--active {
+  width: 220px;
+}
+@media (min-width: 1200px) {
+  .hide--active {
+    width: 86px;
+  }
+}
+
 .side-bar {
   position: fixed;
   top: 0;
@@ -374,6 +392,19 @@ textarea {
 }
 .side-bar::-webkit-scrollbar {
   display: none;
+}
+@media (min-width: 1200px) {
+  .side-bar {
+    width: 220px;
+  }
+}
+.side-bar--active {
+  width: 220px;
+}
+@media (min-width: 1200px) {
+  .side-bar--active {
+    width: 86px;
+  }
 }
 .side-bar__section {
   margin-top: 30px;
@@ -390,12 +421,34 @@ textarea {
   display: inline-block;
   width: 20px;
   position: absolute;
-  top: 50%;
+  top: 36px;
   right: 0px;
-  -webkit-transform: translate(50%, -50%);
-      -ms-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, 0);
+      -ms-transform: translate(50%, 0);
+          transform: translate(50%, 0);
   cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .side-bar__hide-link {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    right: 15px;
+  }
+}
+.side-bar__hide-link--active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: 15px;
+}
+@media (min-width: 1200px) {
+  .side-bar__hide-link--active {
+    right: 0px;
+    -webkit-transform: translate(50%, 0);
+        -ms-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
 }
 .side-bar__section-divider {
   width: 100%;
@@ -410,6 +463,19 @@ textarea {
       align-content: start;
   gap: 5px;
 }
+@media (min-width: 1200px) {
+  .side-bar__section-divider {
+    display: none;
+  }
+  .side-bar__section-divider--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.side-bar__section-divider--active {
+  display: none;
+}
 .side-bar__section-divider span {
   margin-top: 4px;
   display: inline-block;
@@ -423,23 +489,49 @@ textarea {
 }
 .side-bar__section-name {
   display: none;
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.22em;
+  text-transform: uppercase;
+}
+.side-bar__section-name--active {
+  display: block;
+  margin: 0 0 5px 15px;
 }
 .side-bar__item-link {
   display: inline-block;
   width: 100%;
+}
+.side-bar__item-link--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .side-bar__item-link:hover {
   background-color: #9e8cfc;
   -webkit-box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
           box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
 }
+.side-bar__item-link:hover .side-bar__item-name {
+  color: #fff;
+}
 .side-bar__item-link:hover .side-bar__icon svg {
   fill: #fff;
 }
 .side-bar__icon {
-  display: block;
+  display: inline-block;
   position: relative;
   height: 46px;
+  width: 86px;
+  line-height: 0;
 }
 .side-bar__icon svg {
   position: absolute;
@@ -451,6 +543,10 @@ textarea {
   width: 26px;
   height: 26px;
   fill: #4f4f4f;
+}
+.side-bar__icon--active {
+  width: 26px;
+  margin: 0 15px 0 20px;
 }
 .side-bar__label {
   position: absolute;
@@ -474,6 +570,12 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
 }
+.side-bar__label--active {
+  right: 0px;
+  -webkit-transform: translate(50%, 0);
+      -ms-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
 .side-bar__label--mail {
   background-color: #6fcf97;
 }
@@ -485,8 +587,40 @@ textarea {
 }
 .side-bar__item-name {
   display: none;
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.22em;
+}
+.side-bar__item-name--active {
+  display: inline-block;
+  vertical-align: middle;
 }
 
+.logo--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+.logo__icon--active {
+  margin: 0 7px 0 15px;
+}
 .logo__text {
+  color: #392c72;
+  font-weight: 500;
+  font-size: 1.125em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.22em;
   display: none;
+}
+.logo__text--active {
+  display: block;
 }
