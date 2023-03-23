@@ -16,8 +16,14 @@
 	padding: 0 20px;
 	border-radius: 10px;
 	background-color: $col-text-5;
+	@include desktop {
+		width: calc(100% - 220px - 50px);
+	}
 	&--active {
 		width: calc(100% - 220px - 50px);
+		@include desktop {
+			width: calc(100% - 86px - 50px);
+		}
 	}
 
 	&__left {

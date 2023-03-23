@@ -3,8 +3,14 @@
 .hide {
 	position: relative;
 	width: 86px;
+	@include desktop {
+		width: 220px;
+	}
 	&--active {
 		width: 220px;
+		@include desktop {
+			width: 86px;
+		}
 	}
 }
 .side-bar {
@@ -22,8 +28,15 @@
 		display: none;
 	}
 
+	@include desktop {
+		width: 220px;
+	}
+
 	&--active {
 		width: 220px;
+		@include desktop {
+			width: 86px;
+		}
 	}
 
 	&__section {
@@ -46,9 +59,17 @@
 		right: 0px;
 		transform: translate(50%, 0);
 		cursor: pointer;
+		@include desktop {
+			transform: rotate(180deg);
+			right: 15px;
+		}
 		&--active {
 			transform: rotate(180deg);
 			right: 15px;
+			@include desktop {
+				right: 0px;
+				transform: translate(50%, 0);
+			}
 		}
 	}
 
@@ -59,9 +80,14 @@
 		justify-content: center;
 		align-content: start;
 		gap: 5px;
-
+		@include desktop {
+			display: none;
+		}
 		&--active {
 			display: none;
+			@include desktop {
+				display: block;
+			}
 		}
 
 		& span {
@@ -80,9 +106,16 @@
 	&__section-name {
 		display: none;
 		@include font($col-text-2, $fw-1, $fz-base, $ff-base, $lh-1, $ls: null, $tt: uppercase);
+		@include desktop {
+			display: block;
+			margin: 0 0 5px 15px;
+		}
 		&--active {
 			display: block;
 			margin: 0 0 5px 15px;
+			@include desktop {
+				display: none;
+			}
 		}
 	}
 
@@ -90,15 +123,26 @@
 	}
 
 	&__item {
+		line-height: 0;
 	}
 
 	&__item-link {
+		line-height: 0;
 		display: inline-block;
 		width: 100%;
+		@include desktop {
+			display: flex;
+			justify-content: start;
+			align-items: center;
+		}
 		&--active {
 			display: flex;
 			justify-content: start;
 			align-items: center;
+			@include desktop {
+				display: inline-block;
+				width: 100%;
+			}
 		}
 		&:hover {
 			background-color: $col-elm-1;
@@ -130,9 +174,17 @@
 			height: 26px;
 			fill: $col-text-2;
 		}
+		@include desktop {
+			width: 26px;
+			margin: 0 15px 0 20px;
+		}
+
 		&--active {
 			width: 26px;
 			margin: 0 15px 0 20px;
+			@include desktop {
+				width: 86px;
+			}
 		}
 	}
 
@@ -148,9 +200,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include desktop {
+			right: 0px;
+			transform: translate(50%, 0);
+		}
 		&--active {
 			right: 0px;
 			transform: translate(50%, 0);
+			@include desktop {
+				right: 21px;
+				transform: translate(0, 0);
+			}
 		}
 		&--mail {
 			background-color: $col-elm-4;
@@ -166,30 +226,58 @@
 	&__item-name {
 		display: none;
 		@include font($col-text-2, $fw-1, $fz-base, $ff-base, $lh-1);
+		@include desktop {
+			display: inline-block;
+			vertical-align: middle;
+		}
 		&--active {
 			display: inline-block;
 			vertical-align: middle;
+			@include desktop {
+				display: none;
+			}
 		}
 	}
 }
 .logo {
-	&--active {
+	@include desktop {
 		display: flex;
 		justify-content: start;
 		align-items: center;
 		text-align: left;
 	}
+	&--active {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		text-align: left;
+		@include desktop {
+			display: block;
+		}
+	}
 	&__icon {
+		@include desktop {
+			margin: 0 7px 0 15px;
+		}
 		&--active {
 			margin: 0 7px 0 15px;
+			@include desktop {
+				margin: 0;
+			}
 		}
 	}
 
 	&__text {
 		@include font($col-text-1, $fw-2, $fz-1, $ff-base, $lh-1);
 		display: none;
+		@include desktop {
+			display: block;
+		}
 		&--active {
 			display: block;
+			@include desktop {
+				display: none;
+			}
 		}
 	}
 }
