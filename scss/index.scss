@@ -4,3 +4,7 @@
 @use "_mixins" as *;
 @use "side-menu";
 @use "top-menu";
+
+body {
+	min-width: 768px;
+}

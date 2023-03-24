@@ -83,12 +83,6 @@
 		@include desktop {
 			display: none;
 		}
-		&--active {
-			display: none;
-			@include desktop {
-				display: block;
-			}
-		}
 
 		& span {
 			margin-top: 4px;
@@ -103,6 +97,16 @@
 		}
 	}
 
+	&--active &__section-divider {
+		display: none;
+		@include desktop {
+			display: flex;
+			justify-content: center;
+			align-content: start;
+			gap: 5px;
+		}
+	}
+
 	&__section-name {
 		display: none;
 		@include font($col-text-2, $fw-1, $fz-base, $ff-base, $lh-1, $ls: null, $tt: uppercase);
@@ -110,12 +114,13 @@
 			display: block;
 			margin: 0 0 5px 15px;
 		}
-		&--active {
-			display: block;
-			margin: 0 0 5px 15px;
-			@include desktop {
-				display: none;
-			}
+	}
+
+	&--active &__section-name {
+		display: block;
+		margin: 0 0 5px 15px;
+		@include desktop {
+			display: none;
 		}
 	}
 
@@ -135,15 +140,7 @@
 			justify-content: start;
 			align-items: center;
 		}
-		&--active {
-			display: flex;
-			justify-content: start;
-			align-items: center;
-			@include desktop {
-				display: inline-block;
-				width: 100%;
-			}
-		}
+
 		&:hover {
 			background-color: $col-elm-1;
 			box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
@@ -156,6 +153,16 @@
 					fill: $col-elm-7;
 				}
 			}
+		}
+	}
+
+	&--active &__item-link {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		@include desktop {
+			display: inline-block;
+			width: 100%;
 		}
 	}
 
@@ -178,13 +185,14 @@
 			width: 26px;
 			margin: 0 15px 0 20px;
 		}
+	}
 
-		&--active {
-			width: 26px;
-			margin: 0 15px 0 20px;
-			@include desktop {
-				width: 86px;
-			}
+	&--active &__icon {
+		width: 26px;
+		margin: 0 15px 0 20px;
+		@include desktop {
+			width: 86px;
+			margin: 0;
 		}
 	}
 
@@ -204,14 +212,7 @@
 			right: 0px;
 			transform: translate(50%, 0);
 		}
-		&--active {
-			right: 0px;
-			transform: translate(50%, 0);
-			@include desktop {
-				right: 21px;
-				transform: translate(0, 0);
-			}
-		}
+
 		&--mail {
 			background-color: $col-elm-4;
 		}
@@ -223,6 +224,15 @@
 		}
 	}
 
+	&--active &__label {
+		right: 0px;
+		transform: translate(50%, 0);
+		@include desktop {
+			right: 21px;
+			transform: translate(0, 0);
+		}
+	}
+
 	&__item-name {
 		display: none;
 		@include font($col-text-2, $fw-1, $fz-base, $ff-base, $lh-1);
@@ -230,12 +240,12 @@
 			display: inline-block;
 			vertical-align: middle;
 		}
-		&--active {
-			display: inline-block;
-			vertical-align: middle;
-			@include desktop {
-				display: none;
-			}
+	}
+	&--active &__item-name {
+		display: inline-block;
+		vertical-align: middle;
+		@include desktop {
+			display: none;
 		}
 	}
 }
@@ -253,6 +263,7 @@
 		text-align: left;
 		@include desktop {
 			display: block;
+			text-align: center;
 		}
 	}
 	&__icon {

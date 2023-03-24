@@ -469,14 +469,6 @@ textarea {
     display: none;
   }
 }
-.side-bar__section-divider--active {
-  display: none;
-}
-@media (min-width: 1200px) {
-  .side-bar__section-divider--active {
-    display: block;
-  }
-}
 .side-bar__section-divider span {
   margin-top: 4px;
   display: inline-block;
@@ -487,6 +479,22 @@ textarea {
 }
 .side-bar__section-divider span:nth-child(2) {
   width: 15px;
+}
+.side-bar--active .side-bar__section-divider {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .side-bar--active .side-bar__section-divider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    gap: 5px;
+  }
 }
 .side-bar__section-name {
   display: none;
@@ -503,12 +511,12 @@ textarea {
     margin: 0 0 5px 15px;
   }
 }
-.side-bar__section-name--active {
+.side-bar--active .side-bar__section-name {
   display: block;
   margin: 0 0 5px 15px;
 }
 @media (min-width: 1200px) {
-  .side-bar__section-name--active {
+  .side-bar--active .side-bar__section-name {
     display: none;
   }
 }
@@ -533,7 +541,18 @@ textarea {
             align-items: center;
   }
 }
-.side-bar__item-link--active {
+.side-bar__item-link:hover {
+  background-color: #9e8cfc;
+  -webkit-box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
+          box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
+}
+.side-bar__item-link:hover .side-bar__item-name {
+  color: #fff;
+}
+.side-bar__item-link:hover .side-bar__icon svg {
+  fill: #fff;
+}
+.side-bar--active .side-bar__item-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,21 +564,10 @@ textarea {
           align-items: center;
 }
 @media (min-width: 1200px) {
-  .side-bar__item-link--active {
+  .side-bar--active .side-bar__item-link {
     display: inline-block;
     width: 100%;
   }
-}
-.side-bar__item-link:hover {
-  background-color: #9e8cfc;
-  -webkit-box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
-          box-shadow: 0 0 20px 0 rgba(158, 140, 252, 0.7);
-}
-.side-bar__item-link:hover .side-bar__item-name {
-  color: #fff;
-}
-.side-bar__item-link:hover .side-bar__icon svg {
-  fill: #fff;
 }
 .side-bar__icon {
   display: inline-block;
@@ -585,13 +593,14 @@ textarea {
     margin: 0 15px 0 20px;
   }
 }
-.side-bar__icon--active {
+.side-bar--active .side-bar__icon {
   width: 26px;
   margin: 0 15px 0 20px;
 }
 @media (min-width: 1200px) {
-  .side-bar__icon--active {
+  .side-bar--active .side-bar__icon {
     width: 86px;
+    margin: 0;
   }
 }
 .side-bar__label {
@@ -624,20 +633,6 @@ textarea {
             transform: translate(50%, 0);
   }
 }
-.side-bar__label--active {
-  right: 0px;
-  -webkit-transform: translate(50%, 0);
-      -ms-transform: translate(50%, 0);
-          transform: translate(50%, 0);
-}
-@media (min-width: 1200px) {
-  .side-bar__label--active {
-    right: 21px;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
 .side-bar__label--mail {
   background-color: #6fcf97;
 }
@@ -646,6 +641,20 @@ textarea {
 }
 .side-bar__label--calendar {
   background-color: #f2c94c;
+}
+.side-bar--active .side-bar__label {
+  right: 0px;
+  -webkit-transform: translate(50%, 0);
+      -ms-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+@media (min-width: 1200px) {
+  .side-bar--active .side-bar__label {
+    right: 21px;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 .side-bar__item-name {
   display: none;
@@ -661,12 +670,12 @@ textarea {
     vertical-align: middle;
   }
 }
-.side-bar__item-name--active {
+.side-bar--active .side-bar__item-name {
   display: inline-block;
   vertical-align: middle;
 }
 @media (min-width: 1200px) {
-  .side-bar__item-name--active {
+  .side-bar--active .side-bar__item-name {
     display: none;
   }
 }
@@ -700,6 +709,7 @@ textarea {
 @media (min-width: 1200px) {
   .logo--active {
     display: block;
+    text-align: center;
   }
 }
 @media (min-width: 1200px) {
@@ -743,9 +753,6 @@ textarea {
   right: 25px;
   height: 80px;
   width: calc(100% - 86px - 50px);
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -859,4 +866,8 @@ textarea {
 
 .status--online {
   background-color: #6fcf97;
+}
+
+body {
+  min-width: 768px;
 }
