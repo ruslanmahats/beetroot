@@ -2,22 +2,8 @@
 @use "_mixins" as *;
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: $color-base-2;
-	width: 100%;
-	z-index: 10;
-	@include tablet {
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: $color-base-2;
-		width: 100%;
-		z-index: 10;
-	}
-	@include desktop {
-		position: unset;
+	&__logo {
+		@include font($ff-one, 400, 16px, 24px, uppercase, 0.5em, $color-base-1);
 	}
 
 	&__inner {

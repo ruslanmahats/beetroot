@@ -14,17 +14,7 @@ body {
 	overflow: hidden;
 }
 
-.wrapper {
-	max-width: 1238px;
-	margin: 0 auto;
-	padding: 0 10px;
-	@include tablet {
-		padding: 0 34px;
-	}
-	@include desktop {
-		padding: 0 34px;
-	}
-}
+
 
 .menu {
 	position: fixed;
