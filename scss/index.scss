@@ -1,9 +1,11 @@
-@use "reset";
-@use "fonts";
-@use "variables" as *;
-@use "mixins" as *;
-@use "section-header";
-@use "section-member";
+@use "_reset";
+@use "_fonts";
+@use "_variables" as *;
+@use "_mixins" as *;
+@use "header";
+@use "main";
+@use "aside";
+@use "footer";
 
 .wrapper {
 	max-width: 1170px;
