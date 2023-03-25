@@ -487,8 +487,18 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 47px;
-  background-image: url(../assets/images/bitmap-desktop.jpg);
+  background-image: url(../assets/images/bitmap-mobile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .main-image {
+    background-image: url(../assets/images/bitmap-tablet.jpg);
+  }
+}
+@media (min-width: 1200px) {
+  .main-image {
+    background-image: url(../assets/images/bitmap-desktop.jpg);
+  }
 }
