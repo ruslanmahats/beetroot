@@ -368,7 +368,7 @@ textarea {
   font-display: swap;
 }
 .wrapper {
-  max-width: 1440px;
+  max-width: 1540px;
   height: 100%;
   padding: 0 10px;
   margin: 0 auto;
@@ -380,17 +380,47 @@ textarea {
 }
 @media (min-width: 768px) {
   .wrapper {
-    padding: 0 60px;
+    padding: 0 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 0 32px;
+  }
+}
+@media (min-width: 1360px) {
+  .wrapper {
+    padding: 0 110px;
   }
 }
 
 .header {
   height: 100vh;
-  background-image: url(../assets/images/backgrounds/bg-hero.jpg);
+  background-image: url("../assets/images/backgrounds/bg-hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 295px 0 120px;
+  padding: 50px 0 15px;
+}
+@media (min-height: 400px) {
+  .header {
+    padding: 80px 0 20px;
+  }
+}
+@media (min-height: 500px) {
+  .header {
+    padding: 140px 0 30px;
+  }
+}
+@media (min-height: 600px) {
+  .header {
+    padding: 200px 0 60px;
+  }
+}
+@media (min-height: 862px) {
+  .header {
+    padding: 295px 0 120px;
+  }
 }
 .header__container {
   height: 100%;
@@ -420,6 +450,11 @@ textarea {
   max-width: 647px;
   height: auto;
 }
+@media (max-height: 400px), (max-width: 575px) {
+  .header__search {
+    margin: 20px auto 0;
+  }
+}
 @media (min-width: 576px) {
   .header__search {
     height: 60px;
@@ -434,6 +469,12 @@ textarea {
   letter-spacing: normal;
   color: #fff;
   vertical-align: top;
+}
+@media (max-height: 400px) and (max-width: 575px) {
+  .logo__name {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 .logo__name--footer {
   font-family: "Josefin Sans", sans-serif;
@@ -454,6 +495,12 @@ textarea {
   color: #fff;
   vertical-align: top;
   margin-top: 8px;
+}
+@media (max-height: 400px) and (max-width: 575px) {
+  .logo__slogan {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .logo__slogan--footer {
   font-family: "Josefin Sans", sans-serif;
@@ -605,6 +652,8 @@ textarea {
 }
 .scroll-down {
   text-align: center;
+  -webkit-animation: heartbeat 7s infinite;
+          animation: heartbeat 7s infinite;
 }
 .scroll-down__text {
   font-family: "Josefin Sans", sans-serif;
@@ -628,6 +677,193 @@ textarea {
   width: 100%;
   height: 100%;
   fill: #fff;
+}
+
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  5% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  10% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  15% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  5% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  10% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  15% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.feedbacks {
+  padding: 60px 0 120px;
+  background-image: url("../assets/images/backgrounds/bg-why.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 1024px) {
+  .feedbacks {
+    padding: 120px 0 180px;
+  }
+}
+.feedbacks__title {
+  text-align: center;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  color: #fff;
+  vertical-align: top;
+}
+.feedbacks__container {
+  margin-top: 60px;
+}
+
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .feedback {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 336px;
+  }
+}
+@media (min-width: 1360px) {
+  .feedback {
+    min-height: 308px;
+  }
+}
+@media (min-width: 1920px) {
+  .feedback {
+    min-height: 280px;
+  }
+}
+.feedback__picture-container {
+  height: 336px;
+  max-height: 336px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .feedback__picture-container {
+    height: auto;
+    max-height: auto;
+    max-width: 380px;
+    min-height: 100%;
+  }
+}
+@media (min-width: 1360px) {
+  .feedback__picture-container {
+    max-width: 380px;
+  }
+}
+@media (min-width: 1920px) {
+  .feedback__picture-container {
+    max-width: 440px;
+  }
+}
+.feedback__picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.feedback__text-container {
+  background-color: #333;
+  padding: 48px 30px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .feedback__text-container {
+    padding: 48px 60px;
+  }
+}
+.feedback__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  color: #fff;
+  vertical-align: top;
+}
+.feedback__text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-top: 16px;
+}
+.feedback__text:first-of-type {
+  text-indent: 32px;
+  position: relative;
+}
+.feedback__text:first-of-type::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/icons/quote-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer {

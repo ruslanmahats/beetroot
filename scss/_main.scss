@@ -1,2 +1,102 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+.main {
+}
+
+.feedbacks {
+	padding: 60px 0 120px;
+	background-image: url("../assets/images/backgrounds/bg-why.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include tablet-l {
+		padding: 120px 0 180px;
+	}
+	&__title {
+		text-align: center;
+		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
+		vertical-align: top;
+	}
+
+	&__container {
+		margin-top: 60px;
+	}
+}
+.feedback {
+	display: flex;
+	flex-direction: column;
+	@include tablet-l {
+		flex-direction: row;
+		min-height: 336px;
+	}
+	@include desktop {
+		min-height: 308px;
+	}
+	@include desktop-big {
+		min-height: 280px;
+	}
+
+	&__picture-container {
+		height: 336px;
+		max-height: 336px;
+		width: 100%;
+		@include tablet-p {
+		}
+		@include tablet-l {
+			height: auto;
+			max-height: auto;
+			max-width: 380px;
+			min-height: 100%;
+		}
+		@include desktop {
+			max-width: 380px;
+		}
+		@include desktop-big {
+			max-width: 440px;
+		}
+	}
+
+	&__picture {
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__text-container {
+		background-color: $col-bg-feedback;
+		padding: 48px 30px;
+		width: 100%;
+		@include phone {
+			padding: 48px 60px;
+		}
+	}
+
+	&__title {
+		@include font($ff-base, 400, 20px, 28px, uppercase, normal, $col-text);
+		vertical-align: top;
+	}
+
+	&__text {
+		@include font($ff-base, 300, 16px, 28px, none, 0.1em, $col-text);
+		margin-top: 16px;
+		&:first-of-type {
+			text-indent: 32px;
+			position: relative;
+		}
+		&:first-of-type::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: -5px;
+			left: 0px;
+			width: 20px;
+			height: 20px;
+			background-image: url("../assets/icons/quote-left.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}
