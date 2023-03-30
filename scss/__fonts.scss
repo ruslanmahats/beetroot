@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "Aleo";
+	src: url("../assets/fonts/aleo/Aleo-Regular.woff2") format("woff2"),
+		url("../assets/fonts/aleo/Aleo-Regular.woff") format("woff"),
+		url("../assets/fonts/aleo/Aleo-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("../assets/fonts/josefin_sans/JosefinSans-Light.woff2") format("woff2"),
+		url("../assets/fonts/josefin_sans/JosefinSans-Light.woff") format("woff"),
+		url("../assets/fonts/josefin_sans/JosefinSans-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("../assets/fonts/josefin_sans/JosefinSans-Medium.woff2") format("woff2"),
+		url("../assets/fonts/josefin_sans/JosefinSans-Medium.woff") format("woff"),
+		url("../assets/fonts/josefin_sans/JosefinSans-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	src: url("../assets/fonts/josefin_sans/JosefinSans-Regular.woff2") format("woff2"),
+		url("../assets/fonts/josefin_sans/JosefinSans-Regular.woff") format("woff"),
+		url("../assets/fonts/josefin_sans/JosefinSans-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

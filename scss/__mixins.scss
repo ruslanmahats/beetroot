@@ -1,27 +1,32 @@
 @use "_variables" as *;
 
-@mixin phone-only {
-	@media (max-width: $max-width-phone) {
+@mixin rwd {
+	@media (max-width: $w-small) {
+		@content;
+	}
+}
+@mixin phone {
+	@media (min-width: $w-phone) {
 		@content;
 	}
 }
 @mixin tablet-p {
-	@media (min-width: $max-width-tablet-p) {
+	@media (min-width: $w-tablet-p) {
 		@content;
 	}
 }
 @mixin tablet-l {
-	@media (min-width: $max-width-tablet-l) {
+	@media (min-width: $w-tablet-l) {
 		@content;
 	}
 }
 @mixin desktop {
-	@media (min-width: $max-width-desktop) {
+	@media (min-width: $w-desktop) {
 		@content;
 	}
 }
 @mixin desktop-big {
-	@media (min-width: $max-width-desktop-big) {
+	@media (min-width: $w-desktop-big) {
 		@content;
 	}
 }

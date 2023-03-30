@@ -1,2 +1,160 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+.wrapper {
+	max-width: 1440px;
+	height: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+	@include phone {
+		padding: 0 18px;
+	}
+	@include tablet-p {
+		padding: 0 60px;
+	}
+}
+
+.header {
+	height: 100vh;
+	background-image: url(../assets/images/backgrounds/bg-hero.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 295px 0 120px;
+	&__container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__inner {
+		width: 100%;
+	}
+	&__logo {
+		text-align: center;
+	}
+
+	&__search {
+		margin: 48px auto 0;
+		width: 100%;
+		max-width: 647px;
+		height: auto;
+		@include phone {
+			height: 60px;
+		}
+	}
+
+	&__scroll-down {
+	}
+}
+.logo {
+	&__name {
+		@include font($ff-base, 700, 48px, 52px, uppercase, normal, $col-text);
+		vertical-align: top;
+		&--footer {
+			@include font($ff-base, 700, 24px, 28px, uppercase, 0.1em, $col-text);
+		}
+	}
+	&__slogan {
+		@include font($ff-base, 400, 22px, 28px, capitalize, 0.31em, $col-text);
+		vertical-align: top;
+		margin-top: 8px;
+		&--footer {
+			@include font($ff-base, 400, 14px, 20px, capitalize, 0.2em, $col-text);
+		}
+	}
+}
+.search-form {
+	border: 4px solid $col-text;
+	display: flex;
+	height: auto;
+	background-color: $col-text;
+	flex-direction: column;
+	@include phone {
+		flex-direction: row;
+		height: 60px;
+	}
+}
+
+.search-form input {
+	display: inline-block;
+	flex-grow: 1;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	padding: 0 6px;
+	height: 60px;
+	@include font($ff-base, 400, 14px, 20px, none, 0.2em, $col-text-2);
+	vertical-align: top;
+	@include phone {
+		height: initial;
+		padding: 0 36px;
+	}
+	&::placeholder {
+		text-align: center;
+		@include phone {
+			text-align: left;
+		}
+	}
+
+	&:focus::placeholder {
+		color: transparent;
+	}
+}
+.btn {
+	outline: none;
+	border: none;
+	background-color: $col-bg;
+	transition: all 0.2s ease-in;
+	&:hover {
+		opacity: 0.75;
+	}
+	&:active {
+		opacity: 1;
+		transition: none;
+	}
+	&--search {
+		padding: 16px 24px;
+		@include font($ff-two, 400, 14px, 20px, uppercase, 0.1em, $col-text);
+		vertical-align: top;
+		position: relative;
+	}
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 16px;
+		height: 16px;
+		margin-right: 12px;
+		& svg {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			fill: $col-text;
+		}
+	}
+	&__text {
+	}
+}
+.scroll-down {
+	text-align: center;
+	&__text {
+		@include font($ff-base, 400, 14px, 20px, capitalize, 0.2em, $col-text);
+		vertical-align: top;
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 14px;
+		height: 16px;
+		margin-right: 12px;
+		& svg {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			fill: $col-text;
+		}
+	}
+}

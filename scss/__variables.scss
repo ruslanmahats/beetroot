@@ -1,5 +1,24 @@
-$max-width-phone: 576px;
-$max-width-tablet-p: 768px;
-$max-width-tablet-l: 992px;
-$max-width-desktop: 1200px;
-$max-width-desktop-big: 1400px;
+// * BREAKPOINTS =============================================================
+
+$w-small: 575px;
+$w-phone: 576px;
+$w-tablet-p: 768px;
+$w-tablet-l: 1024px;
+$w-desktop: 1360px;
+$w-desktop-big: 1920px;
+
+// * FONTS ===================================================================
+
+$ff-base: "Josefin Sans", sans-serif;
+$ff-two: "Aleo", serif;
+
+// * COLORS ===================================================================
+
+$col-bg: #5373fd;
+$col-bg-footer: #000;
+$col-text: #fff;
+$col-text-2: #999999;
+$col-icons-bg: #000;
+$col-icons-bg-hov: #5373fd;
+$col-icons-bg-sel: #ff6363;
+$col-icons-bg-enj: #00a2ff;
