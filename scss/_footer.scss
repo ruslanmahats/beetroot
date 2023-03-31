@@ -4,18 +4,13 @@
 .footer {
 	padding: 80px 0;
 	background-color: $col-bg-footer;
-	&__container {
-	}
-
 	&__logo {
 		text-align: center;
 	}
-
 	&__socials {
 		margin: 20px auto 0;
 	}
 }
-
 .socials {
 	display: flex;
 	justify-content: center;
@@ -23,17 +18,12 @@
 	@include phone {
 		gap: 32px;
 	}
-
-	&__item {
-	}
-
 	&__link {
 		display: inline-block;
 		position: relative;
 		width: 36px;
 		height: 32px;
 	}
-
 	&__link svg {
 		display: inline-block;
 		fill: $col-text;

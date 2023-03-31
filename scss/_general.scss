@@ -1,8 +1,29 @@
 @use "_variables" as *;
 @use "_mixins" as *;
 
+// * WRAPPER ================================================================
+
+.wrapper {
+	max-width: 1540px;
+	height: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+	@include phone {
+		padding: 0 18px;
+	}
+	@include tablet-p {
+		padding: 0 24px;
+	}
+	@include tablet-l {
+		padding: 0 32px;
+	}
+	@include desktop {
+		padding: 0 110px;
+	}
+}
 
 // * BUTTONS ================================================================
+
 .btn {
 	outline: none;
 	border: none;
@@ -39,5 +60,55 @@
 	}
 	&__text {
 		@include font($ff-two, 400, 14px, 20px, uppercase, 0.1em, $col-text);
+	}
+}
+
+// * LOGO ================================================================
+
+.logo {
+	&__name {
+		@include font($ff-base, 700, 48px, 52px, uppercase, normal, $col-text);
+		vertical-align: top;
+		@media (max-height: 400px) and (max-width: 575px) {
+			font-size: 36px;
+			line-height: 40px;
+		}
+		&--footer {
+			@include font($ff-base, 700, 24px, 28px, uppercase, 0.1em, $col-text);
+		}
+	}
+	&__slogan {
+		@include font($ff-base, 400, 22px, 28px, capitalize, 0.31em, $col-text);
+		vertical-align: top;
+		margin-top: 8px;
+		@media (max-height: 400px) and (max-width: 575px) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		&--footer {
+			@include font($ff-base, 400, 14px, 20px, capitalize, 0.2em, $col-text);
+		}
+	}
+}
+
+// * TEXT ================================================================
+
+.text {
+	color: $col-text;
+	vertical-align: top;
+	& h2 {
+		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
+	}
+
+	& h5 {
+		@include font($ff-base, 400, 20px, 28px, uppercase, normal, $col-text);
+	}
+
+	& h6 {
+		@include font($ff-base, 300, 20px, 28px, capitalize, 0.1em, $col-text);
+	}
+
+	& p {
+		@include font($ff-base, 300, 16px, 28px, none, 0.1em, $col-text);
 	}
 }

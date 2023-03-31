@@ -12,7 +12,6 @@
 	@include tablet-l {
 		padding: 124px 0;
 	}
-
 	&__container {
 		display: flex;
 		align-items: center;
@@ -24,6 +23,7 @@
 		@include tablet-l {
 			flex-direction: row;
 			justify-content: space-between;
+			gap: 24px;
 		}
 		@include desktop {
 			justify-content: start;
@@ -33,7 +33,6 @@
 			gap: 136px;
 		}
 	}
-
 	&__text {
 		text-align: center;
 		width: 100%;
@@ -42,14 +41,12 @@
 			max-width: 648px;
 		}
 	}
-
 	&__button {
 		margin-top: 24px;
 		@include tablet-l {
 			margin-top: 32px;
 		}
 	}
-
 	&__photos {
 		width: 100%;
 		display: flex;
@@ -60,7 +57,6 @@
 			width: auto;
 		}
 	}
-
 	&__photo-container {
 		width: 100%;
 		max-height: 162px;
@@ -74,24 +70,120 @@
 		}
 		&:nth-of-type(2) {
 			@include tablet-l {
-				margin-left: 74px;
+				margin-left: 36px;
 				margin-top: 16px;
+			}
+			@include desktop {
+				margin-left: 110px;
+			}
+			@include desktop-big {
+				margin-left: 74px;
 			}
 		}
 	}
-
 	&__photo {
 		object-fit: cover;
 		object-position: center;
 		width: 100%;
 		height: 100%;
 	}
-
 	& p {
-		margin-top: 24px;
+		margin-top: 19px;
+		@include tablet-p {
+			margin-top: 24px;
+		}
 	}
 	& p + p {
 		margin-top: 32px;
+	}
+}
+
+//* STEPS SECTION =======================================================================
+
+.select {
+	background-color: $col-bg-feedback;
+	padding: 60px 0;
+	@include tablet-l {
+		height: 306px;
+	}
+	&__lines {
+		display: none;
+		margin: 0 auto;
+		background-image: url("../assets/icons/line.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		@include tablet-l {
+			display: block;
+			height: 57px;
+			width: 75%;
+		}
+		@include desktop {
+			height: 69px;
+		}
+		@include desktop-big {
+			height: 90px;
+		}
+	}
+}
+.steps {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 59px;
+	@include tablet-l {
+		flex-direction: row;
+		margin-top: -22px;
+		gap: 0;
+	}
+	@include desktop {
+		gap: 24px;
+		margin-top: -28px;
+	}
+	@include desktop-big {
+		margin-top: -43px;
+	}
+	&__item {
+		text-align: center;
+		@include tablet-l {
+			width: 320px;
+		}
+		@include desktop {
+			width: 364px;
+		}
+		@include desktop-big {
+			width: 424px;
+		}
+	}
+	&__icon-box {
+		display: inline-block;
+		width: 96px;
+		height: 96px;
+		border-radius: 50%;
+		background-color: $col-bg-feedback;
+		position: relative;
+		&--search {
+			fill: $col-icons-bg-hov;
+		}
+		&--select {
+			fill: $col-icons-bg-sel;
+		}
+		&--thumbs {
+			fill: $col-icons-bg-enj;
+		}
+	}
+	&__icon-box svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: inline-block;
+		width: 64px;
+		height: 64px;
+	}
+	&__text {
+		margin-top: 4px;
+		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
+		vertical-align: top;
 	}
 }
 
@@ -111,10 +203,6 @@
 	&--second {
 		background-image: url("../assets/images/backgrounds/bg-rock.jpg");
 	}
-
-	&__container {
-	}
-
 	&__card {
 		margin-right: auto;
 		margin-left: 0;
@@ -128,12 +216,10 @@
 			max-width: calc(50% - 12px);
 		}
 	}
-
 	&--second &__card {
 		margin-right: 0;
 		margin-left: auto;
 	}
-
 	&__button {
 		margin-top: 28px;
 		display: inline-block;
@@ -142,34 +228,11 @@
 			margin-top: 24px;
 		}
 	}
-
 	& h5 {
 		margin-top: 16px;
 	}
-
 	& p {
 		margin-top: 16px;
-	}
-}
-
-.text {
-	color: $col-text;
-	vertical-align: top;
-
-	& h2 {
-		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
-	}
-
-	& h5 {
-		@include font($ff-base, 400, 20px, 28px, uppercase, normal, $col-text);
-	}
-
-	& h6 {
-		@include font($ff-base, 300, 20px, 28px, capitalize, 0.1em, $col-text);
-	}
-
-	& p {
-		@include font($ff-base, 300, 16px, 28px, none, 0.1em, $col-text);
 	}
 }
 
@@ -189,12 +252,10 @@
 		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
 		vertical-align: top;
 	}
-
 	&__container {
 		margin-top: 60px;
 	}
 }
-
 .feedback {
 	display: flex;
 	flex-direction: column;
@@ -208,7 +269,6 @@
 	@include desktop-big {
 		min-height: 280px;
 	}
-
 	&__picture-container {
 		height: 336px;
 		max-height: 336px;
@@ -228,14 +288,12 @@
 			max-width: 440px;
 		}
 	}
-
 	&__picture {
 		object-fit: cover;
 		object-position: center;
 		width: 100%;
 		height: 100%;
 	}
-
 	&__text-container {
 		background-color: $col-bg-feedback;
 		padding: 48px 30px;
@@ -244,12 +302,10 @@
 			padding: 48px 60px;
 		}
 	}
-
 	&__title {
 		@include font($ff-base, 400, 20px, 28px, uppercase, normal, $col-text);
 		vertical-align: top;
 	}
-
 	&__text {
 		@include font($ff-base, 300, 16px, 28px, none, 0.1em, $col-text);
 		margin-top: 16px;

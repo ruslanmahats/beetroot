@@ -1,27 +1,6 @@
 @use "_variables" as *;
 @use "_mixins" as *;
 
-.wrapper {
-	max-width: 1540px;
-	height: 100%;
-	padding: 0 10px;
-	margin: 0 auto;
-	@include phone {
-		padding: 0 18px;
-	}
-	@include tablet-p {
-		padding: 0 24px;
-	}
-
-	@include tablet-l {
-		padding: 0 32px;
-	}
-
-	@include desktop {
-		padding: 0 110px;
-	}
-}
-
 .header {
 	height: 100vh;
 	background-image: url("../assets/images/backgrounds/bg-hero.jpg");
@@ -68,34 +47,6 @@
 			height: 60px;
 		}
 	}
-
-	&__scroll-down {
-	}
-}
-.logo {
-	&__name {
-		@include font($ff-base, 700, 48px, 52px, uppercase, normal, $col-text);
-		vertical-align: top;
-		@media (max-height: 400px) and (max-width: 575px) {
-			font-size: 36px;
-			line-height: 40px;
-		}
-		&--footer {
-			@include font($ff-base, 700, 24px, 28px, uppercase, 0.1em, $col-text);
-		}
-	}
-	&__slogan {
-		@include font($ff-base, 400, 22px, 28px, capitalize, 0.31em, $col-text);
-		vertical-align: top;
-		margin-top: 8px;
-		@media (max-height: 400px) and (max-width: 575px) {
-			font-size: 16px;
-			line-height: 22px;
-		}
-		&--footer {
-			@include font($ff-base, 400, 14px, 20px, capitalize, 0.2em, $col-text);
-		}
-	}
 }
 .search-form {
 	border: 4px solid $col-text;
@@ -108,7 +59,6 @@
 		height: 60px;
 	}
 }
-
 .search-form input {
 	display: inline-block;
 	flex-grow: 1;
@@ -129,43 +79,8 @@
 			text-align: left;
 		}
 	}
-
 	&:focus::placeholder {
 		color: transparent;
-	}
-}
-.btn {
-	outline: none;
-	border: none;
-	background-color: $col-bg;
-	transition: all 0.2s ease-in;
-	&:hover {
-		opacity: 0.75;
-	}
-	&:active {
-		opacity: 1;
-		transition: none;
-	}
-	&--search {
-		padding: 16px 24px;
-		@include font($ff-two, 400, 14px, 20px, uppercase, 0.1em, $col-text);
-		vertical-align: top;
-		position: relative;
-	}
-	&__icon {
-		display: inline-block;
-		vertical-align: middle;
-		width: 16px;
-		height: 16px;
-		margin-right: 12px;
-		& svg {
-			display: inline-block;
-			width: 100%;
-			height: 100%;
-			fill: $col-text;
-		}
-	}
-	&__text {
 	}
 }
 .scroll-down {
@@ -175,7 +90,6 @@
 		@include font($ff-base, 400, 14px, 20px, capitalize, 0.2em, $col-text);
 		vertical-align: top;
 	}
-
 	&__icon {
 		display: inline-block;
 		vertical-align: middle;
@@ -190,7 +104,6 @@
 		}
 	}
 }
-
 @keyframes heartbeat {
 	0% {
 		transform: scale(1);
