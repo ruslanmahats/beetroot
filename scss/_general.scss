@@ -101,7 +101,8 @@ html {
 		&--menu {
 			@include font-h3(uppercase, $col-text);
 			display: inline-block;
-			vertical-align: middle;
+			vertical-align: bottom;
+			margin-bottom: -4px;
 		}
 	}
 	&__slogan {

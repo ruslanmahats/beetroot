@@ -509,7 +509,8 @@ html {
   text-transform: uppercase;
   color: #fff;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
+  margin-bottom: -4px;
 }
 .logo__slogan {
   font-family: "Josefin Sans", sans-serif;
