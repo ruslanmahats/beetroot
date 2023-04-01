@@ -961,13 +961,15 @@ html {
   width: 100%;
   height: 100%;
 }
-.why__photo:hover {
-  -webkit-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-          transform: scale(1.3);
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+@media (min-width: 1024px) {
+  .why__photo:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
 }
 .why p {
   margin-top: 19px;
@@ -1217,7 +1219,9 @@ html {
 @media (min-width: 1024px) {
   .feedback__picture-container {
     height: auto;
-    max-height: auto;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
     max-width: 380px;
     min-height: 100%;
   }
