@@ -86,6 +86,10 @@
 		object-position: center;
 		width: 100%;
 		height: 100%;
+		&:hover {
+			transform: scale(1.3);
+			transition: all 0.3s ease-in;
+		}
 	}
 	& p {
 		margin-top: 19px;
@@ -144,6 +148,10 @@
 	}
 	&__item {
 		text-align: center;
+		&:hover {
+			transform: scale(1.2);
+			transition: all 0.3s ease-in;
+		}
 		@include tablet-l {
 			width: 320px;
 		}
@@ -182,8 +190,6 @@
 	}
 	&__text {
 		margin-top: 4px;
-		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
-		vertical-align: top;
 	}
 }
 
@@ -208,7 +214,6 @@
 		margin-left: 0;
 		padding: 44px 32px;
 		background-color: $col-bg-booking;
-
 		@include tablet-l {
 			max-width: 57.3%;
 		}
@@ -223,7 +228,7 @@
 	&__button {
 		margin-top: 28px;
 		display: inline-block;
-		background-color: $col-text;
+		background-color: $col-bg-2;
 		@include tablet-p {
 			margin-top: 24px;
 		}
@@ -249,7 +254,6 @@
 	}
 	&__title {
 		text-align: center;
-		@include font($ff-two, 400, 36px, 40px, capitalize, normal, $col-text);
 		vertical-align: top;
 	}
 	&__container {
@@ -303,11 +307,9 @@
 		}
 	}
 	&__title {
-		@include font($ff-base, 400, 20px, 28px, uppercase, normal, $col-text);
 		vertical-align: top;
 	}
 	&__text {
-		@include font($ff-base, 300, 16px, 28px, none, 0.1em, $col-text);
 		margin-top: 16px;
 		&:first-of-type {
 			text-indent: 32px;

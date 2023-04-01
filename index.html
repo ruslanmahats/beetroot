@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./styles/index.css">
 </head>
 
-<body>
+<body class="body">
 
 	<header class="header">
 		<div class="wrapper">
@@ -30,21 +30,44 @@
 						</form>
 					</div>
 				</div>
-				<div class="header__scroll-down scroll-down">
-					<div class="scroll-down__text">Scroll Down</div>
-					<div class="scroll-down__icon">
+				<a href="#menu" class="header__scroll-down scroll-down">
+					<span class="scroll-down__text">Scroll Down</span>
+					<span class="scroll-down__icon">
 						<svg>
 							<use xlink:href="./assets/icons/sprite.svg#chevron-down"></use>
 						</svg>
-					</div>
-				</div>
+					</span>
+				</a>
 			</div>
 		</div>
 	</header>
 
+	<menu class="menu" id="menu">
+		<div class="wrapper">
+			<div class="menu__container">
+				<div class="menu__logo logo">
+					<a href="/index.html" class="logo__name logo__name--menu">Bhromaon</a>
+				</div>
+				<div class="menu__nav">
+					<nav class="navigation">
+						<ul class="navigation__list">
+							<li class="navigation__item"><a href="#" class="navigation__link">Who We Are</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">What We Do</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Travel With Us</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Contact Us</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="menu__burger burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</menu>
 
 	<main class="main">
-
 		<section class="why">
 			<div class="wrapper">
 				<div class="why__container">
@@ -66,7 +89,6 @@
 
 			</div>
 		</section>
-
 		<section class="select">
 			<div class="wrapper">
 				<div class="select__container">
@@ -78,7 +100,7 @@
 										<use xlink:href="./assets/icons/sprite.svg#search"></use>
 									</svg></span>
 							</div>
-							<div class="steps__text">
+							<div class="steps__text text">
 								<h2>Search Places</h2>
 							</div>
 						</div>
@@ -88,7 +110,7 @@
 										<use xlink:href="./assets/icons/sprite.svg#check-circle"></use>
 									</svg></span>
 							</div>
-							<div class="steps__text">
+							<div class="steps__text text">
 								<h2>Select Places</h2>
 							</div>
 						</div>
@@ -98,7 +120,7 @@
 										<use xlink:href="./assets/icons/sprite.svg#thumbs-up"></use>
 									</svg></span>
 							</div>
-							<div class="steps__text">
+							<div class="steps__text text">
 								<h2>Book & Enjoy</h2>
 							</div>
 						</div>
@@ -106,7 +128,6 @@
 				</div>
 			</div>
 		</section>
-
 		<section class="booking booking--first">
 			<div class="wrapper">
 				<div class="booking__container">
@@ -139,12 +160,14 @@
 		</section>
 		<section class="feedbacks">
 			<div class="wrapper">
-				<h2 class="feedbacks__title title title--h2">What Our Tourists Say</h2>
+				<div class="text">
+					<h2 class="feedbacks__title">What Our Tourists Say</h2>
+				</div>
 				<div class="feedbacks__container">
 					<div class="feedback">
 						<div class="feedback__picture-container"><img src="./assets/images/content/photo-feedback.jpg"
 								alt="Sam Sumon feedback" class="feedback__picture"></div>
-						<div class="feedback__text-container">
+						<div class="feedback__text-container text">
 							<h5 class="feedback__title">Sam Sumon</h5>
 							<p class="feedback__text">But I must explain to you how all this mistaken idea of account to
 								denouncinpleasure and praising pain But I must explain to you how all this mistaken idea of
@@ -157,9 +180,7 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
-
 
 	<footer class="footer">
 		<div class="wrapper">
@@ -188,6 +209,8 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="./js/burger.js"></script>
 
 </body>
 

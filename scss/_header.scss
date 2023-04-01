@@ -27,14 +27,12 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-
 	&__inner {
 		width: 100%;
 	}
 	&__logo {
 		text-align: center;
 	}
-
 	&__search {
 		margin: 48px auto 0;
 		width: 100%;
@@ -49,10 +47,10 @@
 	}
 }
 .search-form {
-	border: 4px solid $col-text;
+	border: 4px solid $col-border;
 	display: flex;
 	height: auto;
-	background-color: $col-text;
+	background-color: $col-bg-2;
 	flex-direction: column;
 	@include phone {
 		flex-direction: row;
@@ -67,7 +65,7 @@
 	box-shadow: none;
 	padding: 0 6px;
 	height: 60px;
-	@include font($ff-base, 400, 14px, 20px, none, 0.2em, $col-text-2);
+	@include font-body1(null, $col-text-2);
 	vertical-align: top;
 	@include phone {
 		height: initial;
@@ -75,6 +73,7 @@
 	}
 	&::placeholder {
 		text-align: center;
+		text-transform: capitalize;
 		@include phone {
 			text-align: left;
 		}
@@ -85,22 +84,22 @@
 }
 .scroll-down {
 	text-align: center;
-	animation: heartbeat 7s infinite;
+	animation: heartbeat 6s infinite;
+	display: inline-block;
+	width: fit-content;
 	&__text {
-		@include font($ff-base, 400, 14px, 20px, capitalize, 0.2em, $col-text);
-		vertical-align: top;
+		@include font-body1(capitalize, $col-text);
+		display: block;
 	}
 	&__icon {
 		display: inline-block;
-		vertical-align: middle;
-		width: 14px;
 		height: 16px;
-		margin-right: 12px;
+		margin-top: 4px;
 		& svg {
 			display: inline-block;
-			width: 100%;
-			height: 100%;
-			fill: $col-text;
+			width: 14px;
+			height: 16px;
+			fill: $col-icons-bg-2;
 		}
 	}
 }
