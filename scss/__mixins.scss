@@ -1,7 +1,7 @@
 @use "_variables" as *;
 
 @mixin phone-only {
-	@media (max-width: $max-width-phone) {
+	@media (min-width: $max-width-phone) {
 		@content;
 	}
 }
@@ -21,7 +21,7 @@
 	}
 }
 @mixin desktop-big {
-	@media (min-width: $max-width-desktop-big) {
+	@media (min-width: $width-desktop-big) {
 		@content;
 	}
 }

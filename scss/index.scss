@@ -7,8 +7,263 @@
 @use "aside";
 @use "footer";
 
+body {
+	height: 100vh;
+	background-image: url("../assets/images/desk_bg.png");
+	font-family: "Card Characters";
+	font-size: 20px;
+}
+
 .wrapper {
-	max-width: 1170px;
-	margin: 122px auto;
-	padding: 0 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	padding: 50px 0;
+}
+
+.table {
+	display: grid;
+	grid-template-columns: repeat(2, 140px);
+	grid-auto-rows: 200px;
+	gap: 10px;
+	@include phone-only {
+		grid-template-columns: repeat(3, 140px);
+	}
+	@include tablet-p {
+		grid-template-columns: repeat(4, 140px);
+	}
+	@include tablet-l {
+		grid-template-columns: repeat(6, 140px);
+	}
+	@include desktop-big {
+		grid-template-columns: repeat(9, 140px);
+	}
+}
+
+.card-container {
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	perspective: 1000px;
+}
+
+.card-containerinner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	animation-name: rotate;
+	animation-duration: 10s;
+	animation-delay: calc(0.05s * var(--i));
+	animation-iteration-count: 1;
+}
+.card-container:hover .card-containerinner {
+	transform: rotateY(180deg);
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateY(0);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+.deck {
+	border-radius: 10px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url("../assets/images/deck.svg");
+	backface-visibility: hidden;
+	background-color: $col-bg;
+}
+
+.card {
+	background-color: $col-bg;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	padding: 5px;
+	position: absolute;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	&__container {
+		margin: 0 auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	&__container-inner {
+		height: 100%;
+	}
+	&__number-container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 15px 25px;
+	}
+	&__suite-row {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		&--r180deg {
+			transform: rotate(180deg);
+		}
+	}
+	&__suite-row-asolute {
+		position: absolute;
+		top: 27%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		&--910 {
+			position: absolute;
+			top: 21%;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+		&--910r {
+			position: absolute;
+			bottom: 21%;
+			left: 50%;
+			transform: translate(-50%, 0) rotate(180deg);
+		}
+	}
+	&__container svg {
+		width: 25px;
+		height: 25px;
+	}
+	&__value {
+		display: inline-block;
+		position: absolute;
+		width: 20px;
+		height: fit-content;
+		top: 10px;
+		left: 10px;
+		padding: 0 5px 5px 0;
+		background-color: $col-bg;
+	}
+	&__value-r180deg {
+		transform: rotate(180deg);
+		display: inline-block;
+		position: absolute;
+		width: 20px;
+		height: fit-content;
+		bottom: 10px;
+		right: 10px;
+		padding: 0 5px 5px 0;
+		background-color: $col-bg;
+	}
+	&__suite {
+		margin-top: 5px;
+	}
+	&__suite svg {
+		width: 15px;
+		height: 15px;
+	}
+	&__rang-container {
+		text-align: center;
+		&--10 {
+			margin-left: -6px;
+			transform: scale(0.7, 1);
+		}
+	}
+}
+
+.pic {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 7px 12px;
+	&__container {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: bottom;
+		border-left: 1px solid $col-cs;
+		border-right: 1px solid $col-cs;
+		border-top: 1px solid $col-cs;
+		border-radius: 0 5px 0 0;
+		&:last-child {
+			border-bottom: 1px solid $col-cs;
+		}
+		&--r180deg {
+			transform: rotate(180deg);
+		}
+		&--a {
+			width: 100%;
+			height: 100%;
+			background: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			& span {
+				font-size: 60px;
+			}
+		}
+		&--diamonds-j {
+			background-image: url("../assets/images/diamonds-j.svg");
+		}
+		&--diamonds-q {
+			background-image: url("../assets/images/diamonds-q.svg");
+		}
+		&--diamonds-k {
+			background-image: url("../assets/images/diamonds-k.svg");
+		}
+		&--hearts-j {
+			background-image: url("../assets/images/hearts-j.svg");
+		}
+		&--hearts-q {
+			background-image: url("../assets/images/hearts-q.svg");
+		}
+		&--hearts-k {
+			background-image: url("../assets/images/hearts_k.svg");
+		}
+		&--spades-j {
+			background-image: url("../assets/images/spades-j.svg");
+		}
+		&--spades-q {
+			background-image: url("../assets/images/spades-q.svg");
+		}
+		&--spades-k {
+			background-image: url("../assets/images/spades-k.svg");
+		}
+		&--clubs-j {
+			background-image: url("../assets/images/clubs-j.svg");
+		}
+		&--clubs-q {
+			background-image: url("../assets/images/clubs-q.svg");
+		}
+		&--clubs-k {
+			background-image: url("../assets/images/clubs-k.svg");
+		}
+	}
+}
+.clubs,
+.spades {
+	color: $col-cs;
+}
+.diamonds,
+.hearts {
+	color: $col-dh;
+}
+
+.suite-diamonds,
+.suite-hearts {
+	fill: $col-dh;
+}
+.suite-clubs,
+.suite-spades {
+	fill: $col-cs;
 }

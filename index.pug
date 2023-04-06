@@ -1,0 +1,79 @@
+- var suitArr = ['diamonds', 'clubs', 'hearts', 'spades'];
+- var rankArr = ['6', '7', '8', '9', '10', 'j', 'q', 'k', 'a'];
+- var i = 1;
+
+mixin svg(name)
+	svg(class=`suite-${name}`)
+		use(xlink:href=`./assets/icons/sprite.svg#suite-${name}`)
+
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Cards
+		link(rel="stylesheet", href="../styles/index.css")
+	body
+		.wrapper
+			.table
+				each suit in suitArr
+					each rank in rankArr
+						div.card-container(tabindex=`${i++}`)
+							div.card-containerinner(style=`--i: ${i++};`)
+								.deck
+								.card
+									.card__container
+										.card__container-inner
+											if (rank == 6 || rank == 7)
+												.card__number-container
+													.card__suite-row
+														+svg(suit)
+														+svg(suit)
+													.card__suite-row
+														+svg(suit)
+														+svg(suit)
+													.card__suite-row.card__suite-row--r180deg
+														+svg(suit)
+														+svg(suit)
+													if (rank == 7)
+														.card__suite-row-asolute
+															+svg(suit)
+											else
+												if (rank == 8 || rank == 9 || rank == 10)
+													.card__number-container
+														.card__suite-row
+															+svg(suit)
+															+svg(suit)
+														.card__suite-row
+															+svg(suit)
+															+svg(suit)
+														.card__suite-row.card__suite-row--r180deg
+															+svg(suit)
+															+svg(suit)
+														.card__suite-row.card__suite-row--r180deg
+															+svg(suit)
+															+svg(suit)
+														if (rank == 9 || rank == 10)
+															.card__suite-row-asolute--910
+																+svg(suit)
+														if (rank == 10)
+															.card__suite-row-asolute--910r
+																+svg(suit)
+												else
+													.pic
+														if (rank == 'a')
+																div(class=`pic__container--${rank}`)
+																	span(class=`${suit}`) #{rank}
+														else 
+																div(class=`pic__container pic__container--${suit}-${rank}`)
+																div(class=`pic__container pic__container--r180deg pic__container--${suit}-${rank}`)
+									.card__value
+										div(class=`card__rang-container card__rang-container--${rank} ${suit}`) #{rank}
+										.card__suite
+											+svg(suit)
+									.card__value-r180deg
+										div(class=`card__rang-container card__rang-container--${rank} ${suit}`) #{rank}
+										.card__suite
+											+svg(suit)
