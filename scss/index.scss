@@ -57,7 +57,7 @@ body {
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
 	animation-name: rotate;
-	animation-duration: 10s;
+	animation-duration: 0.5s;
 	animation-delay: calc(0.05s * var(--i));
 	animation-iteration-count: 1;
 }

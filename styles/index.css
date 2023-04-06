@@ -417,8 +417,8 @@ body {
           transform-style: preserve-3d;
   -webkit-animation-name: rotate;
           animation-name: rotate;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-delay: calc(0.05s * var(--i));
           animation-delay: calc(0.05s * var(--i));
   -webkit-animation-iteration-count: 1;
