@@ -8,12 +8,12 @@
 // const result = (+res.toFixed(2));
 // console.log(typeof(result)+ " " + result);
 
-
-
 // let numberOne = "1";
 // let numberTwo = 2;
 // let result = Number(numberOne) + numberTwo;
 // console.log(typeof (result) + " " + result);
+
+// --------------------------------
 
 // let userDiskSize;
 // let numberOfFiles;
@@ -46,6 +46,7 @@
 // const remainder = (amount - (Math.floor(pieces) * price));
 // console.log(`You can buy ${Math.floor(pieces)} and will have ${remainder.toFixed(2)}$ left in your wallet.`);
 
+// --------------------------------
 
 // let num = 695;
 // let result = 0;
@@ -73,7 +74,7 @@
 
 // console.log(`\nВсього нарахувань за ${monthCount} місяців: ${(amount - depAmount).toFixed(2)}$.\nСума вашого депозиту становитиме: ${amount.toFixed(2)}$.`);
 
-
+// --------------------------------
 
 //console.log(2 && 0 && 3); // 0
 //console.log(2 || 0 || 3); // 2
