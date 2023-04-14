@@ -12,11 +12,11 @@
 // console.log(factorial(7));
 
 
-let i = 1;
-let timer = setTimeout(function run() {
-	console.log(i);
-	setTimeout(run, 1000);
-}, 1000);
+// let i = 1;
+// let timer = setTimeout(function run() {
+// 	console.log(i);
+// 	setTimeout(run, 1000);
+// }, 1000);
 
 // clearTimeout(timer);
 
@@ -26,4 +26,4 @@ let timer = setTimeout(function run() {
 // let timerId = setTimeout(() => console.log('tick'), 1000);
 
 // остановить вывод через 5 секунд
-setTimeout(() => { clearTimeout(timer); console.log('stop'); }, 5000);
+// setTimeout(() => { clearTimeout(timer); console.log('stop'); }, 5000);
