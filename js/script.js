@@ -142,7 +142,7 @@ function perfectNumber(x) {
 function perfectNumberRange(min, max) {
 	let res = [];
 	for (let i = min; i < max; i++) {
-		if (perfectNumber(i) == true) {
+		if (perfectNumber(i) == true && i > 0) {
 			res.push(i);
 			console.log(i);
 		}
@@ -150,6 +150,6 @@ function perfectNumberRange(min, max) {
 	return res;
 }
 
-console.log(perfectNumberRange(0, 100));
+console.log(perfectNumberRange(-100, 9000));
 
 // --------------------------------------
