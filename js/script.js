@@ -75,25 +75,25 @@ const timer = {
 	minutes: 0,
 	seconds: 0,
 	showTimer: function () {
-		if (this.hours < 9) {
+		if (this.hours <= 9) {
 			this.hours = '0' + this.hours;
 		}
-		if (this.minutes < 9) {
+		if (this.minutes <= 9) {
 			this.minutes = '0' + this.minutes;
 		}
-		if (this.seconds < 9) {
+		if (this.seconds <= 9) {
 			this.seconds = '0' + this.seconds;
 		}
 		console.log(`${this.hours}:${this.minutes}:${this.seconds}`);
 	},
 	setTime: function (h, m, s) {
-		if (s < 60) {
+		if (this.seconds < 60) {
 			this.seconds = this.seconds + s;
 		} else {
 			this.minutes = this.minutes + Math.floor((this.seconds + s) / 60);
 			this.seconds = (this.seconds + s) % 60;
 		};
-		if (m < 60) {
+		if (this.minutes < 60) {
 			this.minutes = this.minutes + m;
 		} else {
 			this.hours = this.hours + Math.floor((this.minutes + m) / 60);
@@ -119,9 +119,9 @@ const timer = {
 }
 
 
-timer.setTime(10, 50, 5);
+timer.setTime(8, 50, 5);
 timer.setSeconds(30);
 timer.setMinutes(20);
-timer.setHours(10);
+timer.setHours(0);
 
 timer.showTimer();
