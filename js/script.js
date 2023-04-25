@@ -20,11 +20,17 @@ buyList.push(
 
 // ф покупка продукту
 function hasBought(name) {
+	let flag;
 	buyList.forEach((element) => {
 		if (name == element.name) {
 			element.bought = true;
+			console.log(`"${element.name}" property 'bought' set to '${element.bought}'.`);
+			flag = true;
+			return;
 		}
 	});
+	if(flag){return;}
+	console.log(`Element with name "${name}" not found.`);
 }
 
 hasBought('Scooter');
@@ -39,7 +45,7 @@ function removeItem(name) {
 		if (name == element.name) {
 			newBuyList = buyList.slice();
 			newBuyList.splice(index, 1);
-			console.log(`Element "${index}" removed.`);
+			console.log(`Element "${element.name}" removed.`);
 		}
 	});
 	return newBuyList;
@@ -77,7 +83,7 @@ function summTotal(arr) {
 	arr.forEach((item) => {
 		res += item.summ;
 	});
-	return res;
+	return 'Total: ' + res;
 }
 
 // ф сума не куплених у списку враховуючи кількість
@@ -88,7 +94,7 @@ function summNotBought(arr) {
 			res += item.summ;
 		}
 	});
-	return res;
+	return 'Summary not bought: ' + res;
 }
 
 // ф сортування за вартістю (0 = 0...n)
@@ -96,6 +102,6 @@ function sortBySumm(arr, sort = 0) {
 	return sort === 0 ? arr.sort((a, b) => a.summ - b.summ) : arr.sort((a, b) => b.summ - a.summ);
 }
 
-console.log('Total: ' + summTotal(newBuyList));
-console.log('Summary not bought: ' + summNotBought(newBuyList));
+console.log(summTotal(newBuyList));
+console.log(summNotBought(newBuyList));
 console.log(sortBySumm(newBuyList, 1));
