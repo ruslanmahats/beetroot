@@ -11,6 +11,8 @@
 	max-width: 1170px;
 	margin: 122px auto;
 	padding: 0 70px;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 101vh;
 }
 
 .edit {
@@ -19,7 +21,74 @@
 	margin: 50px auto;
 	font-size: 16px;
 	line-height: 1.5;
-	font-family: Arial, Helvetica, sans-serif;
 	border: 1px solid #ccc;
 	padding: 30px;
+}
+
+.editText {
+	height: 100%;
+	width: 100%;
+}
+
+.table {
+	width: 100%;
+	outline: 1px solid #797878;
+	& th {
+		padding: 10px 0;
+		border: 1px solid #797878;
+		outline: 1px solid #797878;
+		font-weight: 700;
+	}
+	& tr td {
+		padding: 10px;
+		border: 1px solid #ccc;
+		text-align: center;
+	}
+	& tr td:first-child {
+		text-align: left;
+	}
+	&__name {
+		width: 55%;
+	}
+	&__units {
+		width: 5%;
+	}
+	&__quantity {
+		width: 10%;
+	}
+	&__price {
+		width: 10%;
+		cursor: pointer;
+		user-select: none;
+	}
+	&__summ {
+		width: 10%;
+		cursor: pointer;
+		user-select: none;
+	}
+}
+
+.resizable {
+	width: 500px;
+	margin: 50px 0;
+	font-size: 16px;
+	line-height: 1.5;
+	border: 1px solid #ccc;
+	padding: 30px;
+	position: relative;
+	user-select: none;
+	overflow: hidden;
+}
+
+.resize-corner {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	border-left: 7px solid transparent;
+	border-bottom: 7px solid #ccc;
+	border-right: 7px solid #ccc;
+	border-top: 7px solid transparent;
+	cursor: nwse-resize;
+
+	user-select: none;
 }
