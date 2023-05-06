@@ -7,8 +7,216 @@
 @use "aside";
 @use "footer";
 
-.wrapper {
-	max-width: 1170px;
-	margin: 122px auto;
-	padding: 0 70px;
+// .wrapper {
+// 	max-width: 1400px;
+// 	margin: 0 auto;
+// }
+.hero-wrapper {
+	width: 100%;
+	height: 100vh;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+// MAIN SLIDER ------------------------------------------------------
+
+.swiper-hero {
+	width: 100%;
+	height: calc(100vh - $header-height-mobile);
+	@include desktop {
+		height: calc(100vh - $header-height);
+	}
+	& .slide-inner {
+		width: 100%;
+		height: 100%;
+		&__image {
+			width: 100%;
+			height: 100%;
+		}
+		&__image img {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&__gradient {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0.25) 100%);
+		}
+		&__text {
+			width: 210px;
+			position: absolute;
+			top: 16%;
+			right: 11px;
+			text-align: center;
+			@include tablet-p {
+				right: 82px;
+				top: 16%;
+			}
+			@include desktop {
+				width: 400px;
+				position: absolute;
+				top: 17%;
+				right: 100px;
+			}
+		}
+		&__title {
+			color: $color-light-1;
+		}
+
+		&__button {
+			padding-top: 20px;
+			@include desktop {
+				padding-top: 50px;
+			}
+			& a {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.swiper-pagination-bullets {
+	bottom: 20px !important;
+	@include desktop {
+		bottom: 50px !important;
+	}
+}
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+	background-color: $color-light-1;
+	opacity: 1;
+	@include desktop {
+		width: 20px;
+		height: 20px;
+		margin-left: 15px !important;
+		margin-right: 15px !important;
+	}
+}
+.swiper-pagination-bullet-active {
+	background-color: $color-main-2;
+}
+
+//  FONTS -----------------------------------------
+
+.text {
+	&__heading-1 {
+		font-family: $ff-main;
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 32px;
+		text-transform: uppercase;
+		@include desktop {
+			font-size: 50px;
+			line-height: 61px;
+		}
+	}
+	&__heading-2 {
+		font-family: $ff-main;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 39px;
+		text-transform: uppercase;
+	}
+	&__menu {
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: capitalize;
+		@include tablet-p {
+			font-size: 16px;
+			line-height: 20px;
+		}
+		@include desktop {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+	&__description {
+		font-family: $ff-main;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: capitalize;
+	}
+	&__price {
+		font-family: $ff-main;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+	}
+	&__status {
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 12px;
+		text-transform: uppercase;
+	}
+	&__phone {
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 32px;
+	}
+	&__button {
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+		@include desktop {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	&__copyright {
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		@include tablet-p {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+}
+
+//  BUTTONS -----------------------------------------
+
+.btn {
+	display: block;
+	width: fit-content;
+	padding: 10px 26.5px;
+	background: transparent;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	@include desktop {
+		padding: 14px 57px;
+	}
+	&__white {
+		border: 1px solid $color-light-4;
+		color: $color-light-4;
+	}
+	&__black {
+		border: 1px solid $color-dark-1;
+		color: $color-dark-1;
+	}
+	&:hover {
+		color: $color-light-1;
+		border: 1px solid $color-main-2;
+		background-color: $color-main-2;
+	}
 }

@@ -1,2 +1,210 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+.header {
+	height: $header-height-mobile;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	@include tablet-p {
+		padding: 0 15px;
+	}
+	@include desktop {
+		height: $header-height;
+		padding: 0 100px;
+	}
+	&__container {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__logo svg {
+		width: 100px;
+		height: 19px;
+		fill: $color-main-1;
+		@include tablet-p {
+			width: 168px;
+			height: 31px;
+		}
+		@include desktop {
+			width: 182px;
+			height: 34px;
+		}
+	}
+
+	&__left {
+		display: flex;
+		justify-content: space-between;
+		gap: 17px;
+		@include tablet-p {
+			gap: 23px;
+		}
+		@include desktop {
+			gap: 30px;
+		}
+	}
+}
+.logo {
+	&__img {
+	}
+}
+.menu {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 60px;
+	right: -100%;
+	transition: all 0.5s ease-in-out;
+	z-index: 99999;
+	@include tablet-p {
+		width: fit-content;
+		position: initial;
+		display: flex;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: block;
+		padding: 20px 15px;
+		color: $color-dark-1;
+		transition: all 0.2s ease-in;
+		cursor: pointer;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		@include tablet-p {
+			padding: 20px 15px;
+		}
+		@include desktop {
+			padding: 28px 15px;
+		}
+		&:hover {
+			background-color: $color-main-2;
+			color: $color-light-4;
+		}
+	}
+	&--active {
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 60px;
+		right: 0px;
+		background-color: $color-light-4;
+		overflow: scroll;
+		padding-bottom: 80px;
+		@include tablet-p {
+			position: fixed;
+		}
+		& .menu__link {
+			width: 250px;
+			margin: 0 auto;
+			display: block;
+			text-align: center;
+			padding: 20px 15px;
+		}
+		& .text__menu {
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+}
+
+.search-btn {
+	&__link {
+		& svg {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			fill: $color-dark-1;
+			transition: all 0.2s ease-in-out;
+			@include tablet-p {
+				width: 27px;
+				height: 27px;
+			}
+			@include desktop {
+				width: 36px;
+				height: 36px;
+			}
+			&:hover {
+				fill: $color-main-2;
+			}
+		}
+	}
+}
+.profile-btn {
+	&__link {
+		& svg {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			stroke: $color-dark-1;
+			fill: $color-light-4;
+			transition: all 0.2s ease-in-out;
+			@include tablet-p {
+				width: 27px;
+				height: 27px;
+			}
+			@include desktop {
+				width: 36px;
+				height: 36px;
+			}
+			&:hover {
+				stroke: $color-main-2;
+			}
+		}
+	}
+}
+.burger {
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	margin-left: 38px;
+	position: relative;
+	cursor: pointer;
+	@include tablet-p {
+		display: none;
+	}
+	& span {
+		width: 100%;
+		height: 2px;
+		position: absolute;
+		left: 0px;
+		background-color: $color-dark-1;
+		transition: all 0.2s ease-in-out;
+	}
+	&:hover span {
+		background-color: $color-main-2;
+	}
+	& span:first-child {
+		top: 0px;
+	}
+	& span:nth-child(2) {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	& span:last-child {
+		bottom: 0;
+	}
+	&--active {
+		& span:first-child {
+			transform: rotate(45deg);
+			top: 45%;
+		}
+		& span:nth-child(2) {
+			visibility: hidden;
+			transform: rotate(180deg);
+		}
+		& span:last-child {
+			transform: rotate(-45deg);
+			bottom: 45%;
+		}
+		@include tablet-p {
+			display: block;
+		}
+	}
+}

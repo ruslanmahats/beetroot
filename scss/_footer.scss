@@ -1,2 +1,192 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+.footer {
+	padding: 50px 10px 20px;
+	background-color: $color-dark-2;
+	@include tablet-p {
+		padding: 50px 25px 20px;
+	}
+	@include desktop {
+		padding: 70px 130px 20px;
+	}
+	&__logo {
+		grid-area: logo;
+		margin-bottom: 40px;
+		text-align: center;
+		@include tablet-p {
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
+	&__logo svg {
+		width: 150px;
+		height: 30px;
+		fill: $color-light-1;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			fill: $color-main-2;
+		}
+	}
+
+	&__menu {
+		grid-area: menu;
+		color: $color-light-1;
+		@include desktop {
+			margin-top: 35px;
+		}
+	}
+
+	&__contacts {
+		grid-area: contacts;
+		display: flex;
+		justify-content: end;
+		color: $color-light-1;
+		@include tablet-p {
+			justify-content: start;
+		}
+	}
+	&__container {
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: 35% 65%;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"logo logo"
+			"menu contacts";
+		@include tablet-p {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: auto;
+			grid-template-areas: "logo menu contacts";
+		}
+		@include desktop {
+			grid-template-columns: 65% 35%;
+			grid-template-rows: auto;
+			grid-template-areas:
+				"logo contacts"
+				"menu contacts";
+		}
+	}
+
+	&__copyright {
+		margin-top: 50px;
+		text-align: center;
+		color: $color-light-1;
+	}
+}
+.logo {
+	&__img {
+	}
+
+	&__link {
+	}
+}
+.footer-menu {
+	&__link {
+		display: inline-block;
+		color: $color-light-1;
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		transition: all 0.2s ease-in-out;
+		@include desktop {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		&:hover {
+			color: $color-main-2;
+		}
+	}
+	&__item + &__item {
+		margin-top: 10px;
+	}
+}
+.contacts {
+	width: fit-content;
+	&__title {
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: capitalize;
+		@include desktop {
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
+
+	&__socials {
+		margin-top: 25px;
+		@include tablet-p {
+			margin-top: 20px;
+		}
+		@include desktop {
+			margin-top: 48px;
+		}
+	}
+
+	&__phone {
+		margin-top: 25px;
+		font-family: $ff-main;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		@include tablet-p {
+			margin-top: 20px;
+		}
+		@include desktop {
+			margin-top: 32px;
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
+	&__phone-link {
+		color: $color-light-1;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			color: $color-main-2;
+		}
+	}
+}
+
+.socials {
+	&__item {
+		display: inline;
+		width: fit-content;
+	}
+	&__item + &__item {
+		margin-left: 18px;
+		@include desktop {
+			margin-left: 30px;
+		}
+	}
+
+	&__link svg {
+		height: 20px;
+		width: 20px;
+		transition: all 0.2s ease-in-out;
+		fill: $color-light-1;
+		@include desktop {
+			height: 33px;
+			width: 33px;
+		}
+		&:hover {
+			fill: $color-main-2;
+		}
+		&.stroke {
+			fill: none;
+			stroke: $color-light-1;
+			&:hover {
+				stroke: $color-main-2;
+			}
+		}
+		&.stroke {
+			fill: none;
+			stroke: $color-light-1;
+			&:hover {
+				stroke: $color-main-2;
+			}
+		}
+	}
+}
