@@ -1,7 +1,7 @@
 @use "_variables" as *;
 
-@mixin phone-only {
-	@media (max-width: $max-width-phone) {
+@mixin phone-l {
+	@media (min-width: $max-width-phone) {
 		@content;
 	}
 }

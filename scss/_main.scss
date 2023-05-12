@@ -1,2 +1,548 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+// HERO SLIDER ------------------------------------------------
+
+.swiper-hero {
+	width: 100%;
+	height: 100vh;
+	& .slide-inner {
+		width: 100%;
+		height: 100%;
+		&__image {
+			width: 100%;
+			height: 100%;
+		}
+		&__image img {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&__gradient {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(45deg, $color-bg-2, $color-bg-3);
+			opacity: 0.85;
+		}
+		&__text {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		&__title {
+			color: $color-text-3;
+			font-family: $font-family-titles;
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 49px;
+			text-transform: uppercase;
+			@include tablet-p {
+				letter-spacing: 1.05rem;
+				font-size: 60px;
+				line-height: 78px;
+			}
+			@include desktop {
+				font-size: 80px;
+				line-height: 98px;
+				letter-spacing: 1.1rem;
+			}
+		}
+		&__subtitle {
+			padding-top: 20px;
+			color: $color-text-3;
+			color: $color-text-3;
+			font-family: $font-family-titles;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 28px;
+			letter-spacing: 0.5rem;
+			text-transform: uppercase;
+			@include tablet-p {
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 0.5rem;
+			}
+			@include desktop {
+				font-size: 18px;
+				line-height: 22px;
+				letter-spacing: 0.5rem;
+			}
+		}
+	}
+
+	& .swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: 25px;
+		@include tablet-p {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 10px;
+			top: 50%;
+			right: 15px !important;
+			left: unset;
+			transform: translate(0, -50%);
+			right: 32px !important;
+		}
+		@include desktop {
+			right: 52px !important;
+		}
+	}
+	& .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+	& .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet,
+	& .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+	& .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: none;
+		border: 1px solid $color-bg-1;
+		opacity: 1;
+	}
+
+	& .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+	& .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0;
+	}
+
+	& .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+	& .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet + .swiper-pagination-bullet {
+		margin-left: 20px;
+		@include tablet-p {
+			margin-top: 40px;
+			margin-left: 0px;
+		}
+	}
+
+	& .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+	& .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+		background-color: $color-bg-1 !important;
+	}
+}
+
+.arrow-down {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	transform: translate(-50%, 0);
+	z-index: 9999;
+	color: $color-bg-1;
+	background-image: url("../assets/icons/arrow.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: heartbeat 3s infinite;
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		border: 1px solid $color-bg-1;
+	}
+}
+
+@keyframes heartbeat {
+	0% {
+		transform: translate(-50%, 0);
+	}
+	50% {
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+
+// WHAT WE DO -----------------------------------------------
+
+.whatwedo {
+	padding: 50px 0 50px;
+	@include tablet-l {
+		padding: 100px 0 150px;
+	}
+	&__wrapper {
+	}
+
+	&__title {
+	}
+
+	&__block {
+		padding: 50px 0 10px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		gap: 15px;
+		@include tablet-l {
+			padding: 147px 0 30px;
+			flex-direction: row;
+			gap: 70px;
+		}
+		&--text-right {
+			flex-direction: column;
+			@include tablet-l {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	&__image-container-outer {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		@include tablet-l {
+			width: 57%;
+		}
+	}
+
+	&__image-container {
+		position: relative;
+		width: 100%;
+		padding-bottom: 54%;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			transform: scale(1.2);
+		}
+		@include tablet-l {
+			box-shadow: -55px -57px $color-bg-2;
+			padding-bottom: 74%;
+		}
+		@include desktop {
+			box-shadow: -115px -57px $color-bg-2;
+		}
+		@include desktop-big {
+			box-shadow: -215px -57px $color-bg-2;
+		}
+		&--text-right {
+			@include tablet-l {
+				box-shadow: 55px -57px $color-bg-2;
+				padding-bottom: 74%;
+			}
+			@include desktop {
+				box-shadow: 115px -57px $color-bg-2;
+			}
+			@include desktop-big {
+				box-shadow: 215px -57px $color-bg-2;
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		z-index: 5;
+	}
+
+	&__image-shadow {
+		position: absolute;
+		top: 90px;
+		left: 0px;
+		background-color: $color-bg-2;
+		width: 36.5%;
+
+		height: 470px;
+		&--text-right {
+			left: initial;
+			right: 0;
+			background-color: $color-bg-3;
+		}
+	}
+
+	&__text-container {
+		width: 100%;
+		@include tablet-l {
+			padding-bottom: 34px;
+			width: 41%;
+		}
+	}
+}
+.section-title {
+	&__line {
+		height: 1px;
+		margin: 0 auto;
+		background-color: $color-bg-4;
+		width: 100px;
+		&--white {
+			background-color: $color-bg-1;
+		}
+	}
+
+	&__text {
+		margin-top: 30px;
+		font-family: $font-family-titles;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 30px;
+		color: $color-text-1;
+		text-align: center;
+		@include phone-l {
+			font-size: 36px;
+			line-height: 36px;
+		}
+		@include tablet-l {
+			font-size: 44px;
+			line-height: 54px;
+		}
+		&--white {
+			color: $color-bg-1;
+		}
+	}
+}
+.text-container {
+	align-self: self-end;
+	color: $color-text-1;
+	&__subtitle {
+		font-family: $font-family-titles;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		@include tablet-l {
+			font-size: 22px;
+			line-height: 27px;
+		}
+	}
+
+	&__title {
+		font-family: $font-family-titles;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 30px;
+		color: $color-text-1;
+		@include phone-l {
+			font-size: 34px;
+			line-height: 40px;
+		}
+		@include tablet-l {
+			font-size: 44px;
+			line-height: 54px;
+		}
+	}
+
+	&__paragraph {
+		font-family: $font-family-text;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		color: $color-text-1;
+		margin-top: 19px;
+		@include phone-l {
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+
+	&__button {
+		border: 1px solid #2c4058;
+		margin-top: 40px;
+		display: inline-block;
+		padding: 16px 41px;
+		font-family: $font-family-text;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 18px;
+		color: $color-text-1;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			background-color: $color-bg-4;
+			color: $color-text-3;
+		}
+	}
+
+	&__point {
+		&--bottom {
+			display: none;
+			@include tablet-l {
+				margin-top: 60px;
+			}
+		}
+		&--top {
+			margin-bottom: 20px;
+			@include tablet-l {
+				display: none;
+			}
+		}
+	}
+	&__point-point {
+		display: inline-block;
+		width: 9px;
+		height: 18px;
+		vertical-align: middle;
+		margin-right: 10px;
+		& svg {
+			width: 9px;
+			height: 18px;
+			fill: $color-bg-4;
+		}
+	}
+	&__point-text {
+		font-family: $font-family-text;
+		font-style: italic;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 26px;
+		color: $color-text-1;
+		vertical-align: middle;
+		@include tablet-l {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+}
+
+// LATEST SECTION  ---------------------------------------------------
+
+.latest {
+	background: linear-gradient(45deg, $color-bg-5, $color-bg-6);
+	&__wrapper-img {
+		background-image: url("../assets/images/latest-city.png");
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		padding: 120px 0 170px;
+	}
+	&__wrapper {
+		max-width: 1370px;
+		margin: 0 auto;
+		position: relative;
+		padding: 0 100px;
+	}
+	&__wrapper-inner {
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	&__slider-outer {
+		margin-top: 90px;
+	}
+
+	& .post-slide {
+		background-color: $color-bg-1;
+		height: 514px;
+		position: relative;
+		&__text-container {
+			padding: 30px 20px 130px;
+		}
+		&__image-container {
+			width: 100%;
+			height: 240px;
+		}
+
+		&__image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&__title {
+			font-family: $font-family-titles;
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 27px;
+			color: $color-text-1;
+		}
+		&__text {
+			margin-top: 15px;
+			flex-grow: 1;
+			flex-shrink: 1;
+			height: 100%;
+			font-family: $font-family-text;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 25px;
+			color: $color-text-1;
+		}
+
+		&__user-info {
+			margin-top: 40px;
+			position: absolute;
+			left: 20px;
+			bottom: 30px;
+		}
+	}
+	& .user-info {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		&__avatar-container {
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		&__avatar {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&__text-container {
+			align-self: self-start;
+		}
+
+		&__name {
+			padding-top: 7px;
+		}
+		&__name-link {
+			margin-top: 15px;
+			font-family: $font-family-titles;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			color: $color-text-1;
+		}
+
+		&__date {
+			padding-top: 6px;
+		}
+		&__date-link {
+			margin-top: 15px;
+			font-family: $font-family-titles;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			color: $color-text-4;
+			&:hover {
+				color: $color-text-1;
+			}
+		}
+	}
+
+	& .swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: -50px;
+	}
+	& .swiper-pagination-bullet + .swiper-pagination-bullet {
+		margin: 0 0 0 40px;
+	}
+	& .swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: none;
+		border: 1px solid $color-bg-1;
+		opacity: 1;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $color-bg-1;
+	}
+}
