@@ -4,18 +4,28 @@ $max-width-tablet-l: 992px;
 $max-width-desktop: 1200px;
 $max-width-desktop-big: 1400px;
 
-$color-text-1: #2c4058;
-$color-text-2: #000;
-$color-text-3: #fff;
-$color-text-4: #55b7ff;
-$color-text-5: #4b5562;
+$color-1: #fff;
+$color-2: #2c4058;
+$color-3: #55b7ff;
+$color-4: #7e5aff;
+$color-5: #000;
+$color-6: #4b5562;
+$color-7: #3c7fd4;
+$color-8: #24ccfa;
 
-$color-bg-1: #fff;
-$color-bg-2: #55b7ff;
-$color-bg-3: #7e5aff;
-$color-bg-4: #2c4058;
-$color-bg-5: #3c7fd4;
-$color-bg-6: #24ccfa;
+$color-text-1: $color-2;
+$color-text-2: $color-5;
+$color-text-3: $color-1;
+$color-text-4: $color-3;
+$color-text-5: $color-6;
+$color-text-6: $color-4;
+
+$color-bg-1: $color-1;
+$color-bg-2: $color-3;
+$color-bg-3: $color-4;
+$color-bg-4: $color-2;
+$color-bg-5: $color-7;
+$color-bg-6: $color-8;
 
 $font-family-menu: "Source Sans Pro", sans-serif;
 $font-family-titles: "Montserrat", sans-serif;

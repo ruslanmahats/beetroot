@@ -6,3 +6,7 @@
 @use "main";
 @use "aside";
 @use "footer";
+
+html {
+	scroll-behavior: smooth;
+}

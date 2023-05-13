@@ -45,17 +45,20 @@ const swiperLatest = new Swiper('.swiper-latest', {
 
 let map;
 let marker;
+// const markerImg = document.createElement("img");
+// markerImg.src = "/assets/icons/location.png";
 
 async function initMap() {
 	const { Map } = await google.maps.importLibrary("maps");
 	map = new Map(document.getElementById("map"), {
-		center: { lat: 40.664, lng: -73.915 },
+		center: { lat: 40.668, lng: -73.928 },
 		zoom: 15,
 		mapId: '45a6b3075846a08b',
 		disableDefaultUI: true,
+
 	});
 	marker = new google.maps.Marker({
-		position: { lat: 40.670, lng: -73.933 },
+		position: { lat: 40.673, lng: -73.930 },
 		map,
 		title: "Monticello",
 	});

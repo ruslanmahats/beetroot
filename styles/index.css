@@ -1486,12 +1486,196 @@ textarea {
 }
 
 .location {
-  height: 700px;
+  height: 750px;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 576px) {
+  .location {
+    height: 700px;
+  }
+}
+
+.contacts {
+  max-width: 770px;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  bottom: -150px;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 999;
+  background-color: #fff;
+  padding: 40px 20px 0 20px;
+}
+@media (min-width: 576px) {
+  .contacts {
+    height: 450px;
+  }
+}
+@media (min-width: 768px) {
+  .contacts {
+    padding: 60px 60px 0 60px;
+  }
+}
+.contacts__container {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
   width: 100%;
 }
-.location__wrapper {
+@media (min-width: 768px) {
+  .contacts__container {
+    margin-top: 42px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 50px;
+  }
+}
+.contacts__address {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 20px;
   width: 100%;
-  height: 100%;
+}
+@media (min-width: 576px) {
+  .contacts__address {
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__address {
+    display: block;
+    width: 50%;
+  }
+}
+.contacts__form {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .contacts__form {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__form {
+    display: block;
+    width: 50%;
+  }
+}
+.contacts__shadow {
+  max-width: 770px;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 999;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -4px 30px rgba(133, 133, 133, 0.2);
+          box-shadow: 0px -4px 30px rgba(133, 133, 133, 0.2);
+}
+@media (min-width: 576px) {
+  .contacts__shadow {
+    height: 300px;
+  }
+}
+
+.address__item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+@media (min-width: 768px) {
+  .address__item {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .address__item + .address__item {
+    margin-top: 30px;
+  }
+}
+.address__link {
+  color: #000;
+}
+.address__link:hover {
+  color: #7e5aff;
+}
+.address__icon {
+  color: #7e5aff;
+  margin-right: 10px;
+}
+
+.form-contacts {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .form-contacts {
+    text-align: right;
+  }
+}
+.form-contacts__input {
+  width: 100%;
+  padding: 0 0 14px 0;
+  outline: none;
+  border: none;
+  color: #000;
+  border-bottom: 1px solid rgba(44, 64, 88, 0.2);
+}
+.form-contacts__input:focus {
+  border-bottom: 1px solid rgb(44, 64, 88);
+}
+.form-contacts__input + .form-contacts__input {
+  margin-top: 33px;
+}
+.form-contacts__submit {
+  background-color: #fff;
+}
+
+.text-container__button {
+  margin-top: 30px;
+}
+
+a[href^="http://maps.google.com/maps"] {
+  display: none !important;
+}
+
+a[href^="https://maps.google.com/maps"] {
+  display: none !important;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none;
+}
+
+.gmnoprint div {
+  background: none !important;
 }
 
 .footer {
@@ -1507,7 +1691,7 @@ textarea {
 }
 .footer__wrapper {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 800px;
   padding: 0 15px;
 }
 .footer__inner {
@@ -1561,4 +1745,8 @@ textarea {
   .footer__copy {
     text-align: left;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

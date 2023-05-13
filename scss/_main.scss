@@ -705,15 +705,173 @@
 	}
 }
 
+// MAP CONTACTS --------------------------------------------------------------------
+
 #map {
 	height: 100%;
 }
 
 .location {
-	height: 700px;
+	height: 750px;
 	width: 100%;
-	&__wrapper {
-		width: 100%;
-		height: 100%;
+	position: relative;
+	@include phone-l {
+		height: 700px;
 	}
+}
+
+.contacts {
+	max-width: 770px;
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	bottom: -150px;
+	transform: translate(-50%, 0);
+	z-index: 999;
+	background-color: $color-bg-1;
+	padding: 40px 20px 0 20px;
+	@include phone-l {
+		height: 450px;
+	}
+	@include tablet-p {
+		padding: 60px 60px 0 60px;
+	}
+	&__title {
+	}
+
+	&__container {
+		margin-top: 25px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+		width: 100%;
+		@include tablet-p {
+			margin-top: 42px;
+			flex-direction: row;
+			gap: 50px;
+		}
+	}
+
+	&__address {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: 1fr;
+		gap: 20px;
+		width: 100%;
+		@include phone-l {
+			grid-template-columns: 1fr 1fr;
+			width: 80%;
+		}
+		@include tablet-p {
+			display: block;
+			width: 50%;
+		}
+	}
+
+	&__form {
+		width: 100%;
+		@include phone-l {
+			width: 80%;
+		}
+		@include tablet-p {
+			display: block;
+			width: 50%;
+		}
+	}
+
+	&__shadow {
+		max-width: 770px;
+		width: 100%;
+		height: 350px;
+		position: absolute;
+		left: 50%;
+		bottom: 0px;
+		transform: translate(-50%, 0);
+		z-index: 999;
+		background-color: $color-bg-1;
+		box-shadow: 0px -4px 30px rgba(133, 133, 133, 0.2);
+		@include phone-l {
+			height: 300px;
+		}
+	}
+}
+
+.address {
+	&__item {
+		font-family: $font-family-titles;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		@include tablet-p {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+	&__item + &__item {
+		@include tablet-p {
+			margin-top: 30px;
+		}
+	}
+
+	&__link {
+		color: $color-text-2;
+		&:hover {
+			color: $color-text-6;
+		}
+	}
+	&__icon {
+		color: $color-bg-3;
+		margin-right: 10px;
+	}
+}
+
+.form-contacts {
+	text-align: center;
+	@include tablet-p {
+		text-align: right;
+	}
+	&__input {
+		width: 100%;
+		padding: 0 0 14px 0;
+		outline: none;
+		border: none;
+		color: $color-text-2;
+		border-bottom: 1px solid rgba(44, 64, 88, 0.2);
+		&:focus {
+			border-bottom: 1px solid rgba(44, 64, 88);
+		}
+	}
+	&__input + &__input {
+		margin-top: 33px;
+	}
+
+	&__submit {
+		background-color: $color-bg-1;
+	}
+}
+.text-container {
+	&__button {
+		margin-top: 30px;
+	}
+}
+
+a[href^="http://maps.google.com/maps"]
+{
+	display: none !important;
+}
+a[href^="https://maps.google.com/maps"]
+{
+	display: none !important;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+	display: none;
+}
+.gmnoprint div {
+	background: none !important;
 }

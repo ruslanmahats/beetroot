@@ -111,10 +111,10 @@
 
 			</div>
 
-			<div class="arrow-down"><a href="#" class="arrow-down__link"></a></div>
+			<div class="arrow-down"><a href="#projects" class="arrow-down__link"></a></div>
 		</section>
 
-		<section class="whatwedo">
+		<section class="whatwedo" id="projects">
 
 			<div class="whatwedo__title section-title">
 				<div class="section-title__line"></div>
@@ -415,9 +415,8 @@
 			</div>
 		</section>
 		<section class="location">
-			<div class="location__wrapper">
-				<div id="map"></div>
-			</div>
+			<div class="contacts__shadow"></div>
+			<div id="map"></div>
 			<section class="contacts">
 				<div class="contacts__title section-title">
 					<div class="section-title__line"></div>
@@ -425,16 +424,26 @@
 				</div>
 				<div class="contacts__container">
 					<ul class="contacts__address address">
-						<li class="address__item"><i class="fa-solid fa-location-dot"></i><span>91 Nolan Extensions Suite
+						<li class="address__item"><i class="fa-solid fa-location-dot address__icon"></i><span>91 Nolan
+								Extensions Suite
 								670</span></li>
-						<li class="address__item"><i class="fa-solid fa-phone"></i><a href="" class="address__link">+001
+						<li class="address__item"><i class="fa-solid fa-phone address__icon"></i><a href="tel:+0013568682454"
+								class="address__link">+001
 								356-868-2454</a></li>
-						<li class="address__item"><i class="fa-solid fa-inbox"></i><a href=""
-								class="address__link">montichello@service.com</a></li>
-						<li class="address__item"><i class="fa-regular fa-clock"></i><span>From 07:05AM to 19:30PM</span></li>
+						<li class="address__item"><i class="fa-solid fa-inbox address__icon"></i><a
+								href="mailto:montichello@service.com" class="address__link">montichello@service.com</a></li>
+						<li class="address__item"><i class="fa-regular fa-clock address__icon"></i></i><span>From 07:05AM to
+								19:30PM</span>
+						</li>
 					</ul>
+					<form action="" class="contacts__form form-contacts">
+						<input class="form-contacts__input" type="text" name="name" placeholder="Name" required>
+						<input class="form-contacts__input" type="email" name="email" placeholder="Email" required>
+						<button type="submit" class="text-container__button form-contacts__submit">SUBMIT</button>
+					</form>
 				</div>
 			</section>
+
 		</section>
 	</main>
 	<footer class="footer">
@@ -454,7 +463,6 @@
 									<use xlink:href="./assets/icons/socials.svg#instagram"></use>
 								</svg></a></li>
 					</ul>
-					<i class="fa-solid fa-frog"></i>
 				</div>
 				<p class="footer__copy">Copyrights © 2020 Montichello</p>
 			</div>
