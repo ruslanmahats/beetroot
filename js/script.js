@@ -31,7 +31,7 @@ const swiperLatest = new Swiper('.swiper-latest', {
 			slidesPerView: 1,
 			spaceBetween: 30,
 		},
-		992: {
+		900: {
 			slidesPerView: 2,
 			spaceBetween: 30,
 		},
@@ -41,3 +41,24 @@ const swiperLatest = new Swiper('.swiper-latest', {
 		},
 	},
 });
+
+
+let map;
+let marker;
+
+async function initMap() {
+	const { Map } = await google.maps.importLibrary("maps");
+	map = new Map(document.getElementById("map"), {
+		center: { lat: 40.664, lng: -73.915 },
+		zoom: 15,
+		mapId: '45a6b3075846a08b',
+		disableDefaultUI: true,
+	});
+	marker = new google.maps.Marker({
+		position: { lat: 40.670, lng: -73.933 },
+		map,
+		title: "Monticello",
+	});
+}
+
+initMap();

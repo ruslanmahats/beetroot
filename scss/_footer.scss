@@ -1,2 +1,55 @@
 @use "_variables" as *;
 @use "_mixins" as *;
+
+.footer {
+	background: linear-gradient(45deg, $color-bg-2, $color-bg-3);
+	&__bg {
+		padding: 203px 0 234px;
+		background-image: url("../assets/images/footer-bg.png");
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: cover;
+	}
+
+	&__wrapper {
+		margin: 0 auto;
+		max-width: 900px;
+		padding: 0 15px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include phone-l {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+	}
+
+	&__socials {
+		margin-top: 50px;
+		display: flex;
+		gap: 20px;
+		@include phone-l {
+			margin-top: 0;
+		}
+	}
+
+	&__copy {
+		text-align: center;
+		padding-top: 41px;
+		color: $color-text-3;
+		font-family: $font-family-titles;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		@include phone-l {
+			text-align: left;
+		}
+	}
+}
