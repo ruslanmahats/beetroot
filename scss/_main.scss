@@ -21,7 +21,7 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
-			// z-index: 1;
+			z-index: 1;
 		}
 
 		&__gradient {
@@ -210,9 +210,9 @@
 		width: 100%;
 		padding-bottom: 54%;
 		transition: all 0.3s ease-in-out;
-		&:hover {
-			transform: scale(1.2);
-		}
+		// &:hover {
+		// 	transform: scale(1.2);
+		// }
 		@include tablet-l {
 			box-shadow: -55px -57px $color-bg-2;
 			padding-bottom: 74%;
@@ -225,14 +225,14 @@
 		}
 		&--text-right {
 			@include tablet-l {
-				box-shadow: 55px -57px $color-bg-2;
+				box-shadow: 55px -57px $color-bg-3;
 				padding-bottom: 74%;
 			}
 			@include desktop {
-				box-shadow: 115px -57px $color-bg-2;
+				box-shadow: 115px -57px $color-bg-3;
 			}
 			@include desktop-big {
-				box-shadow: 215px -57px $color-bg-2;
+				box-shadow: 215px -57px $color-bg-3;
 			}
 		}
 	}
@@ -476,6 +476,13 @@
 			font-size: 22px;
 			line-height: 27px;
 			color: $color-text-1;
+		}
+		.post-slide__link {
+			color: $color-text-1;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				opacity: 0.75;
+			}
 		}
 		&__text {
 			margin-top: 15px;
@@ -721,6 +728,9 @@
 	transform: translate(-50%, 0);
 	z-index: 999;
 	background-color: $color-bg-1;
+	background-image: url("../assets/images/city_contacts.png");
+	background-position: center bottom;
+	background-repeat: no-repeat;
 	padding: 40px 20px 0 20px;
 	@include phone-l {
 		height: 450px;

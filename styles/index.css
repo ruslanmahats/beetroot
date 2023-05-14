@@ -691,6 +691,7 @@ textarea {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  z-index: 1;
 }
 .swiper-hero .slide-inner__gradient {
   position: absolute;
@@ -945,11 +946,6 @@ textarea {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.whatwedo__image-container:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-}
 @media (min-width: 992px) {
   .whatwedo__image-container {
     -webkit-box-shadow: -55px -57px #55b7ff;
@@ -971,21 +967,21 @@ textarea {
 }
 @media (min-width: 992px) {
   .whatwedo__image-container--text-right {
-    -webkit-box-shadow: 55px -57px #55b7ff;
-            box-shadow: 55px -57px #55b7ff;
+    -webkit-box-shadow: 55px -57px #7e5aff;
+            box-shadow: 55px -57px #7e5aff;
     padding-bottom: 74%;
   }
 }
 @media (min-width: 1200px) {
   .whatwedo__image-container--text-right {
-    -webkit-box-shadow: 115px -57px #55b7ff;
-            box-shadow: 115px -57px #55b7ff;
+    -webkit-box-shadow: 115px -57px #7e5aff;
+            box-shadow: 115px -57px #7e5aff;
   }
 }
 @media (min-width: 1400px) {
   .whatwedo__image-container--text-right {
-    -webkit-box-shadow: 215px -57px #55b7ff;
-            box-shadow: 215px -57px #55b7ff;
+    -webkit-box-shadow: 215px -57px #7e5aff;
+            box-shadow: 215px -57px #7e5aff;
   }
 }
 .whatwedo__image {
@@ -1255,6 +1251,15 @@ textarea {
   line-height: 27px;
   color: #2c4058;
 }
+.latest .post-slide .post-slide__link {
+  color: #2c4058;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.latest .post-slide .post-slide__link:hover {
+  opacity: 0.75;
+}
 .latest .post-slide__text {
   margin-top: 15px;
   -webkit-box-flex: 1;
@@ -1521,6 +1526,9 @@ textarea {
           transform: translate(-50%, 0);
   z-index: 999;
   background-color: #fff;
+  background-image: url("../assets/images/city_contacts.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
   padding: 40px 20px 0 20px;
 }
 @media (min-width: 576px) {
