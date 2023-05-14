@@ -40,14 +40,9 @@
 			padding-top: 53px;
 		}
 	}
-	&__main-page {
-	}
 
 	&__logo {
 		z-index: 9;
-	}
-
-	&__socials {
 	}
 }
 .logo {
@@ -55,6 +50,14 @@
 		width: 220px;
 		@include phone-l {
 			width: 241px;
+		}
+	}
+	&__link {
+		display: block;
+		opacity: 1;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			transform: scale(1.05);
 		}
 	}
 }
@@ -132,8 +135,6 @@
 	}
 	@include tablet-l {
 		order: 3;
-	}
-	&__item {
 	}
 	&__link {
 		display: inline-block;

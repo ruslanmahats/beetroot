@@ -438,6 +438,7 @@ textarea {
 .header__logo {
   z-index: 9;
 }
+
 .logo__image {
   width: 220px;
 }
@@ -445,6 +446,18 @@ textarea {
   .logo__image {
     width: 241px;
   }
+}
+.logo__link {
+  display: block;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.logo__link:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .menu {
@@ -1683,11 +1696,21 @@ a[href^="https://maps.google.com/maps"] {
   background: linear-gradient(45deg, #55b7ff, #7e5aff);
 }
 .footer__bg {
-  padding: 203px 0 234px;
+  padding: 203px 0 70px;
   background-image: url("../assets/images/footer-bg.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
+}
+@media (min-width: 576px) {
+  .footer__bg {
+    padding: 203px 0 100px;
+  }
+}
+@media (min-width: 992px) {
+  .footer__bg {
+    padding: 203px 0 234px;
+  }
 }
 .footer__wrapper {
   margin: 0 auto;

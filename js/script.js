@@ -61,6 +61,7 @@ async function initMap() {
 		position: { lat: 40.673, lng: -73.930 },
 		map,
 		title: "Monticello",
+		icon: '../assets/icons/location.png',
 	});
 }
 
