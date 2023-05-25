@@ -1,0 +1,1 @@
+export const Footer = ()=> <footer className="footer">Some footer staff</footer>

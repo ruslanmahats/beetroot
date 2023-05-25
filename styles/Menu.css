@@ -1,0 +1,20 @@
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+.menu__link {
+  padding: 10px 20px;
+  color: rgb(0, 162, 255);
+  font-weight: 700;
+}
+.menu__link:hover {
+  background-color: rgb(174, 225, 255);
+}
+.menu__link:active {
+  background-color: rgb(99, 198, 255);
+}
