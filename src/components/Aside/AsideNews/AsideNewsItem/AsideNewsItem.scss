@@ -1,0 +1,7 @@
+.aside-news-item {
+	height: 100px;
+	background-color: #a2c582;
+	& + & {
+		margin-top: 30px;
+	}
+}

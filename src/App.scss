@@ -339,12 +339,13 @@ body {
 }
 
 .wrapper {
-	max-width: 1110px;
+	max-width: 1380px;
 	padding: 0 30px;
 	margin: 0 auto;
 }
 
 .page-content {
+	margin-top: 50px;
 	display: flex;
 	justify-content: space-between;
 	gap: 50px;

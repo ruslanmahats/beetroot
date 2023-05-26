@@ -1,3 +1,4 @@
-export const Aside = () => <aside class="aside">
-	<section class="aside__news"></section>
-</aside>;
+import './Aside.scss';
+import { AsideNews } from './AsideNews/AsideNews';
+
+export const Aside = () => <aside class="aside"><AsideNews></AsideNews></aside>;
