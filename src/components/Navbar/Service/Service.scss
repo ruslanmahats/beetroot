@@ -1,0 +1,22 @@
+.service {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	& svg {
+		width: 40px;
+		height: 40px;
+		fill: #fff;
+	}
+	&__link {
+		line-height: 0;
+		transition: all 0.2s ease-in;
+		&:hover {
+			background-color: #fff;
+			& svg {
+				fill: #283592;
+				transition: all 0.2s ease-in;
+			}
+		}
+	}
+}

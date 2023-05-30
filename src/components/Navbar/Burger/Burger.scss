@@ -1,0 +1,42 @@
+@use "../../../styles/variables" as *;
+
+.burger {
+	cursor: pointer;
+	line-height: 0;
+	transition: all 0.2s ease-in;
+	& svg {
+		fill: white;
+		width: 40px;
+		height: 40px;
+	}
+	&:hover {
+		background-color: #fff;
+		& svg {
+			fill: #283592;
+			transition: all 0.2s ease-in;
+		}
+	}
+}
+
+.burger-menu {
+	width: 320px;
+	position: fixed;
+	background-color: #fff;
+	top: $Navbar-height;
+	left: 0px;
+	padding: 20px;
+	box-shadow: 1px 1px 5px #bbbbbb;
+	text-align: center;
+	&__item-link {
+		color: #283592;
+		font-size: 20px;
+		font-weight: 600;
+		display: block;
+		padding: 20px 0;
+		transition: all 0.2s ease-in;
+		&:hover {
+			background-color: #283592;
+			color: #fff;
+		}
+	}
+}

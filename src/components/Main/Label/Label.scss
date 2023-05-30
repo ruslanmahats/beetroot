@@ -1,0 +1,60 @@
+@use "../../../styles/variables" as *;
+
+.label {
+	width: 100%;
+	margin-top: 20px;
+	position: relative;
+	padding: 15px 20px;
+	background-color: $background-color-1;
+	height: 100px;
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	border-radius: $border-radius-containers;
+	box-shadow: 0 1px 3px $background-color-4;
+	&--nobr {
+		border-radius: $border-radius-containers $border-radius-containers 0 0;
+	}
+	&__icon-container {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: -15px;
+		left: 20px;
+		border-radius: $border-radius-containers;
+		box-shadow: 0 1px 3px $background-color-4;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& svg {
+			fill: $background-color-1;
+			width: 70%;
+			height: 70%;
+		}
+		&--blue {
+			background-color: $background-color-square-1;
+		}
+		&--orange {
+			background-color: $background-color-square-2;
+		}
+		&--red {
+			background-color: $background-color-square-3;
+		}
+		&--green {
+			background-color: $background-color-square-4;
+		}
+	}
+	&__text-container {
+		text-align: right;
+	}
+	&__name {
+		font-size: 14px;
+		color: $color-text-1;
+	}
+	&__value {
+		margin-top: 10px;
+		font-size: 28px;
+		font-weight: 700;
+		color: $color-text-2;
+	}
+}

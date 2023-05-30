@@ -1,0 +1,32 @@
+[
+	{
+		"id": "0",
+		"name": "Dashboard",
+		"icon": "Dashboard"
+	},
+	{
+		"id": "1",
+		"name": "Sales",
+		"icon": "AttachMoney"
+	},
+	{
+		"id": "2",
+		"name": "Catalog",
+		"icon": "Collections"
+	},
+	{
+		"id": "3",
+		"name": "Customers",
+		"icon": "Group"
+	},
+	{
+		"id": "4",
+		"name": "Reviews",
+		"icon": "Comment"
+	},
+	{
+		"id": "5",
+		"name": "NewItem",
+		"icon": "NewItem"
+	}
+]

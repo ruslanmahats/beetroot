@@ -1,0 +1,44 @@
+@use "../../../../styles/variables" as *;
+
+.pending-order-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	color: $color-text-2;
+	transition: all 0.2s ease-in-out;
+	padding: 15px 20px;
+	border-radius: 5px;
+	&:hover {
+		background-color: $background-color-3;
+	}
+	&__user-image-container {
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+	&__user-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	&__order-info {
+		flex: 1;
+	}
+	&__time {
+		color: $color-text-2;
+		font-size: 14px;
+	}
+	&__user {
+		margin-top: 10px;
+		color: $color-text-1;
+		font-size: 14px;
+	}
+	&__summ {
+		color: $color-text-2;
+		font-weight: 700;
+		font-size: 20px;
+	}
+}

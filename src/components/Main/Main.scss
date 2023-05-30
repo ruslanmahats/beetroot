@@ -1,5 +1,15 @@
+@use "../../styles/variables" as *;
+
 .main {
-	width: 70%;
-	padding: 30px;
-	background-color: brown;
+	min-height: calc(100vh - $Navbar-height);
+	padding: 30px 20px;
+	background-color: $background-color-3;
+	display: grid;
+	grid-template-columns: 0.6fr 2fr 1fr 1fr;
+	gap: 30px;
+	&__column-labels {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+	}
 }

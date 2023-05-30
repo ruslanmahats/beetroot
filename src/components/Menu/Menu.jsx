@@ -1,17 +1,20 @@
+import { useEffect, useState } from 'react';
+import { MenuItem } from './MenuItem/MenuItem';
+import { Request } from '../../utils/Request';
 import './Menu.scss';
 
-const liItems = [
-	{ anchor: 'Home' },
-	{ anchor: 'Blog' },
-	{ anchor: 'News' },
-	{ anchor: 'Gallery' },
-	{ anchor: 'About' }
-];
+export const Menu = () => {
+	const [menuItems, setMenuItems] = useState([]);
 
-export const Menu = () => <ul className="menu">
-	<li className="menu__item"><a href="#" className="menu__link">Item 1</a></li>
-	<li className="menu__item"><a href="#" className="menu__link">Item 2</a></li>
-	<li className="menu__item"><a href="#" className="menu__link">Item 3</a></li>
-	<li className="menu__item"><a href="#" className="menu__link">Item 4</a></li>
-	<li className="menu__item"><a href="#" className="menu__link">Item 5</a></li>
-</ul>;
+	useEffect(() => {
+		Request.get('./mock/menu.json').then(data => setMenuItems(data));
+	}, []);
+
+
+
+	return <ul className="menu">
+		{menuItems.map(item => {
+			return <MenuItem id={item.id} name={item.name} icon={item.icon} key={item.id}></MenuItem>
+		})}
+	</ul >
+};

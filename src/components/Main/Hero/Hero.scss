@@ -1,0 +1,67 @@
+@use "../../../styles/variables" as *;
+
+.hero {
+	margin-top: 30px;
+	background-color: $background-color-1;
+	border-radius: $border-radius-containers;
+	box-shadow: 0 1px 3px $background-color-4;
+	overflow: hidden;
+	&__image-container {
+		position: relative;
+		padding-bottom: 55%;
+	}
+	&__image {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	&__text-container {
+		padding: 20px;
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		color: $color-text-2;
+	}
+	&__text {
+		margin-top: 20px;
+		font-size: 14px;
+		line-height: 1.5;
+		color: $color-text-2;
+	}
+	&__links-container {
+		padding: 0 20px 20px 20px;
+		display: flex;
+		justify-content: end;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		color: $color-text-2;
+		transition: all 0.2s ease-in;
+		&:hover {
+			color: $color-text-1;
+		}
+	}
+	&__link-icon {
+		display: inline-block;
+		&--rotate {
+			transform: rotate(90deg);
+		}
+		& svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+	&__link-text {
+		text-transform: uppercase;
+	}
+}

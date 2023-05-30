@@ -1,0 +1,27 @@
+[
+	{
+		"id": "0",
+		"comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequuntur soluta nulla, iste, ullam architecto dolore iusto aspernatur eius neque hic. Sit quasi veritatis aut! Odio maxime incidunt doloremque a!",
+		"image": "user-1.jpg"
+	},
+	{
+		"id": "1",
+		"comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequuntur soluta nulla, iste, ullam architecto dolore iusto aspernatur eius neque hic. Sit quasi veritatis aut! Odio maxime incidunt doloremque a!",
+		"image": "user-2.jpg"
+	},
+	{
+		"id": "2",
+		"comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequuntur soluta nulla, iste, ullam architecto dolore iusto aspernatur eius neque hic. Sit quasi veritatis aut! Odio maxime incidunt doloremque a!",
+		"image": "user-3.jpg"
+	},
+	{
+		"id": "3",
+		"comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequuntur soluta nulla, iste, ullam architecto dolore iusto aspernatur eius neque hic. Sit quasi veritatis aut! Odio maxime incidunt doloremque a!",
+		"image": "user-4.jpg"
+	},
+	{
+		"id": "4",
+		"comment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequuntur soluta nulla, iste, ullam architecto dolore iusto aspernatur eius neque hic. Sit quasi veritatis aut! Odio maxime incidunt doloremque a!",
+		"image": "user-5.jpg"
+	}
+]

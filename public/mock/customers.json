@@ -1,0 +1,27 @@
+[
+	{
+		"id": "0",
+		"name": "Ben Laden",
+		"image": "user-1.jpg"
+	},
+	{
+		"id": "1",
+		"name": "Rick Morty",
+		"image": "user-2.jpg"
+	},
+	{
+		"id": "2",
+		"name": "Lolick Bolick",
+		"image": "user-3.jpg"
+	},
+	{
+		"id": "3",
+		"name": "Sponge Bob",
+		"image": "user-4.jpg"
+	},
+	{
+		"id": "4",
+		"name": "New Name",
+		"image": "user-5.jpg"
+	}
+]
