@@ -12,9 +12,98 @@
 <body>
 
 
+	<aside class="aside">
 
+		<div class="aside__user-info">
+			<div class="avatar avatar--medium"><img src="./public/img/users/user.jpg" alt="" class="avatar__image">
+			</div>
+			<div class="aside__user-name">Scott Grant</div>
+		</div>
+		<ul class="aside__menu menu">
+			<li class="menu__item"><a href="#" class="menu__item-link"><span class="menu__item-icon"></span><span
+						class="menu__item-text">Home</span></a></li>
+			<li class="menu__item"><a href="#" class="menu__item-link"><span class="menu__item-icon"></span><span
+						class="menu__item-text">Deposits</span></a></li>
+			<li class="menu__item"><a href="#" class="menu__item-link"><span class="menu__item-icon"></span><span
+						class="menu__item-text">Offers</span></a></li>
+			<li class="menu__item"><a href="#" class="menu__item-link"><span class="menu__item-icon"></span><span
+						class="menu__item-text">Payments</span></a></li>
+			<li class="menu__item"><a href="#" class="menu__item-link"><span class="menu__item-icon"></span><span
+						class="menu__item-text">Settings</span></a></li>
+		</ul>
+		<div class="aside__theme-switcher">
+			<div class="theme-switcher">
+				<div class="theme-switcher__bubble"></div>
+			</div>
+		</div>
+	</aside>
 
+	<main class="main">
+		<section class="panel">
+			<div class="avatar avatar--small"><img src="./public/img/users/user.jpg" alt="" class="avatar__image"></div>
+			<div class="panel__mail">
+				<div class="avatar avatar--small"><img src="./public/img/users/user.jpg" alt="" class="avatar__image"></div>
+			</div>
+		</section>
+		<section class="section">
 
+			<div class="section__title">
+
+				<div class="title-table">
+					<span class="title-table__text">Active Deposits</span>
+					<span class="title-table__label">2</span>
+				</div>
+				<div class="title-table__btn"><button class="btn-add"></button></div>
+
+			</div>
+
+			<div class="table">
+
+				<div class="table__header">
+
+				</div>
+				<div class="table__body">
+
+					<div class="table__item">
+						<div class="table__item-column">
+							<img src="" alt="">
+							<div class="table__address">
+								<div>771 Lost Round</div>
+								<div class="label">Sacramento CA</div>
+							</div>
+						</div>
+						<div class="table__item-column">25 February 2020</div>
+						<div class="table__item-column">$3000</div>
+						<div class="table__item-column">
+							<div class="table__item-deposit">
+								<div>$9000</div>
+								<div class="label">First, Last & Security</div>
+							</div>
+						</div>
+						<div class="table__item-column">
+							<div class="table__item-status">
+								<div>Awaiting Bank Processing</div>
+								<div class="table__item-status-label"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<button class="btn-all"></button>
+
+		</section>
+
+	</main>
+
+	<script>
+		const elem = document.querySelector('.theme-switcher');
+		elem.addEventListener('click', () => {
+			elem.classList.toggle('theme-switcher--dark')
+		})
+	</script>
 </body>
 
 </html>
