@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.scss';
 
+import { Route, Routes } from 'react-router-dom';
+
 import { Header } from './components/Header/Header';
-import { Hero } from './components/Hero/Hero';
-import { Main } from './components/Main/Main';
-import { Aside } from './components/Aside/Aside';
 import { Footer } from './components/Footer/Footer';
+import { Home } from './pages/Home';
+import { Blog } from './pages/Blog';
+import { About } from './pages/About';
+import { UpButton } from './components/UpButton/UpButton';
+
+
+
 
 
 function App() {
 	return <>
+
 		<Header></Header>
-		<Hero></Hero>
-		<div className='wrapper'>
-			<div className='page-content'>
-				<Main></Main>
-				<Aside></Aside>
-			</div>
-		</div>
+		<Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="/blog" element={<Blog />} />
+			<Route path="/about" element={<About />} />
+		</Routes>
 		<Footer></Footer>
+		<UpButton />
 	</>;
 }
 
