@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 110px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.3s ease-in-out;
+	&--fixed {
+		height: 100px;
+		position: fixed;
+		background-color: $color-bg-1;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+}

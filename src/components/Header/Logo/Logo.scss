@@ -1,0 +1,16 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.logo {
+	&__link {
+		display: inline-block;
+		transition: all 0.3s ease-in-out;
+		padding: 5px;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__image {
+		max-width: 150px;
+	}
+}

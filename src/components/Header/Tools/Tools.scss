@@ -1,0 +1,18 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.tools {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	&__item {
+		color: $color-text-2;
+		cursor: pointer;
+		padding: 10px;
+		transition: all 0.3s ease-in-out;
+		font-size: 20px;
+		&:hover {
+			color: $color-text-3;
+		}
+	}
+}

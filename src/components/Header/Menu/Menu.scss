@@ -1,0 +1,18 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.menu {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	&__link {
+		color: $color-text-2;
+		font-weight: 700;
+		display: block;
+		padding: 20px 10px;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: $color-text-3;
+		}
+	}
+}
