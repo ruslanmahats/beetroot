@@ -2,6 +2,8 @@
 @use "../../../styles/mixins" as *;
 
 .logo {
+	position: relative;
+	z-index: 5;
 	&__link {
 		display: inline-block;
 		transition: all 0.3s ease-in-out;
@@ -11,6 +13,12 @@
 		}
 	}
 	&__image {
-		max-width: 150px;
+		max-width: 100px;
+		@include phone-l {
+			max-width: 120px;
+		}
+		@include tablet-p {
+			max-width: 150px;
+		}
 	}
 }

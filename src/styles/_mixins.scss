@@ -1,1 +1,27 @@
 @use "./src/styles/variables" as *;
+
+@mixin phone-l {
+	@media (min-width: $max-width-phone) {
+		@content;
+	}
+}
+@mixin tablet-p {
+	@media (min-width: $max-width-tablet-p) {
+		@content;
+	}
+}
+@mixin tablet-l {
+	@media (min-width: $max-width-tablet-l) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: $max-width-desktop) {
+		@content;
+	}
+}
+@mixin desktop-big {
+	@media (min-width: $max-width-desktop-big) {
+		@content;
+	}
+}

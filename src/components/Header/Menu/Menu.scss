@@ -2,17 +2,57 @@
 @use "../../../styles/mixins" as *;
 
 .menu {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: -100%;
+	right: 0px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
 	gap: 15px;
+	transition: all 0.3s ease-in-out;
+	background-color: #051922;
+	overflow: auto;
+	@include tablet-l {
+		width: initial;
+		height: initial;
+		position: initial;
+		flex-direction: row;
+		justify-content: start;
+		background-color: transparent;
+		transition: all 0s ease-in-out;
+	}
 	&__link {
 		color: $color-text-2;
 		font-weight: 700;
+		font-size: 18px;
+		letter-spacing: 1px;
 		display: block;
 		padding: 20px 10px;
 		transition: all 0.3s ease-in-out;
+		user-select: none;
+		&:focus {
+			outline: none;
+		}
 		&:hover {
 			color: $color-text-3;
+		}
+	}
+	&--active {
+		padding: 110px 0 50px;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		justify-content: start;
+		align-items: center;
+		flex-direction: column;
+		background-color: $color-bg-1;
+		& .menu__link {
+			padding: 20px 60px;
 		}
 	}
 }

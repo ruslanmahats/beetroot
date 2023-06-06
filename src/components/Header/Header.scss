@@ -3,20 +3,69 @@
 
 .header {
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
-	height: 110px;
+	height: 70px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	transition: all 0.3s ease-in-out;
+	@include phone-l {
+		height: 80px;
+	}
+	@include tablet-l {
+		height: 110px;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-color: transparent;
+		width: 100%;
+		height: 100%;
+		transition: all 0.3s ease-in-out;
+		transition-delay: 0s;
+		z-index: -1;
+	}
 	&--fixed {
-		height: 100px;
+		height: 70px;
 		position: fixed;
 		background-color: $color-bg-1;
+		@include phone-l {
+			height: 80px;
+		}
+		@include tablet-l {
+			height: 90px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: $color-bg-1;
+			width: 100%;
+			height: 100%;
+			transition: 0;
+		}
+		@include tablet-l {
+			&::after {
+				background-color: transparent;
+			}
+		}
 	}
+
+	&--active {
+		&::after {
+			background-color: $color-bg-1;
+			transition: all 0.1s ease-in-out;
+			transition-delay: 0.3s;
+			z-index: 4;
+		}
+	}
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;

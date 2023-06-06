@@ -13,6 +13,10 @@ import { Footer } from './components/Footer/Footer';
 function App() {
 	const [scroll, setScroll] = useState(0);
 
+	const menuItems = useEffect(() => {
+
+	});
+
 	const handleScroll = () => {
 		setScroll(window.scrollY);
 	};

@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.contacts {
+	&__item + &__item {
+		margin-top: 15px;
+	}
+	&__item-link,
+	& span {
+		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 12px;
+		color: $color-text-5;
+		@include phone-l {
+			justify-content: flex-start;
+		}
+	}
+	&__item-link {
+		&:hover {
+			color: $color-text-3;
+		}
+	}
+}

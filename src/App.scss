@@ -13,7 +13,8 @@ body {
 	height: 100%;
 }
 
-body {
+.lock {
+	overflow: hidden;
 }
 
 #root {
@@ -22,9 +23,12 @@ body {
 
 .wrapper {
 	max-width: 1380px;
-	padding: 0 30px;
+	padding: 0 10px;
 	margin: 0 auto;
 	width: 100%;
+	@include phone-l {
+		padding: 0 30px;
+	}
 }
 
 .page-content {
@@ -46,6 +50,5 @@ body {
 }
 
 .home {
-	height: 1200px;
-	background-color: #374b56;
+	height: 100vh;
 }

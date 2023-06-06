@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.footer {
+	padding: 50px 0;
+	background-color: $color-bg-1;
+	color: #fff;
+	@include phone-l {
+		padding: 80px 0;
+	}
+	@include tablet-l {
+		padding: 120px 0;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 50px 30px;
+		text-align: center;
+		@include phone-l {
+			grid-template-columns: 1fr 1fr;
+			gap: 50px 30px;
+			text-align: left;
+		}
+		@include tablet-l {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 30px 30px;
+		}
+	}
+	&__title {
+		font-family: $font-family-1;
+		font-size: 24px;
+		font-weight: 500;
+		position: relative;
+		padding-bottom: 20px;
+		color: #fff;
+		margin-bottom: 20px;
+		&::after {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 60px;
+			height: 2px;
+			background-color: #f28123;
+			transform: translate(-50%, 0);
+			content: "";
+			@include phone-l {
+				left: 0;
+				width: 40px;
+				transform: translate(0, 0);
+			}
+		}
+	}
+	&__content {
+		font-family: $font-family-1;
+		color: $color-text-5;
+		font-size: 15px;
+	}
+}
