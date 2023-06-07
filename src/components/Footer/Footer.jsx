@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
 import { Contacts } from '../Contacts/Contacts';
 import './Footer.scss';
 import { FooterMenu } from './FooterMenu/FooterMenu';
+import { Subscribe } from './Subscribe/Subscribe';
+import { Socials } from '../Socials/Socials';
 
-export const Footer = () => {
+export const Footer = ({ menuItems }) => {
 	return (
 		<>
 			<footer className="footer">
@@ -25,17 +28,26 @@ export const Footer = () => {
 						<div className="footer__section">
 							<div className="footer__title">Pages</div>
 							<div className="footer__content">
-								<FooterMenu />
+								<FooterMenu menuItems={menuItems} />
 							</div>
 						</div>
 						<div className="footer__section">
 							<div className="footer__title">Subscribe</div>
-							<div className="footer__content"></div>
+							<div className="footer__content">
+								<p>Subscribe to our mailing list to get the latest updates.</p>
+								<Subscribe />
+							</div>
 						</div>
 					</div>
-					<div className="footer__copy-container">
-						<div className="footer__copy"></div>
-						<div className="footer__socials"></div>
+				</div>
+				<div className="footer__copy-container">
+					<div className='wrapper'>
+						<div className='footer__inner'>
+							<div className="footer__copy">
+								<p>Copyrights © 2019 - <Link to="/">Fruitkha</Link >, All Rights Reserved.</p>
+							</div>
+							<div className="footer__socials"><Socials /></div>
+						</div>
 					</div>
 				</div>
 			</footer>

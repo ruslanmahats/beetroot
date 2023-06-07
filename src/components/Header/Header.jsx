@@ -6,7 +6,7 @@ import { Tools } from './Tools/Tools';
 import { useState } from 'react';
 import { Cart } from './Cart/Cart';
 
-export const Header = ({ scroll }) => {
+export const Header = ({ scroll, menuItems }) => {
 	const [burgerClick, setBurgerClick] = useState(false);
 	const [cartActive, setCartActive] = useState(false);
 
@@ -18,7 +18,7 @@ export const Header = ({ scroll }) => {
 						<div className='wrapper'>
 							<div className="header__inner">
 								<div className="header__logo"><Logo /></div>
-								<div className="header__menu"><Menu /></div>
+								<div className="header__menu"><Menu menuItems={menuItems} /></div>
 								<div className="header__tools"><Tools /></div>
 							</div>
 						</div>

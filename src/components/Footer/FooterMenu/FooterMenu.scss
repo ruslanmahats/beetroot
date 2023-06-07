@@ -1,2 +1,38 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
+
+.footer-menu {
+	&__item {
+		padding: 0 40%;
+		@include phone-l {
+			padding: 0;
+		}
+	}
+	&__item + &__item {
+		margin-top: 10px;
+	}
+	&__link {
+		width: fit-content;
+		display: inline-block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $color-text-5;
+		transition: all 0.3s ease-in-out;
+		@include phone-l {
+			justify-content: flex-start;
+		}
+		&:hover {
+			color: $color-text-3;
+			& span {
+				margin-right: 20px;
+			}
+		}
+		& span {
+			transition: all 0.3s ease-in-out;
+			display: block;
+			color: $color-text-3;
+			margin-right: 12px;
+		}
+	}
+}

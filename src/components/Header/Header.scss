@@ -12,6 +12,7 @@
 	justify-content: space-between;
 	align-items: center;
 	transition: all 0.3s ease-in-out;
+	z-index: 2;
 	@include phone-l {
 		height: 80px;
 	}

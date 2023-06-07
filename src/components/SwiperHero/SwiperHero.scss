@@ -1,0 +1,48 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.slider-hero {
+	.swiper-button-prev,
+	.swiper-rtl .swiper-button-next,
+	.swiper-button-next,
+	.swiper-rtl .swiper-button-prev {
+		display: none;
+		font-weight: 700;
+		@include phone-l {
+			display: initial;
+			color: $color-bg-3;
+			transition: opacity 0.3s ease-in-out;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	.swiper-button-prev,
+	.swiper-rtl .swiper-button-next {
+		left: 20px;
+		@include tablet-p {
+			left: 40px;
+		}
+	}
+	.swiper-button-next,
+	.swiper-rtl .swiper-button-prev {
+		right: 20px;
+		@include tablet-p {
+			right: 40px;
+		}
+	}
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		background-color: $color-bg-3;
+		margin: 0 10px !important;
+		opacity: 0.4;
+		&.swiper-pagination-bullet-active {
+			background-color: $color-bg-3 !important;
+			opacity: 1;
+		}
+	}
+	.swiper-pagination {
+		bottom: 30px !important;
+	}
+}

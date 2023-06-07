@@ -3,6 +3,10 @@
 @import "./styles/reset";
 @import "./styles/fonts";
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	font-family: "Open Sans", sans-serif;

@@ -2,28 +2,31 @@
 @use "../../styles/mixins" as *;
 
 .footer {
-	padding: 50px 0;
 	background-color: $color-bg-1;
 	color: #fff;
 	@include phone-l {
-		padding: 80px 0;
 	}
 	@include tablet-l {
-		padding: 120px 0;
 	}
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 50px 30px;
 		text-align: center;
+		padding: 50px 0;
 		@include phone-l {
 			grid-template-columns: 1fr 1fr;
 			gap: 50px 30px;
 			text-align: left;
+			padding: 80px 0;
 		}
 		@include tablet-l {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			gap: 30px 30px;
+			padding: 120px 0;
+		}
+		& p + p {
+			margin-top: 20px;
 		}
 	}
 	&__title {
@@ -54,5 +57,41 @@
 		font-family: $font-family-1;
 		color: $color-text-5;
 		font-size: 15px;
+		& .subscribe {
+			width: 80%;
+			margin: 20px auto;
+			@include phone-l {
+				width: initial;
+				margin: 20px 0 0 0;
+			}
+		}
+	}
+	&__inner {
+		color: $color-text-5;
+		font-size: 15px;
+		padding: 30px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 30px;
+		@include phone-l {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		& a {
+			color: $color-text-3;
+			transition: all 0.3s ease-in-out;
+			font-weight: 700;
+			&:hover {
+				color: $color-text-5;
+			}
+		}
+	}
+	&__copy-container {
+		border-top: 1px solid $color-bg-8;
+	}
+	&__copy {
+		text-align: center;
 	}
 }

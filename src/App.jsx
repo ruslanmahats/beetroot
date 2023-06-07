@@ -8,14 +8,17 @@ import { Contacts } from './pages/Contacts';
 import { Header } from './components/Header/Header';
 import { useEffect, useState } from 'react';
 import { Footer } from './components/Footer/Footer';
+import { Request } from './utils/Request';
 
 
 function App() {
 	const [scroll, setScroll] = useState(0);
 
-	const menuItems = useEffect(() => {
+	const [menuItems, setMenuItems] = useState([]);
 
-	});
+	useEffect(() => {
+		Request.get('./mock/menu.json').then(data => setMenuItems(data));
+	}, []);
 
 	const handleScroll = () => {
 		setScroll(window.scrollY);
@@ -34,7 +37,7 @@ function App() {
 		<>
 			<div className='mockup'>
 				<div className='mockup__section'>
-					<Header scroll={scroll} />
+					<Header scroll={scroll} menuItems={menuItems} />
 				</div>
 				<div className='mockup__section--main'>
 					<Routes>
@@ -46,7 +49,7 @@ function App() {
 					</Routes>
 				</div>
 				<div className='mockup__section'>
-					<Footer />
+					<Footer menuItems={menuItems} />
 				</div>
 			</div>
 		</>

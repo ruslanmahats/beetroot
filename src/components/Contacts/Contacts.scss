@@ -13,10 +13,15 @@
 		align-items: center;
 		gap: 12px;
 		color: $color-text-5;
+		transition: all 0.3s ease-in-out;
 		@include phone-l {
 			justify-content: flex-start;
 		}
+		& span {
+			color: $color-text-3;
+		}
 	}
+
 	&__item-link {
 		&:hover {
 			color: $color-text-3;
