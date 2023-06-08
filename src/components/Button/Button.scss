@@ -2,14 +2,15 @@
 @use "../../styles/mixins" as *;
 
 .button {
-	display: inline-block;
-	justify-content: space-between;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	font-family: $font-family-1;
 	padding: 10px 20px;
 	transition: all 0.3s ease-in-out;
 	text-transform: capitalize;
 	letter-spacing: 0.5px;
+	gap: 10px;
 	&--solid {
 		background-color: $color-bg-3;
 		border: 2px solid $color-bg-3;
@@ -30,8 +31,8 @@
 			background-color: $color-bg-3;
 		}
 	}
-	&__icon {
-	}
-	&__text {
-	}
+}
+.slider-hero .button {
+	font-size: 14px;
+	padding: 10px 15px;
 }

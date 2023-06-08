@@ -15,9 +15,14 @@ function App() {
 	const [scroll, setScroll] = useState(0);
 
 	const [menuItems, setMenuItems] = useState([]);
+	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
 		Request.get('./mock/menu.json').then(data => setMenuItems(data));
+	}, []);
+
+	useEffect(() => {
+		Request.get('./mock/products.json').then(data => setProducts(data));
 	}, []);
 
 	const handleScroll = () => {
@@ -41,7 +46,7 @@ function App() {
 				</div>
 				<div className='mockup__section--main'>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Home products={products} />} />
 						<Route path="/shop" element={<Shop />}></Route>
 						<Route path="/blog" element={<Blog />}></Route>
 						<Route path="/about" element={<About />}></Route>

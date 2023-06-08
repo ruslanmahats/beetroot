@@ -32,17 +32,24 @@
 		}
 	}
 	.swiper-pagination-bullet {
-		width: 15px;
-		height: 15px;
+		width: 10px;
+		height: 10px;
 		background-color: $color-bg-3;
 		margin: 0 10px !important;
 		opacity: 0.4;
+		@include phone-l {
+			width: 15px;
+			height: 15px;
+		}
 		&.swiper-pagination-bullet-active {
 			background-color: $color-bg-3 !important;
 			opacity: 1;
 		}
 	}
 	.swiper-pagination {
-		bottom: 30px !important;
+		bottom: 20px !important;
+		@include phone-l {
+			bottom: 30px !important;
+		}
 	}
 }

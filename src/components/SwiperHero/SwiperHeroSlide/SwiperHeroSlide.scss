@@ -29,7 +29,7 @@
 	}
 	&__text-container {
 		z-index: 3;
-		padding: 30px;
+		padding: 30px 15px;
 		max-width: 920px;
 		text-align: center;
 		@include tablet-p {

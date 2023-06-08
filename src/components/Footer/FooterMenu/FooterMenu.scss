@@ -2,14 +2,21 @@
 @use "../../../styles/mixins" as *;
 
 .footer-menu {
-	&__item {
-		padding: 0 40%;
-		@include phone-l {
-			padding: 0;
-		}
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 30px;
+	@include phone-l {
+		padding: 0;
 	}
-	&__item + &__item {
-		margin-top: 10px;
+	@include tablet-l {
+		display: block;
+	}
+	&__item {
+		margin-bottom: 10px;
+		width: 50%;
+
+		@include tablet-l {
+		}
 	}
 	&__link {
 		width: fit-content;

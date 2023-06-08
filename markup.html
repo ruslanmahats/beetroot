@@ -12,7 +12,37 @@
 <body>
 
 
-
+	<div class="card-product">
+		<div class="card-product__image-container">
+			<img src="./assets/images/products/product-1.jpg" alt="Strawberry" class="card-product__image" />
+			<div class="card-product__label-off">-30%</div>
+			<div class="card-product__label-new">New</div>
+			<div class="card-product__fav-button">
+				<FontAwesomeIcon icon={faHeart} />
+			</div>
+			<div class="card-product__counter-container">
+				<div class="card-product__counter-minus">
+					<FontAwesomeIcon icon={faMinus} />
+				</div>
+				<input class="card-product__counter-number" />
+				<div class="card-product__counter-plus">
+					<FontAwesomeIcon icon={faPlus} />
+				</div>
+			</div>
+		</div>
+		<div class="card-product__text-container">
+			<div class="card-product__title">Strawberry</div>
+			<div class="card-product__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, possimus.
+			</div>
+			<div class="card-product__buy-container">
+				<div class="card-product__old-price">180$</div>
+				<div class="card-product__price">150$</div>
+				<div class="card-product__button">
+					<Button icon={<FontAwesomeIcon icon={faCartShopping} />} text="Add to Cart" mod="solid" />
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 </body>
