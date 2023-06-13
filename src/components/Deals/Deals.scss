@@ -1,0 +1,205 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.deals {
+	background-color: $color-bg-2;
+	padding: 40px 0;
+	@include phone-l {
+		padding: 80px 0;
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+		@include tablet-p {
+			gap: 0px;
+			flex-direction: row;
+		}
+	}
+	&__image-container {
+		flex: 0 0 100%;
+		text-align: center;
+		@include tablet-p {
+			flex: 0 0 50%;
+		}
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		max-width: 500px;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&__content-container {
+		flex: 0 0 100%;
+		position: relative;
+		@include tablet-p {
+			flex: 0 0 50%;
+		}
+	}
+	&__btn {
+		margin-top: 50px;
+		width: fit-content;
+	}
+	&__title {
+		font-size: 40px;
+		font-family: $font-family-1;
+		font-weight: 700;
+		line-height: 2.25rem;
+		color: $color-text-1;
+		& span {
+			color: $color-text-3;
+		}
+	}
+	&__title-after {
+		font-size: 20px;
+		font-family: $font-family-1;
+		line-height: 22px;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-top: 20px;
+	}
+	&__text {
+		margin-top: 35px;
+		font-size: 14px;
+		line-height: 1.5;
+	}
+	&__off-outer {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 110px;
+		height: 110px;
+	}
+	&_ &__off {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	&__off-under {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		border-radius: 50%;
+		border: 5px dotted $color-bg-12;
+		width: 110px;
+		height: 110px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation: 10s pulse infinite linear;
+		@include phone-l {
+			top: -36px;
+			left: 70px;
+		}
+		@include tablet-p {
+			top: 0px;
+			left: 20px;
+		}
+		@include tablet-l {
+			top: -36px;
+			left: 90px;
+		}
+		@include desktop {
+			top: -36px;
+			left: 130px;
+		}
+		& span {
+			display: block;
+		}
+	}
+	&__off-inner {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		width: 94px;
+		height: 94px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		border-radius: 50%;
+		background-color: $color-bg-3;
+		@include phone-l {
+			top: -28px;
+			left: 78px;
+		}
+		@include tablet-p {
+			top: 8px;
+			left: 28px;
+		}
+		@include tablet-l {
+			top: -28px;
+			left: 98px;
+		}
+		@include desktop {
+			top: -28px;
+			left: 138px;
+		}
+	}
+	&__off-perc {
+		font-size: 24px;
+		font-weight: 700;
+	}
+	&__off-text {
+		font-size: 14px;
+	}
+}
+
+.counter {
+	margin-top: 25px;
+	display: flex;
+	justify-content: flex-start;
+	gap: 4px;
+	&__completed {
+		border: 2px solid $color-bg-3;
+		font-size: 30px;
+		line-height: 1.4em;
+		color: $color-text-3;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 20px;
+	}
+	&__item {
+		width: 65px;
+		height: 65px;
+		text-align: center;
+		padding: 20px;
+		border: 2px solid $color-bg-3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@include phone-l {
+			width: 82px;
+			height: 82px;
+		}
+	}
+	&__number {
+		font-size: 30px;
+		line-height: 1.4em;
+		color: $color-text-3;
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+	&__text {
+		font-size: 13px;
+		line-height: 1em;
+		text-transform: capitalize;
+	}
+}
+@keyframes pulse {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

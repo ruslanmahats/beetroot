@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Menu.scss';
 import { useContext } from 'react';
 import { MenuActive } from '../../../context/context';
@@ -16,7 +16,7 @@ export const Menu = ({ menuItems }) => {
 		<>
 			<ul className={!burgerClick ? "menu" : "menu menu--active"}>
 				{menuItems.map(item => {
-					return <li className="menu__item" key={item.id}><Link to={item.url} className="menu__link" onClick={onClickLink}>{item.name}</Link></li>
+					return <li className="menu__item" key={item.id}><NavLink to={item.url} className="menu__link" onClick={onClickLink}>{item.name}</NavLink></li>
 				})}
 			</ul>
 		</>

@@ -1,0 +1,71 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.shop {
+	padding-top: 50px;
+	&__products-panel {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $color-bg-3;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__sorting-container {
+		position: relative;
+		height: 40px;
+		width: 180px;
+		font-family: $font-family-1;
+		font-size: 14px;
+	}
+	&__sorting-btn {
+		height: 40px;
+		width: 180px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		border: 1px solid $color-bg-9;
+		padding: 10px 20px;
+		cursor: pointer;
+		transition: all 0.1s ease-in-out;
+		&:hover {
+			background-color: $color-bg-9;
+		}
+	}
+	&__sorting-btn + &__sorting {
+		z-index: 2;
+		width: 180px;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		border-left: 1px solid $color-bg-9;
+		border-right: 1px solid $color-bg-9;
+		border-bottom: 1px solid $color-bg-9;
+		transition: all 0.1s ease-in-out;
+		visibility: hidden;
+		background-color: $color-bg-2;
+	}
+	&__sorting-btn--active + &__sorting {
+		visibility: visible;
+		height: auto;
+	}
+
+	&__sorting-item {
+		padding: 10px 20px;
+		cursor: pointer;
+		&:hover {
+			background-color: $color-bg-9;
+		}
+	}
+
+	&__products {
+	}
+
+	&__sorting {
+	}
+
+	&__products-list {
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 50px 30px;
+	}
+}

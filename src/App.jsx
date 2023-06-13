@@ -1,7 +1,7 @@
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Shop } from './pages/Shop';
+import { Shop } from './pages/Shop/Shop';
 import { Blog } from './pages/Blog';
 import { About } from './pages/About';
 import { Contacts } from './pages/Contacts';
@@ -9,6 +9,8 @@ import { Header } from './components/Header/Header';
 import { useEffect, useState } from 'react';
 import { Footer } from './components/Footer/Footer';
 import { Request } from './utils/Request';
+import { Product } from './pages/Product';
+import { BlogPost } from './pages/BlogPost';
 
 
 function App() {
@@ -47,10 +49,12 @@ function App() {
 				<div className='mockup__section--main'>
 					<Routes>
 						<Route path="/" element={<Home products={products} />} />
-						<Route path="/shop" element={<Shop />}></Route>
-						<Route path="/blog" element={<Blog />}></Route>
-						<Route path="/about" element={<About />}></Route>
-						<Route path="/contacts" element={<Contacts />}></Route>
+						<Route path="/shop" element={<Shop products={products} />} />
+						<Route path="/shop/:id" element={<Product />} />
+						<Route path="/blog" element={<Blog />} />
+						<Route path="/blog/:id" element={<BlogPost />} />
+						<Route path="/about" element={<About />} />
+						<Route path="/contacts" element={<Contacts />} />
 					</Routes>
 				</div>
 				<div className='mockup__section'>

@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.pagination {
+	margin: 50px auto 0;
+	width: fit-content;
+	&__btn {
+		display: inline-block;
+		border: 1px solid $color-bg-3;
+		background-color: transparent;
+		width: 50px;
+		height: 50px;
+		transition: all 0.3s ease-in-out;
+		border-radius: 50%;
+		font-weight: 700;
+		font-family: $font-family-1;
+		color: $color-text-3;
+		&:hover {
+			border: 1px solid $color-bg-1;
+			background-color: $color-bg-1;
+		}
+		&--active {
+			border: 1px solid $color-bg-3;
+			background-color: $color-bg-3;
+			color: $color-text-2;
+		}
+	}
+	&__btn + &__btn {
+		margin-left: 15px;
+	}
+}

@@ -15,7 +15,9 @@
 	transition: all 0.3s ease-in-out;
 	background-color: #051922;
 	overflow: auto;
+	visibility: hidden;
 	@include tablet-l {
+		visibility: visible;
 		width: initial;
 		height: initial;
 		position: initial;
@@ -40,6 +42,9 @@
 			color: $color-text-3;
 		}
 	}
+	&__link.active {
+		color: $color-text-3;
+	}
 	&--active {
 		padding: 110px 0 50px;
 		width: 100%;
@@ -51,6 +56,7 @@
 		align-items: center;
 		flex-direction: column;
 		background-color: $color-bg-1;
+		visibility: visible;
 		& .menu__link {
 			padding: 20px 60px;
 		}

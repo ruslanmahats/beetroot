@@ -1,0 +1,21 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.product-cards {
+	width: fit-content;
+	margin: 0 auto;
+	margin-top: 80px;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+	gap: 40px 40px;
+	@media screen and (min-width: 670px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include tablet-l {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@include desktop-big {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}

@@ -1,0 +1,67 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.shop-banner {
+	padding: 70px 0;
+	background-color: $color-bg-9;
+	background-image: url("./../../../public/assets/images/design/banner-home.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center right;
+	@include phone-l {
+		padding: 100px 0;
+	}
+	&__container {
+		background-color: $color-bg-13;
+		padding: 40px 40px;
+		border-radius: 10px;
+		@include tablet-p {
+			max-width: fit-content;
+			padding: 50px 80px;
+		}
+	}
+
+	&__title {
+		font-family: $font-family-1;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 1.2em;
+		color: $color-text-1;
+		@include tablet-p {
+			font-size: 50px;
+		}
+		& span {
+			color: $color-text-3;
+		}
+	}
+
+	&__after-title {
+		margin-top: 30px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 20px;
+
+		& span:nth-child(1),
+		& span:nth-child(3) {
+			font-size: 24px;
+			line-height: 1.1em;
+			color: $color-text-1;
+			font-weight: 400;
+		}
+		& span:nth-child(2) {
+			font-size: 40px;
+			font-weight: 700;
+			color: #f28123;
+			line-height: 1;
+		}
+		& span:nth-child(3) {
+			align-self: flex-end;
+		}
+	}
+
+	&__button {
+		margin-top: 30px;
+		width: fit-content;
+	}
+}

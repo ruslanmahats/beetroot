@@ -9,11 +9,4 @@
 	@include tablet-l {
 		padding: 120px 0;
 	}
-	&__body {
-		margin-top: 80px;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 50px 30px;
-	}
 }

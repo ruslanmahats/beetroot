@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.home-blog-section {
+	&__container {
+		width: fit-content;
+		margin: 0 auto;
+		margin-top: 50px;
+		display: grid;
+		justify-content: center;
+		grid-template-columns: 1fr;
+		gap: 40px 40px;
+		@include phone-l {
+			grid-template-columns: 1fr 1fr;
+		}
+		@include tablet-l {
+			grid-template-columns: 1fr 1fr 1fr;
+			margin-top: 80px;
+		}
+	}
+	&__btn {
+		margin: 50px auto 0;
+		width: fit-content;
+	}
+}
