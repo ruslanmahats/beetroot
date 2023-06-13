@@ -1,0 +1,27 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.page-contacts {
+	&__location-title {
+		background-color: $color-bg-14;
+		padding: 95px 0;
+		text-align: center;
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	&__location-title-icon {
+		color: $color-text-3;
+		margin-right: 20px;
+	}
+
+	&__location-title-text {
+		color: $color-text-2;
+	}
+	&__location-map {
+		height: 700px;
+		@include phone-l {
+			height: 600px;
+		}
+	}
+}

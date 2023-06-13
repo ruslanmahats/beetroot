@@ -1,0 +1,8 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.page-about {
+	.swiper-comm {
+		padding-top: 0;
+	}
+}
