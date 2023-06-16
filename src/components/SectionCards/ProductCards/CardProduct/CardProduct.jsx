@@ -3,14 +3,14 @@ import { Button } from '../../../Button/Button';
 import './CardProduct.scss';
 import { faCartShopping, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { useContext, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ProductsInCart } from '../../../../context/context';
+// import { ProductsInCart } from '../../../../context/context';
 
 export const CardProduct = ({ id, title, descShort, price, priceOld, discount, labelDiscount, labelBestPrice, labelNew, photoUrl }) => {
 	const [inputQuantity, setInputQuantity] = useState(1);
 	// const [random, setRandom] = useState(0);
-	const { cart, setCart } = useContext(ProductsInCart);
+	// const { cart, setCart } = useContext(ProductsInCart);
 
 
 	function handleQuantity(event) {

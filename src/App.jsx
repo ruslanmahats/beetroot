@@ -6,7 +6,7 @@ import { Blog } from './pages/Blog';
 import { About } from './pages/About/About';
 import { Contacts } from './pages/Contacts/Contacts';
 import { Header } from './components/Header/Header';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Footer } from './components/Footer/Footer';
 import { Request } from './utils/Request';
 import { Product } from './pages/Product';
