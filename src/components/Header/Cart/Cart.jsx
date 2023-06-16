@@ -1,16 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.scss';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from 'react';
-import { CartActive } from '../../../context/context';
+import { useContext, useEffect } from 'react';
+import { CartActive, ProductsInCart } from '../../../context/context';
 
 export const Cart = () => {
 	const { cartActive, setCartActive } = useContext(CartActive);
+	const { cart, setCart } = useContext(ProductsInCart);
+
 
 	const onClickButton = () => {
 		setCartActive(false);
 		document.querySelector('body').classList.remove("lock");
 	}
+
+
 
 	return (
 		<>
@@ -21,7 +25,11 @@ export const Cart = () => {
 							<button className="cart__btn-close" onClick={onClickButton}><FontAwesomeIcon icon={faXmark} /></button>
 							<div className="cart__title">Order</div>
 						</div>
-						<div className="cart__orders"></div>
+						<div className="cart__orders">
+
+							{ }
+
+						</div>
 						<div className="cart__checkout">
 							<div className="cart__order-summary">Order Summary</div>
 							<div className="cart__total-amount">

@@ -8,7 +8,7 @@ export const HomeWeAre = () => {
 
 	const [videoModal, setVideoModal] = useState(false);
 
-	const video = <iframe src="https://www.youtube.com/embed/a_0AgvcCQ20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	const video = <iframe src="https://www.youtube.com/embed/a_0AgvcCQ20" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 	const videoModalHandle = () => {
 		videoModal ? setVideoModal(false) : setVideoModal(true)

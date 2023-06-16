@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Button.scss';
 
-export const Button = ({ icon, text, mod, url }) => {
+export const Button = ({ icon, text, mod, url, addToCart }) => {
 
 	const iconEl = () => {
 		if (icon) {
@@ -17,7 +17,7 @@ export const Button = ({ icon, text, mod, url }) => {
 
 	return (
 		<>
-			<Link to={url} className={'button button--' + mod}>{iconEl()}{textEl()}</Link>
+			{addToCart ? <Link to={url} className={'button button--' + mod} onClick={addToCart}>{iconEl()}{textEl()}</Link> : <Link to={url} className={'button button--' + mod}>{iconEl()}{textEl()}</Link>}
 		</>
 	)
 };

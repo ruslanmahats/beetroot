@@ -1,2 +1,83 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/mixins" as *;
+
+.contact-section {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 70px;
+	@include tablet-p {
+		flex-direction: row;
+		gap: 40px;
+	}
+	@include tablet-l {
+		gap: 60px;
+	}
+	&__form {
+		padding-top: 40px;
+	}
+
+	&__title {
+		font-family: $font-family-1;
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	&__text {
+		padding-top: 20px;
+		line-height: 1.8;
+	}
+
+	&__adress-container {
+		background-color: $color-bg-2;
+		flex: 0 0 340px;
+		padding: 40px 20px;
+		@include phone-l {
+			padding: 50px 40px;
+		}
+		@include tablet-l {
+			flex: 0 0 400px;
+		}
+	}
+	&__form-container {
+		flex: 0 1 auto;
+	}
+
+	&__adress-item {
+		display: flex;
+		justify-content: flex-start;
+		gap: 25px;
+	}
+	&__adress-item + &__adress-item {
+		margin-top: 30px;
+	}
+
+	&__adress-icon {
+		color: $color-bg-12;
+		font-size: 30px;
+	}
+
+	&__adress-text {
+		ul {
+			margin-top: 10px;
+		}
+		li {
+			color: $color-text-4;
+			font-size: 14px;
+			padding-top: 5px;
+			a {
+				color: $color-text-3;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					color: $color-text-4;
+				}
+			}
+		}
+	}
+
+	&__adress-title {
+		font-size: 20px;
+		font-weight: 600;
+		font-family: $font-family-1;
+	}
+}

@@ -22,7 +22,6 @@ export const Tools = () => {
 
 	const onClickChangeCart = () => {
 		const body = document.querySelector('body');
-		console.log(cartActive)
 		if (!cartActive) {
 			setCartActive(true);
 			body.classList.add("lock");

@@ -1,2 +1,37 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
+
+.contact-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0px 20px;
+	&__item {
+		& input,
+		& textarea {
+			width: 100%;
+			padding: 15px 20px;
+			color: $color-text-4;
+			border: 1px solid $color-bg-9;
+			border-radius: 10px;
+			margin-bottom: 35px;
+			font-family: $font-family-1;
+			font-size: 16px;
+		}
+		& textarea {
+			height: 200px;
+		}
+		& input:focus::placeholder,
+		& textarea:focus::placeholder {
+			color: transparent;
+		}
+	}
+	&__item:nth-child(5),
+	&__item:nth-child(6) {
+		grid-column: 1 / span 2;
+	}
+	&__item:has(> .error-container) input,
+	&__item:has(> .error-container) textarea {
+		border: 1px solid $color-bg-7;
+		margin-bottom: 0;
+	}
+}

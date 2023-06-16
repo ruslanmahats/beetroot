@@ -11,7 +11,7 @@ export const Contacts = () => {
 				title="Contact Us"
 				preTitle="GET 24/7 SUPPORT" />
 			<section className="page-contacts__contact-section">
-				<ContactSection />
+				<div className="wrapper"><ContactSection /></div>
 			</section>
 			<h2 className="page-contacts__location-title"><span className="page-contacts__location-title-icon"><FontAwesomeIcon icon={faLocationDot} /></span><span className="page-contacts__location-title-text">Find Our Location</span></h2>
 			<section className="page-contacts__location-map">

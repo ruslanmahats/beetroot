@@ -108,7 +108,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "753159.jpg",
+		"photoUrl": "754159.jpg",
 		"unit": 0.8
 	},
 	{
@@ -156,7 +156,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "951753.jpg",
+		"photoUrl": "961753.jpg",
 		"unit": 0.3
 	},
 	{
@@ -204,7 +204,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "951753.jpg",
+		"photoUrl": "955753.jpg",
 		"unit": 0.4
 	},
 	{
@@ -220,7 +220,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "753951.jpg",
+		"photoUrl": "753051.jpg",
 		"unit": 0.9
 	},
 	{
@@ -236,7 +236,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "159753.jpg",
+		"photoUrl": "157903.jpg",
 		"unit": 0.3
 	},
 	{
@@ -252,7 +252,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "357951.jpg",
+		"photoUrl": "357958.jpg",
 		"unit": 0.7
 	},
 	{
@@ -284,7 +284,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "753159.jpg",
+		"photoUrl": "752159.jpg",
 		"unit": 0.2
 	},
 	{
@@ -300,7 +300,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "951753.jpg",
+		"photoUrl": "951763.jpg",
 		"unit": 0.3
 	},
 	{
@@ -316,7 +316,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "357951.jpg",
+		"photoUrl": "357941.jpg",
 		"unit": 0.8
 	},
 	{
@@ -332,7 +332,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "159753.jpg",
+		"photoUrl": "135975.jpg",
 		"unit": 0.9
 	},
 	{
@@ -348,7 +348,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "753159.jpg",
+		"photoUrl": "753169.jpg",
 		"unit": 0.2
 	},
 	{
@@ -364,7 +364,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "951753.jpg",
+		"photoUrl": "151753.jpg",
 		"unit": 0.3
 	},
 	{
@@ -380,7 +380,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "357951.jpg",
+		"photoUrl": "353951.jpg",
 		"unit": 0.4
 	},
 	{
@@ -396,7 +396,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "159753.jpg",
+		"photoUrl": "150953.jpg",
 		"unit": 0.5
 	},
 	{
@@ -412,7 +412,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "753951.jpg",
+		"photoUrl": "703951.jpg",
 		"unit": 0.3
 	},
 	{
@@ -428,7 +428,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "951753.jpg",
+		"photoUrl": "951553.jpg",
 		"unit": 0.4
 	},
 	{
@@ -444,7 +444,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "357951.jpg",
+		"photoUrl": "352551.jpg",
 		"unit": 0.5
 	},
 	{
@@ -460,7 +460,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "159753.jpg",
+		"photoUrl": "157593.jpg",
 		"unit": 0.6
 	}
 ]

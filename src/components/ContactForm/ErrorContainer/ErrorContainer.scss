@@ -1,0 +1,10 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.error-container {
+	font-family: $font-family-1;
+	font-size: 16px;
+	color: $color-bg-7;
+	padding: 5px 20px;
+	height: 35px;
+}

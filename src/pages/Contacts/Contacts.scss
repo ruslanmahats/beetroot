@@ -2,6 +2,15 @@
 @use "../../styles/mixins" as *;
 
 .page-contacts {
+	&__contact-section {
+		padding: 70px 0;
+		@include tablet-p {
+			padding: 100px 0;
+		}
+		@include desktop {
+			padding: 150px 0;
+		}
+	}
 	&__location-title {
 		background-color: $color-bg-14;
 		padding: 95px 0;

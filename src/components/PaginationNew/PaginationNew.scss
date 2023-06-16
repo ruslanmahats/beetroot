@@ -19,10 +19,15 @@
 			border: 1px solid $color-bg-1;
 			background-color: $color-bg-1;
 		}
-		& &--active {
+		&--active {
 			border: 1px solid $color-bg-3;
 			background-color: $color-bg-3;
 			color: $color-text-2;
+			cursor: initial;
+			&:hover {
+				border: 1px solid $color-bg-3;
+				background-color: $color-bg-3;
+			}
 		}
 		&--disable {
 			visibility: hidden;

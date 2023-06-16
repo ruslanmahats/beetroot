@@ -10,6 +10,8 @@ export const Header = ({ scroll, menuItems }) => {
 	const [burgerClick, setBurgerClick] = useState(false);
 	const [cartActive, setCartActive] = useState(false);
 
+
+
 	return (
 		<>
 			<CartActive.Provider value={{ cartActive, setCartActive }}>

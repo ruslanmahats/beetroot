@@ -3,12 +3,14 @@ import { Button } from '../../../Button/Button';
 import './CardProduct.scss';
 import { faCartShopping, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ProductsInCart } from '../../../../context/context';
 
-export const CardProduct = ({ id, title, descShort, price, priceOld, discount, labelDiscount, labelBestPrice, labelNew }) => {
+export const CardProduct = ({ id, title, descShort, price, priceOld, discount, labelDiscount, labelBestPrice, labelNew, photoUrl }) => {
 	const [inputQuantity, setInputQuantity] = useState(1);
-	const [random, setRandom] = useState(0);
+	// const [random, setRandom] = useState(0);
+	const { cart, setCart } = useContext(ProductsInCart);
 
 
 	function handleQuantity(event) {
@@ -24,12 +26,6 @@ export const CardProduct = ({ id, title, descShort, price, priceOld, discount, l
 	}
 
 
-	useEffect(() => {
-		setRandom(Math.floor(Math.random() * 20) + 1);
-	}, [])
-
-
-
 	return (
 		<>
 			<div className="card-product">{labelNew && <div className="card-product__label-new">New</div>}
@@ -41,9 +37,9 @@ export const CardProduct = ({ id, title, descShort, price, priceOld, discount, l
 					labelBestPrice && <div className="card-product__label-off card-product__label-off--best"><span className='card-product__label-off-percent-n' >Best</span><span className='card-product__label-off-percent'>Price</span></div>
 				)}
 
-				<div className="card-product__image-container"><Link to={`/shop/product-${id}`}><img src={`./assets/images/products/product-${random}.jpg`} alt="Strawberry" className="card-product__image" /></Link></div>
+				<div className="card-product__image-container"><Link to={`/shop/${id}`}><img src={`./assets/images/products/${photoUrl}`} alt={title} className="card-product__image" /></Link></div>
 				<div className="card-product__text-container">
-					<div className="card-product__title"><Link to={`/shop/product-${id}`} className='card-product__title-link'>{title}</Link></div>
+					<div className="card-product__title"><Link to={`/shop/${id}`} className='card-product__title-link'>{title}</Link></div>
 					<div className="card-product__desc">{descShort.length > 35 ? descShort.substr(0, 35) + '...' : descShort}</div>
 					<div className="card-product__buy-container">
 						<div className='card-product__price-container'>

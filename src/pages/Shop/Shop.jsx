@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { PagesHeader } from "../../components/PagesHeader/PagesHeader";
 import "./Shop.scss";
-import Pagination from "../../components/Pagination/Pagination";
+// import Pagination from "../../components/Pagination/Pagination";
+import { PaginationNew } from "../../components/PaginationNew/PaginationNew";
+// import { Request } from "../../utils/Request";
+import { CardProduct } from "../../components/SectionCards/ProductCards/CardProduct/CardProduct";
 
 export const Shop = ({ products }) => {
 
@@ -51,9 +54,22 @@ export const Shop = ({ products }) => {
 			setFilterValue(0)
 			setProductList([...products])
 			setCurrentPage(1)
-			console.log(products)
 		}
 	}
+
+
+	const itemsPerPage = 8;
+	// const totalPages = Math.ceil(productList.length / itemsPerPage);
+
+
+
+	const startIndex = (currentPage - 1) * itemsPerPage;
+	const endIndex = startIndex + itemsPerPage;
+
+
+	const currentPageItems = productList.slice(startIndex, endIndex);
+
+	const totalProducts = () => productList.length;
 
 
 	return (
@@ -65,6 +81,7 @@ export const Shop = ({ products }) => {
 				<div className="shop">
 					<div className="shop__products">
 						<div className="shop__products-panel">
+							<div className="shop__quantity">Total: <span>{totalProducts()}</span> products</div>
 							<div className="shop__sorting-container" ref={sortingRef}>
 								<div className={filterIsOpen ? "shop__sorting-btn shop__sorting-btn--active" : "shop__sorting-btn"} onClick={toggleSortMenu}>{
 									filterValue === 0
@@ -81,8 +98,16 @@ export const Shop = ({ products }) => {
 							</div>
 						</div>
 
-						<Pagination itemsPerPage={8} data={productList} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+						<div className="shop__products-list">
+							{currentPageItems.map(item => {
+								return <CardProduct key={item.id} {...item} />
+							})}
+						</div>
 
+
+
+						{/* <Pagination itemsPerPage={8} data={productList} currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
+						<PaginationNew itemsPerPage={8} data={productList} currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
 					</div>
 					<div className="pagination"></div>
@@ -91,4 +116,52 @@ export const Shop = ({ products }) => {
 
 		</>
 	)
+
+
+
+
+	// const [currentPage, setCurrentPage] = useState([]);
+	// const [products, setProducts] = useState([]);
+	// const [loading, setLoading] = useState(true);
+	// const apiUrl = 'https://api.predic8.de/shop/products/';
+
+	// const fetchData = async () => {
+	// 	try {
+	// 		const response = await fetch(currentPage === 1 ? `https://api.predic8.de/shop/products/` : `https://api.predic8.de/shop/products/?page=${currentPage}&limit=10`);
+	// 		const data = await response.json();
+	// 		setProducts(data);
+	// 		setLoading(false);
+	// 	} catch (error) {
+	// 		console.log('Error:', error);
+	// 		setLoading(false);
+	// 	}
+	// };
+
+	// useEffect(() => {
+	// 	fetchData();
+	// }, [currentPage]);
+
+	// return (
+	// 	<div>
+	// 		{loading ? (
+	// 			<p>Loading...</p>
+	// 		) : (
+	// 			<>
+	// 				<ul>
+	// 					{products.products.map((product) => (
+	// 						<div key={+(product.product_url.substr(15, 15))}>
+	// 							<img src={`https://api.predic8.de${product.product_url}/photo`} alt={product.name} />
+	// 							<div>{`${product.name} ${+(product.product_url.substr(15, 15))}`}</div>
+	// 						</div>
+	// 					))}
+	// 				</ul>
+	// 				<PaginationNew meta={products.meta} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
+	// 			</>)}
+	// 	</div>
+	// );
+
+
+
+
 };
