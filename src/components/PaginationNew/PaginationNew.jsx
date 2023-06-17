@@ -7,6 +7,7 @@ export const PaginationNew = ({ itemsPerPage, data, currentPage, setCurrentPage 
 
 	const handlePageChange = (pageNumber) => {
 
+		window.scrollTo(0, 380);
 		setCurrentPage(pageNumber);
 	};
 
@@ -27,8 +28,6 @@ export const PaginationNew = ({ itemsPerPage, data, currentPage, setCurrentPage 
 			>
 				{currentPage + 1}
 			</button>
-
-			{/* <span>Total Pages: {totalPages}</span> */}
 		</div>
 	);
 };

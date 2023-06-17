@@ -27,7 +27,7 @@ export const SwiperHero = () => {
 					spaceBetween={0}
 					slidesPerView={1}
 					loop={true}
-					// autoplay={{ delay: 3800, disableOnInteraction: false }}
+					autoplay={{ delay: 3800, disableOnInteraction: false }}
 					parallax
 				>
 					{sliderHeroItems.map(item => {

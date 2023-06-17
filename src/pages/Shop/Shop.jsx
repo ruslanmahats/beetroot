@@ -3,8 +3,9 @@ import { PagesHeader } from "../../components/PagesHeader/PagesHeader";
 import "./Shop.scss";
 // import Pagination from "../../components/Pagination/Pagination";
 import { PaginationNew } from "../../components/PaginationNew/PaginationNew";
-// import { Request } from "../../utils/Request";
+import { Request } from "../../utils/Request";
 import { CardProduct } from "../../components/SectionCards/ProductCards/CardProduct/CardProduct";
+
 
 export const Shop = ({ products }) => {
 
@@ -13,6 +14,11 @@ export const Shop = ({ products }) => {
 	const [filterValue, setFilterValue] = useState(0)
 	const sortingRef = useRef(null)
 	const [currentPage, setCurrentPage] = useState(1);
+
+
+	// useEffect(() => {
+	// 	Request.get(`https://648d6dee2de8d0ea11e7d552.mockapi.io/products`).then(data => setProductList(data));
+	// }, [currentPage]);
 
 
 	useEffect(() => {
@@ -28,6 +34,7 @@ export const Shop = ({ products }) => {
 			document.removeEventListener('click', handleOutsideClick);
 		};
 	}, []);
+
 
 
 
@@ -59,16 +66,10 @@ export const Shop = ({ products }) => {
 
 
 	const itemsPerPage = 8;
-	// const totalPages = Math.ceil(productList.length / itemsPerPage);
-
-
-
+	const totalPages = Math.ceil(productList.length / itemsPerPage);
 	const startIndex = (currentPage - 1) * itemsPerPage;
 	const endIndex = startIndex + itemsPerPage;
-
-
 	const currentPageItems = productList.slice(startIndex, endIndex);
-
 	const totalProducts = () => productList.length;
 
 

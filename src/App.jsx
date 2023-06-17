@@ -25,7 +25,7 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		Request.get('http://localhost:3000/mock/products.json').then(data => setProducts(data));
+		Request.get('https://648d6dee2de8d0ea11e7d552.mockapi.io/products').then(data => setProducts(data));
 	}, []);
 
 
@@ -65,7 +65,6 @@ function App() {
 						</Routes>
 					</div>
 					<div className='mockup__section'>
-
 						<Footer menuItems={menuItems} />
 					</div>
 				</div>
