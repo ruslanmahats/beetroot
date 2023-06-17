@@ -1,12 +1,12 @@
 import './PaginationNew.scss';
 
-export const PaginationNew = ({ itemsPerPage, data, currentPage, setCurrentPage }) => {
+export const PaginationNew = ({ itemsPerPage, length, currentPage, setCurrentPage, cssClass }) => {
 
 
-	const totalPages = Math.ceil(data.length / itemsPerPage);
+	const totalPages = Math.ceil(length / itemsPerPage);
 
 	const handlePageChange = (pageNumber) => {
-		const elY = document.querySelector('.shop__products').getBoundingClientRect().top + window.pageYOffset - 110
+		const elY = document.querySelector(cssClass).getBoundingClientRect().top + window.pageYOffset - 110
 		pageNumber < 1 ? setCurrentPage(1) : pageNumber > totalPages ? setCurrentPage(totalPages) : setCurrentPage(pageNumber);
 		window.scrollTo(0, elY);
 	};

@@ -51,8 +51,14 @@
 		color: $color-text-5;
 		display: flex;
 		justify-content: flex-start;
-		gap: 20px;
+		flex-direction: column;
+		gap: 5px;
 		font-size: 15px;
+		flex-wrap: wrap;
+		@include phone-l {
+			justify-content: space-between;
+			flex-direction: row;
+		}
 	}
 
 	&__user-icon,

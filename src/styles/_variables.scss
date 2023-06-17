@@ -8,23 +8,27 @@ $max-width-desktop-big: 1400px;
 
 // COLORS ----------------------------------------------
 
-$color-text-1: #051922;
-$color-text-2: #fff;
-$color-text-3: #f28123;
+$color-1: #051922;
+$color-2: #fff;
+$color-3: #f28123;
+
+$color-text-1: $color-1;
+$color-text-2: $color-2;
+$color-text-3: $color-3;
 $color-text-4: #69757a;
 $color-text-5: #b4babd;
 $color-text-6: #555;
 
-$color-bg-1: #051922;
+$color-bg-1: $color-1;
 $color-bg-2: #f5f5f5;
-$color-bg-3: #f28123;
+$color-bg-3: $color-3;
 $color-bg-4: #374b56;
 $color-bg-5: rgba(5, 25, 34, 0.7);
 $color-bg-6: #012738;
 $color-bg-7: #e61d23;
 $color-bg-8: #232a35;
 $color-bg-9: #e5e5e5;
-$color-bg-10: #fff;
+$color-bg-10: $color-2;
 $color-bg-11: #54ba07;
 $color-bg-12: rgba(242, 129, 35, 0.75);
 $color-bg-13: rgb(255, 255, 255, 0.7);

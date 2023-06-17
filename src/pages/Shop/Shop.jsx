@@ -3,7 +3,7 @@ import { PagesHeader } from "../../components/PagesHeader/PagesHeader";
 import "./Shop.scss";
 // import Pagination from "../../components/Pagination/Pagination";
 import { PaginationNew } from "../../components/PaginationNew/PaginationNew";
-import { Request } from "../../utils/Request";
+// import { Request } from "../../utils/Request";
 import { CardProduct } from "../../components/SectionCards/ProductCards/CardProduct/CardProduct";
 
 
@@ -27,9 +27,7 @@ export const Shop = ({ products }) => {
 				setFilterIsOpen(false);
 			}
 		};
-
 		document.addEventListener('click', handleOutsideClick);
-
 		return () => {
 			document.removeEventListener('click', handleOutsideClick);
 		};
@@ -66,7 +64,6 @@ export const Shop = ({ products }) => {
 
 
 	const itemsPerPage = 8;
-	const totalPages = Math.ceil(productList.length / itemsPerPage);
 	const startIndex = (currentPage - 1) * itemsPerPage;
 	const endIndex = startIndex + itemsPerPage;
 	const currentPageItems = productList.slice(startIndex, endIndex);
@@ -107,7 +104,7 @@ export const Shop = ({ products }) => {
 
 
 						{/* <Pagination itemsPerPage={8} data={productList} currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
-						<PaginationNew itemsPerPage={8} data={productList} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+						<PaginationNew itemsPerPage={8} length={productList.length} currentPage={currentPage} setCurrentPage={setCurrentPage} cssClass='.shop__products' />
 
 					</div>
 					<div className="pagination"></div>

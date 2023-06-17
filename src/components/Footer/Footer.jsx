@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import { Contacts } from '../Contacts/Contacts';
 import './Footer.scss';
 import { FooterMenu } from './FooterMenu/FooterMenu';
@@ -44,7 +44,7 @@ export const Footer = ({ menuItems }) => {
 					<div className='wrapper'>
 						<div className='footer__inner'>
 							<div className="footer__copy">
-								<p>Copyrights © 2019 - <Link to="/">Fruitkha</Link >, All Rights Reserved.</p>
+								<p>Copyrights © 2019 - <a href="https://imransdesign.com/">Fruitkha</a >, Design Imran Hossain. All Rights Reserved.</p>
 							</div>
 							<div className="footer__socials"><Socials /></div>
 						</div>

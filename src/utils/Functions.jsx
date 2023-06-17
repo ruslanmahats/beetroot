@@ -1,6 +1,11 @@
-export const cutTextAfterNSymbols = (text, nSymbols) => {
+export const cutTextAfterNSymbolsP = (text, nSymbols) => {
 	const newText = text.replace(/\n/g, ' ').substr(0, nSymbols);
 	return <p>{`${newText}...`}</p>;
+};
+
+export const cutTextAfterNSymbols = (text, nSymbols) => {
+	const newText = text.replace(/\n/g, ' ').substr(0, nSymbols);
+	return newText;
 };
 
 export const makeTextToPText = (text) => {
