@@ -70,7 +70,6 @@ export const Shop = ({ products }) => {
 	const startIndex = (currentPage - 1) * itemsPerPage;
 	const endIndex = startIndex + itemsPerPage;
 	const currentPageItems = productList.slice(startIndex, endIndex);
-	const totalProducts = () => productList.length;
 
 
 	return (
@@ -82,7 +81,7 @@ export const Shop = ({ products }) => {
 				<div className="shop">
 					<div className="shop__products">
 						<div className="shop__products-panel">
-							<div className="shop__quantity">Total: <span>{totalProducts()}</span> products</div>
+							<div className="shop__quantity">Total: <span>{productList.length}</span> products</div>
 							<div className="shop__sorting-container" ref={sortingRef}>
 								<div className={filterIsOpen ? "shop__sorting-btn shop__sorting-btn--active" : "shop__sorting-btn"} onClick={toggleSortMenu}>{
 									filterValue === 0
