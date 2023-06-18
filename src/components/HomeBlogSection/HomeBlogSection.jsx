@@ -11,7 +11,7 @@ export const HomeBlogSection = () => {
 
 
 	useEffect(() => {
-		Request.get('./mock/blog-items.json').then(data => getNRandomItems(3, data, setBlogItems));
+		Request.get('/beetroot/mock/blog-items.json').then(data => getNRandomItems(3, data, setBlogItems));
 	}, []);
 
 	return (

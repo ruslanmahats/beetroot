@@ -51,7 +51,7 @@ export const Deals = () => {
 							</div>
 						</div>
 						<div className="deals__image-container">
-							<img src="./assets/images/design/splash.jpg" alt="" className="deals__image" />
+							<img src="/beetroot/assets/images/design/splash.jpg" alt="" className="deals__image" />
 						</div>
 						<div className="deals__content-container">
 							<h3 className="deals__title"><span>Deal</span> of the month</h3>
