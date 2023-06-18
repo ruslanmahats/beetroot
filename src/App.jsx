@@ -21,7 +21,7 @@ function App() {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		Request.get('/beetroot/mock/menu.json').then(data => setMenuItems(data));
+		Request.get('/mock/menu.json').then(data => setMenuItems(data));
 	}, []);
 
 	useEffect(() => {
