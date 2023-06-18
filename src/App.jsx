@@ -21,7 +21,7 @@ function App() {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		Request.get('http://localhost:3000/mock/menu.json').then(data => setMenuItems(data));
+		Request.get('/mock/menu.json').then(data => setMenuItems(data));
 	}, []);
 
 	useEffect(() => {
