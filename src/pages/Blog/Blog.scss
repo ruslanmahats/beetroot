@@ -21,4 +21,37 @@
 			gap: 80px 40px;
 		}
 	}
+
+	&__buttons-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	&__buttons-item {
+		cursor: pointer;
+		background-color: $color-bg-2;
+		padding: 8px 15px;
+		border-radius: 10px;
+		font-family: $font-family-1;
+		font-weight: 600;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			background-color: $color-bg-3;
+			color: $color-bg-10;
+		}
+		&--active {
+			background-color: $color-bg-3;
+			color: $color-bg-10;
+		}
+	}
 }

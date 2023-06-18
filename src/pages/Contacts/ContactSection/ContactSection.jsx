@@ -21,9 +21,9 @@ export const ContactSection = () => {
 						<div className="contact-section__adress-text">
 							<h4 className="contact-section__adress-title">Shop Address</h4>
 							<ul>
-								<li>34/8, East Hukupara</li>
-								<li>Gifirtok, Sadan.</li>
-								<li>Country Name</li>
+								<li>34/8, Fruits St.,</li>
+								<li>New York, Brooklyn</li>
+								<li>Nepal</li>
 							</ul>
 						</div>
 					</li>
@@ -31,7 +31,7 @@ export const ContactSection = () => {
 					<li className="contact-section__adress-item">
 						<div className="contact-section__adress-icon"><FontAwesomeIcon icon={faContactBook} /></div>
 						<div className="contact-section__adress-text">
-							<h4 className="contact-section__adress-title">Shop Address</h4>
+							<h4 className="contact-section__adress-title">Shop Hours</h4>
 							<ul>
 								<li>MON - FRIDAY: 8 to 9 PM</li>
 								<li>SAT - SUN: 10 to 8 PM</li>
@@ -42,10 +42,10 @@ export const ContactSection = () => {
 					<li className="contact-section__adress-item">
 						<div className="contact-section__adress-icon"><FontAwesomeIcon icon={faClockFour} /></div>
 						<div className="contact-section__adress-text">
-							<h4 className="contact-section__adress-title">Shop Address</h4>
+							<h4 className="contact-section__adress-title">Contact</h4>
 							<ul>
-								<li>Phone: <a href='tel:+001112223333'>+00 111 222 3333</a></li>
-								<li>Email: <a href='mailto:support@fruitkha.com'>support@fruitkha.com</a></li>
+								<li>Phone: <a href='tel:+451115553333'>+45 111 555 3333</a></li>
+								<li>Email: <a href='mailto:support@fruitshop.com'>support@fruitshop.com</a></li>
 							</ul>
 						</div>
 					</li>

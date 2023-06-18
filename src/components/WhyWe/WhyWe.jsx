@@ -8,7 +8,7 @@ export const WhyWe = () => {
 		<>
 			<section className="why-we">
 				<div className='why-we__container'>
-					<h2 className="why-we__title">Why <span>Fruitkha</span></h2>
+					<h2 className="why-we__title">Why <span>FruitShop</span></h2>
 					<ul className="why-we__advantages advantages">
 						<AdvantagesItem icon={<FontAwesomeIcon icon={faTruckFast} />} title="Home Delivery" desc="Sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo." />
 						<AdvantagesItem icon={<FontAwesomeIcon icon={faMoneyBill1} />} title="Best Price" desc="Sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo." />

@@ -21,8 +21,8 @@ export const HomeWeAre = () => {
 					<div className="we-are__container">
 						<div className="we-are__video-container"><img src="./assets/images/design/video-image-bg.jpg" alt="Video Frutkha" className="we-are__video-image" /><div className="we-are__video-blur"></div><div className="we-are__video-play-btn" onClick={videoModalHandle} ><FontAwesomeIcon icon={faPlay} /></div></div>
 						<div className="we-are__text-container">
-							<div className="we-are__pre-title">Since Year 1999</div>
-							<h3 className="we-are__title">We are <span>Fruitkha</span></h3>
+							<div className="we-are__pre-title">Since Year 1975</div>
+							<h3 className="we-are__title">We are <span>FruitShop</span></h3>
 							<div className="we-are__text">
 								<p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>

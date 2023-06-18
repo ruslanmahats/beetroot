@@ -4,6 +4,7 @@ import './Footer.scss';
 import { FooterMenu } from './FooterMenu/FooterMenu';
 import { Subscribe } from './Subscribe/Subscribe';
 import { Socials } from '../Socials/Socials';
+import { Link } from 'react-router-dom';
 
 export const Footer = ({ menuItems }) => {
 	return (
@@ -44,7 +45,7 @@ export const Footer = ({ menuItems }) => {
 					<div className='wrapper'>
 						<div className='footer__inner'>
 							<div className="footer__copy">
-								<p>Copyrights © 2019 - <a href="https://imransdesign.com/">Fruitkha</a >, Design Imran Hossain. All Rights Reserved.</p>
+								<p>Copyrights © 2020 - <Link to="/">FruitShop</Link ></p>
 							</div>
 							<div className="footer__socials"><Socials /></div>
 						</div>
