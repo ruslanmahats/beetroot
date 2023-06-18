@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.scss';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import { useContext, useEffect } from 'react';
-import { CartActive, ProductsInCart } from '../../../context/context';
+import { useContext } from 'react';
+import { CartActive } from '../../../context/context';
 
 export const Cart = () => {
 	const { cartActive, setCartActive } = useContext(CartActive);
-	const { cart, setCart } = useContext(ProductsInCart);
+	// const { cart, setCart } = useContext(ProductsInCart);
 
 
 	const onClickButton = () => {

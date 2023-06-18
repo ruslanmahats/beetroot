@@ -14,7 +14,7 @@ export const SwiperHero = () => {
 	const [sliderHeroItems, setSliderHeroItems] = useState([]);
 
 	useEffect(() => {
-		Request.get('/mock/slider-hero.json').then(data => setSliderHeroItems(data));
+		Request.get('./mock/slider-hero.json').then(data => setSliderHeroItems(data));
 	}, []);
 
 	return (
