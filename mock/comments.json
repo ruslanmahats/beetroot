@@ -1,0 +1,30 @@
+[
+	{
+		"id": "0",
+		"userName": "Alex Vazovsky",
+		"position": "Local store owner",
+		"commText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquid sunt temporibus repellendus perspiciatis recusandae laboriosam dolore tempora culpa tenetur.",
+		"avatarUrl": "avatar-0.jpg"
+	},
+	{
+		"id": "1",
+		"userName": "Jacob Sikim",
+		"position": "Local store owner",
+		"commText": "Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+		"avatarUrl": "avatar-1.jpg"
+	},
+	{
+		"id": "2",
+		"userName": "David Niph ",
+		"position": "Local store owner",
+		"commText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquid sunt temporibus repellendus perspiciatis recusandae laboriosam dolore tempora culpa tenetur.",
+		"avatarUrl": "avatar-2.jpg"
+	},
+	{
+		"id": "3",
+		"userName": "John Connor",
+		"position": "Local store owner",
+		"commText": "Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+		"avatarUrl": "avatar-3.jpg"
+	}
+]
