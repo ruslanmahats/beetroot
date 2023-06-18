@@ -14,7 +14,7 @@ export const BlogPreviewItem = ({ id, userName, addDate, title, text, image, url
 
 			<div className="blog-preview-item">
 				<div className="blog-preview-item__image-container"><div className="blog-preview-item__blur">
-				</div>{id ? <Link to={`/blog/${id}`} className="blog-preview-item__title-link"><img src={`/beetroot/assets/images/blog/${image}`} alt={title} className="blog-preview-item__image" /></Link> : <a href={url} className="blog-preview-item__title-link" target='_blank' rel="noreferrer"><img src={urlToImage} alt={title} className="blog-preview-item__image" /></a>}
+				</div>{id ? <Link to={`/blog/${id}`} className="blog-preview-item__title-link"><img src={`/assets/images/blog/${image}`} alt={title} className="blog-preview-item__image" /></Link> : <a href={url} className="blog-preview-item__title-link" target='_blank' rel="noreferrer"><img src={urlToImage} alt={title} className="blog-preview-item__image" /></a>}
 				</div>
 				<div className="blog-preview-item__text-container">
 					<div className="blog-preview-item__title">{id ? <Link to={`/blog/${id}`} className="blog-preview-item__title-link">{title}</Link> : <a href={url} className="blog-preview-item__title-link" target='_blank' rel="noreferrer">{title}</a>}</div>

@@ -21,7 +21,7 @@ function App() {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		Request.get('/mock/menu.json').then(data => setMenuItems(data));
+		Request.get('https://648d6dee2de8d0ea11e7d552.mockapi.io/menu').then(data => setMenuItems(data));
 	}, []);
 
 	useEffect(() => {

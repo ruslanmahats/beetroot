@@ -11,7 +11,7 @@ export const ProductSection = ({ photoUrl, id, title, descShort, descFull, price
 			<div className="product-section">
 				<div className='wrapper'>
 					<div className='product-section__details'>
-						<div className="product-section__image-container"><img src={`/beetroot/assets/images/products/${photoUrl}`} alt={title} className="product-section__image" /></div>
+						<div className="product-section__image-container"><img src={`/assets/images/products/${photoUrl}`} alt={title} className="product-section__image" /></div>
 						<div className="product-section__info">
 							<p className="product-section__short-desc">{descShort}</p>
 							<div className="product-section__category"><span>Category:</span> <span>{catName}</span></div>

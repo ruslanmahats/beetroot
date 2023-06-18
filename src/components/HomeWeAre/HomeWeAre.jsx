@@ -19,7 +19,7 @@ export const HomeWeAre = () => {
 			<section className={videoModal ? 'we-are we-are--active' : 'we-are'}>
 				<div className="wrapper">
 					<div className="we-are__container">
-						<div className="we-are__video-container"><img src="/beetroot/assets/images/design/video-image-bg.jpg" alt="Video Frutkha" className="we-are__video-image" /><div className="we-are__video-blur"></div><div className="we-are__video-play-btn" onClick={videoModalHandle} ><FontAwesomeIcon icon={faPlay} /></div></div>
+						<div className="we-are__video-container"><img src="/assets/images/design/video-image-bg.jpg" alt="Video Frutkha" className="we-are__video-image" /><div className="we-are__video-blur"></div><div className="we-are__video-play-btn" onClick={videoModalHandle} ><FontAwesomeIcon icon={faPlay} /></div></div>
 						<div className="we-are__text-container">
 							<div className="we-are__pre-title">Since Year 1975</div>
 							<h3 className="we-are__title">We are <span>FruitShop</span></h3>
@@ -32,7 +32,7 @@ export const HomeWeAre = () => {
 					</div>
 				</div>
 				<div className="we-are__modal">
-					<div className='we-are__modal-video'>{video}<div className='we-are__modal-close-btn' onClick={videoModalHandle} ><FontAwesomeIcon icon={faXmark} /></div></div>
+					<div className='we-are__modal-video'>{videoModal && video}<div className='we-are__modal-close-btn' onClick={videoModalHandle} ><FontAwesomeIcon icon={faXmark} /></div></div>
 				</div>
 			</section>
 		</>
