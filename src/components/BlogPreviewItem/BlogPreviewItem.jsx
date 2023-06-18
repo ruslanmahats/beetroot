@@ -10,8 +10,6 @@ export const BlogPreviewItem = ({ id, userName, addDate, title, text, image, url
 
 	return (
 		<>
-
-
 			<div className="blog-preview-item">
 				<div className="blog-preview-item__image-container"><div className="blog-preview-item__blur">
 				</div>{id ? <Link to={`/blog/${id}`} className="blog-preview-item__title-link"><img src={`/assets/images/blog/${image}`} alt={title} className="blog-preview-item__image" /></Link> : <a href={url} className="blog-preview-item__title-link" target='_blank' rel="noreferrer"><img src={urlToImage} alt={title} className="blog-preview-item__image" /></a>}
