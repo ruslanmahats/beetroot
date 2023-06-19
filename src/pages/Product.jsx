@@ -11,7 +11,7 @@ export const Product = () => {
 
 
 	useEffect(() => {
-		Request.get('http://localhost:3000/mock/products.json').then(data => setProduct(data.find(item => {
+		Request.get('/beetroot/mock/products.json').then(data => setProduct(data.find(item => {
 			return +item.id === +id
 		})));
 	}, [id]);
