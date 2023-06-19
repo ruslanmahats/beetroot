@@ -1,6 +1,6 @@
 import './Tools.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faMagnifyingGlass, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faBars, faXmark, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import { MenuActive, CartActive } from '../../../context/context';
 
@@ -35,7 +35,7 @@ export const Tools = () => {
 	return (
 		<>
 			<ul className='tools'>
-				<li className='tools__item'><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
+				<li className='tools__item'><FontAwesomeIcon icon={faUser} /></li>
 				<li className='tools__item' onClick={onClickChangeCart}><FontAwesomeIcon icon={faCartShopping} /></li>
 				<li className={!burgerClick ? 'tools__item burger' : 'tools__item burger burger--active'} onClick={onClickChangeBurger}>{!burgerClick ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faXmark} />}</li>
 			</ul>

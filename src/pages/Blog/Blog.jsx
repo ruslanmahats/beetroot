@@ -5,6 +5,8 @@ import { PagesHeader } from "../../components/PagesHeader/PagesHeader";
 import { PaginationNew } from "../../components/PaginationNew/PaginationNew";
 import { Request } from "../../utils/Request";
 import { BlogPreviewItem } from "../../components/BlogPreviewItem/BlogPreviewItem";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export const Blog = () => {
 
@@ -12,14 +14,18 @@ export const Blog = () => {
 	const [posts, setPosts] = useState({});
 	const [sort, setSort] = useState("publishedAt");
 	const [cat, setCat] = useState("none");
+	const [search, setSearch] = useState("news");
+
+
 
 	const pageSize = 12;
-
 	const API_KEY = 'fa5ca2cfb8434a74af52dfbad03e120b';
 
+
+
 	useEffect(() => {
-		Request.get(`https://newsapi.org/v2/${cat === 'none' ? 'everything' : 'top-headlines'}?q=food%20OR%20fruits${cat !== 'none' ? "&category=" + cat : ''}&page=${blogPage}&pageSize=${pageSize}&sortBy=${sort}&apiKey=${API_KEY}`).then(data => setPosts(data));
-	}, [blogPage, sort, cat])
+		Request.get(`https://newsapi.org/v2/${cat === 'none' ? 'everything' : 'top-headlines'}?q=${search === "" ? "news" : search}${cat !== 'none' ? "&category=" + cat : ''}&page=${blogPage}&pageSize=${pageSize}&sortBy=${sort}&apiKey=${API_KEY}`).then(data => setPosts(data));
+	}, [blogPage, sort, cat, search]);
 
 	const sortPosts = (e) => {
 		console.log(e)
@@ -41,12 +47,16 @@ export const Blog = () => {
 		} else if (e.target.innerText === "Science") {
 			setCat("science")
 		} else if (e.target.innerText === "Technology") {
-			setCat("sports")
-		} else {
 			setCat("technology")
+		} else {
+			setCat("sports")
 		}
-		console.log(cat)
 	}
+
+	const searchHeandler = (e) => {
+		setSearch(e.target.value);
+	};
+
 
 	return (
 		<>
@@ -55,6 +65,11 @@ export const Blog = () => {
 				preTitle="ORGANIC INFORMATION" />
 			<div className='page-blog'>
 				<div className='wrapper'>
+					<div className="page-blog__search-container">
+						<div className='page-blog__search-inner'>
+							<FontAwesomeIcon icon={faSearch} /><input type="text" onChange={searchHeandler} placeholder='Search in Blog' />
+						</div>
+					</div>
 					<div className='page-blog__buttons-container'>
 						<ul className="page-blog__buttons">
 							<li className={cat === "none" ? "page-blog__buttons-item page-blog__buttons-item--active" : "page-blog__buttons-item"} onClick={changeCat}>All</li>
