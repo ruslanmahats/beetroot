@@ -16,7 +16,7 @@ export const SwiperHero = () => {
 
 
 	useEffect(() => {
-		Request.get('beetroot/mock/slider-hero.json').then(data => setSliderHeroItems(data));
+		Request.get('/beetroot/mock/slider-hero.json').then(data => setSliderHeroItems(data));
 	}, []);
 
 	return (
