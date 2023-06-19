@@ -12,7 +12,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "215467.jpg",
+		"photoUrl": "215467.webp",
 		"unit": 0.5
 	},
 	{
@@ -28,7 +28,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "467523.jpg",
+		"photoUrl": "467523.webp",
 		"unit": 0.7
 	},
 	{
@@ -44,7 +44,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "876549.jpg",
+		"photoUrl": "876549.webp",
 		"unit": 0.9
 	},
 	{
@@ -60,7 +60,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "321678.jpg",
+		"photoUrl": "321678.webp",
 		"unit": 0.3
 	},
 	{
@@ -76,7 +76,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "987645.jpg",
+		"photoUrl": "987645.webp",
 		"unit": 0.4
 	},
 	{
@@ -92,7 +92,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "135792.jpg",
+		"photoUrl": "135792.webp",
 		"unit": 0.2
 	},
 	{
@@ -108,7 +108,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "754159.jpg",
+		"photoUrl": "754159.webp",
 		"unit": 0.8
 	},
 	{
@@ -124,7 +124,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "246813.jpg",
+		"photoUrl": "246813.webp",
 		"unit": 0.6
 	},
 	{
@@ -140,7 +140,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "369258.jpg",
+		"photoUrl": "369258.webp",
 		"unit": 0.9
 	},
 	{
@@ -156,7 +156,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "961753.jpg",
+		"photoUrl": "961753.webp",
 		"unit": 0.3
 	},
 	{
@@ -172,7 +172,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "785421.jpg",
+		"photoUrl": "785421.webp",
 		"unit": 0.2
 	},
 	{
@@ -188,7 +188,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "258369.jpg",
+		"photoUrl": "258369.webp",
 		"unit": 0.6
 	},
 	{
@@ -204,7 +204,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "955753.jpg",
+		"photoUrl": "955753.webp",
 		"unit": 0.4
 	},
 	{
@@ -220,7 +220,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "753051.jpg",
+		"photoUrl": "753051.webp",
 		"unit": 0.9
 	},
 	{
@@ -236,7 +236,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "157903.jpg",
+		"photoUrl": "157903.webp",
 		"unit": 0.3
 	},
 	{
@@ -252,7 +252,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "357958.jpg",
+		"photoUrl": "357958.webp",
 		"unit": 0.7
 	},
 	{
@@ -268,7 +268,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "951357.jpg",
+		"photoUrl": "951357.webp",
 		"unit": 0.4
 	},
 	{
@@ -284,7 +284,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "752159.jpg",
+		"photoUrl": "752159.webp",
 		"unit": 0.2
 	},
 	{
@@ -300,7 +300,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "951763.jpg",
+		"photoUrl": "951763.webp",
 		"unit": 0.3
 	},
 	{
@@ -316,7 +316,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "357941.jpg",
+		"photoUrl": "357941.webp",
 		"unit": 0.8
 	},
 	{
@@ -332,7 +332,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "135975.jpg",
+		"photoUrl": "135975.webp",
 		"unit": 0.9
 	},
 	{
@@ -348,7 +348,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "753169.jpg",
+		"photoUrl": "753169.webp",
 		"unit": 0.2
 	},
 	{
@@ -364,7 +364,7 @@
 		"labelNew": false,
 		"labelDiscount": true,
 		"labelBestPrice": false,
-		"photoUrl": "151753.jpg",
+		"photoUrl": "151753.webp",
 		"unit": 0.3
 	},
 	{
@@ -380,7 +380,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "353951.jpg",
+		"photoUrl": "353951.webp",
 		"unit": 0.4
 	},
 	{
@@ -396,7 +396,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "150953.jpg",
+		"photoUrl": "150953.webp",
 		"unit": 0.5
 	},
 	{
@@ -412,7 +412,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "703951.jpg",
+		"photoUrl": "703951.webp",
 		"unit": 0.3
 	},
 	{
@@ -428,7 +428,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "951553.jpg",
+		"photoUrl": "951553.webp",
 		"unit": 0.4
 	},
 	{
@@ -444,7 +444,7 @@
 		"labelNew": true,
 		"labelDiscount": false,
 		"labelBestPrice": true,
-		"photoUrl": "352551.jpg",
+		"photoUrl": "352551.webp",
 		"unit": 0.5
 	},
 	{
@@ -460,7 +460,7 @@
 		"labelNew": false,
 		"labelDiscount": false,
 		"labelBestPrice": false,
-		"photoUrl": "157593.jpg",
+		"photoUrl": "157593.webp",
 		"unit": 0.6
 	}
 ]
