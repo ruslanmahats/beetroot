@@ -15,8 +15,10 @@
 	&__image-container {
 		position: relative;
 		flex: 0 0 100%;
+		padding-bottom: 65%;
 		@include tablet-l {
 			flex: 0 0 calc(50% - 50px);
+			padding-bottom: initial;
 		}
 	}
 
