@@ -18,7 +18,7 @@ export const Blog = () => {
 	const API_KEY = 'fa5ca2cfb8434a74af52dfbad03e120b';
 
 	useEffect(() => {
-		Request.get(`https://newsapi.org/v2/${cat === 'none' ? 'everything' : 'top-headlines'}?q=food${cat !== 'none' ? "&category=" + cat : ''}&page=${blogPage}&pageSize=${pageSize}&sortBy=${sort}&apiKey=${API_KEY}`).then(data => setPosts(data));
+		Request.get(`https://newsapi.org/v2/${cat === 'none' ? 'everything' : 'top-headlines'}?q=food%20OR%20fruits${cat !== 'none' ? "&category=" + cat : ''}&page=${blogPage}&pageSize=${pageSize}&sortBy=${sort}&apiKey=${API_KEY}`).then(data => setPosts(data));
 	}, [blogPage, sort, cat])
 
 	const sortPosts = (e) => {
