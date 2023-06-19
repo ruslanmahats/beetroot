@@ -5,7 +5,7 @@ export const SwiperHeroSlide = ({ title, preTitle, imgUrl, btnSolidText, btnRegu
 	return (
 		<>
 			<div className="slide-hero__container">
-				<div className="slide-hero__image-conteainer"><img src={'/assets/images/slider-hero/' + imgUrl} alt={title} className="slide-hero__image" /></div>
+				<div className="slide-hero__image-conteainer"><img src={'/beetroot/assets/images/slider-hero/' + imgUrl} alt={title} className="slide-hero__image" /></div>
 				<div className="slide-hero__blur"></div>
 				<div className="slide-hero__text-container">
 					<div className="slide-hero__pre-title" data-swiper-parallax="-200" data-swiper-parallax-duration="1000" data-swiper-parallax-opacity="0.2">{preTitle}</div>
