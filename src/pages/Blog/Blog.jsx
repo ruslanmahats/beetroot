@@ -15,7 +15,7 @@ export const Blog = () => {
 
 	const pageSize = 12;
 
-	const API_KEY = '7032c80efcda4276bc6642c1a404bd45';
+	const API_KEY = 'fa5ca2cfb8434a74af52dfbad03e120b';
 
 	useEffect(() => {
 		Request.get(`https://newsapi.org/v2/${cat === 'none' ? 'everything' : 'top-headlines'}?q=food${cat !== 'none' ? "&category=" + cat : ''}&page=${blogPage}&pageSize=${pageSize}&sortBy=${sort}&apiKey=${API_KEY}`).then(data => setPosts(data));
