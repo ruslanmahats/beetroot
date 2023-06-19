@@ -40,7 +40,7 @@ export const CardProduct = ({ id, title, descShort, price, priceOld, discount, l
 				<div className="card-product__image-container"><Link to={`/shop/${id}`}><img src={`/assets/images/products/${photoUrl}`} alt={title} className="card-product__image" /></Link></div>
 				<div className="card-product__text-container">
 					<div className="card-product__title"><Link to={`/shop/${id}`} className='card-product__title-link'>{title}</Link></div>
-					<div className="card-product__desc">{descShort.length && descShort.length > 35 ? descShort.substr(0, 35) + '...' : descShort}</div>
+					<div className="card-product__desc">{descShort}</div>
 					<div className="card-product__buy-container">
 						<div className='card-product__price-container'>
 							<div className="card-product__price">{price + " $"}</div>
