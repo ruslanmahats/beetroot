@@ -11,7 +11,7 @@ export const SwiperComm = () => {
 	const [comments, setComments] = useState([]);
 
 	useEffect(() => {
-		Request.get('/mock/comments.json').then(data => setComments(data));
+		Request.get('/beetroot/mock/comments.json').then(data => setComments(data));
 	}, []);
 
 
