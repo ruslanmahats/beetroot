@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/beetroot/static/css/main.ae397893.css",
+    "main.css": "/beetroot/static/css/main.55b3d6f1.css",
     "main.js": "/beetroot/static/js/main.ee311caf.js",
     "static/media/Poppins-Regular.ttf": "/beetroot/static/media/Poppins-Regular.e09d5cf4d895b8585f80.ttf",
     "static/media/Poppins-Medium.ttf": "/beetroot/static/media/Poppins-Medium.c8811e16c7cc3159fb7d.ttf",
@@ -29,11 +29,11 @@
     "static/media/Poppins-Medium.woff2": "/beetroot/static/media/Poppins-Medium.563f976db73ca07d8fc3.woff2",
     "static/media/Poppins-Black.woff2": "/beetroot/static/media/Poppins-Black.9f8a4a5f1e0fe91ec9f7.woff2",
     "index.html": "/beetroot/index.html",
-    "main.ae397893.css.map": "/beetroot/static/css/main.ae397893.css.map",
+    "main.55b3d6f1.css.map": "/beetroot/static/css/main.55b3d6f1.css.map",
     "main.ee311caf.js.map": "/beetroot/static/js/main.ee311caf.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae397893.css",
+    "static/css/main.55b3d6f1.css",
     "static/js/main.ee311caf.js"
   ]
 }
