@@ -47,9 +47,9 @@ export const CardProduct = ({ id, title, descShort, price, priceOld, discount, l
 							<div className="card-product__old-price">{labelDiscount && priceOld + " $"}</div>
 						</div>
 						<div className="card-product__counter-container">
-							<div className="card-product__counter-minus" onClick={handleQuantityMinus}><FontAwesomeIcon icon={faMinus} /></div>
+							<div className="card-product__counter-minus" onClick={handleQuantityMinus}><FontAwesomeIcon icon={faMinus} aria-label="Minus" /></div>
 							<input className="card-product__counter-number" value={inputQuantity} onChange={handleQuantity} type='number' />
-							<div className="card-product__counter-plus" onClick={handleQuantityPlus}><FontAwesomeIcon icon={faPlus} /></div>
+							<div className="card-product__counter-plus" onClick={handleQuantityPlus}><FontAwesomeIcon icon={faPlus} aria-label="Plus" /></div>
 						</div>
 					</div>
 					<div className="card-product__button">

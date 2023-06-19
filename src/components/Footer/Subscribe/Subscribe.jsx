@@ -16,7 +16,7 @@ export const Subscribe = () => {
 		<>
 			<form action="" className="subscribe">
 				<input onChange={handleValue} type="email" name="email" className={valueInput ? 'subscribe__input' : 'subscribe__input subscribe__input--error'} placeholder='Email' pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required />
-				<button type='submit' className='subscribe__btn' disabled={!valueInput}><FontAwesomeIcon icon={faPaperPlane} /></button>
+				<button type='submit' className='subscribe__btn' disabled={!valueInput} aria-label="Search"><FontAwesomeIcon icon={faPaperPlane} /></button>
 			</form>
 		</>
 	)
