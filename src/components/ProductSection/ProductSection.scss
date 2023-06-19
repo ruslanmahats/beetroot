@@ -6,12 +6,18 @@
 	&__details {
 		display: flex;
 		gap: 50px;
-		flex-wrap: wrap;
+		flex-direction: column;
+		@include tablet-l {
+			flex-direction: row;
+		}
 	}
 
 	&__image-container {
 		position: relative;
-		flex: 0 0 calc(50% - 50px);
+		flex: 0 0 100%;
+		@include tablet-l {
+			flex: 0 0 calc(50% - 50px);
+		}
 	}
 
 	&__image {
@@ -26,7 +32,10 @@
 	}
 
 	&__info {
-		flex: 0 0 calc(50% - 50px);
+		flex: 0 0 100%;
+		@include tablet-l {
+			flex: 0 0 calc(50% - 50px);
+		}
 	}
 
 	&__short-desc {
