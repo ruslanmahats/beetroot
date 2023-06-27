@@ -3,14 +3,14 @@ import { Button } from '../../../Button/Button';
 import './CardProduct.scss';
 import { faCartShopping, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { ProductsInCart } from '../../../../context/context';
+import { ProductsInCart } from '../../../../context/context';
 
 export const CardProduct = ({ id, title, descShort, price, priceOld, discount, labelDiscount, labelBestPrice, labelNew, photoUrl }) => {
 	const [inputQuantity, setInputQuantity] = useState(1);
 	// const [random, setRandom] = useState(0);
-	// const { cart, setCart } = useContext(ProductsInCart);
+	const { cart, setCart } = useContext(ProductsInCart);
 
 
 	function handleQuantity(event) {
@@ -24,6 +24,26 @@ export const CardProduct = ({ id, title, descShort, price, priceOld, discount, l
 	function handleQuantityPlus() {
 		setInputQuantity(+inputQuantity + 1);
 	}
+
+
+	function addToCart(id, quantity, cart) {
+		let newCart = cart;
+		const existingProduct = newCart.find(obj => obj.id === id);
+		if (existingProduct) {
+			existingProduct.quantity += quantity;
+		} else {
+			const newObject = { "id": id, "quantity": quantity };
+			newCart.push(newObject);
+		}
+		localStorage.setItem("cart", JSON.stringify(newCart))
+		setCart(newCart);
+		console.log(cart)
+	};
+
+	// useEffect(() => {
+	// 	localStorage.setItem("cart", JSON.stringify(cart))
+	// }, [cart])
+
 
 
 	return (
@@ -53,7 +73,7 @@ export const CardProduct = ({ id, title, descShort, price, priceOld, discount, l
 						</div>
 					</div>
 					<div className="card-product__button">
-						<Button icon={<FontAwesomeIcon icon={faCartShopping} />} text="Add to Cart" mod="solid" />
+						<Button icon={<FontAwesomeIcon icon={faCartShopping} />} text="Add to Cart" mod="solid" addToCart={() => addToCart(id, inputQuantity, cart)} />
 					</div>
 				</div>
 			</div >

@@ -17,7 +17,7 @@ export const Button = ({ icon, text, mod, url, addToCart }) => {
 
 	return (
 		<>
-			{addToCart ? <Link to={url} className={'button button--' + mod} onClick={addToCart}>{iconEl()}{textEl()}</Link> : <Link to={url} className={'button button--' + mod}>{iconEl()}{textEl()}</Link>}
+			{addToCart ? <button className={'button button--' + mod} onClick={addToCart}>{iconEl()}{textEl()}</button> : <Link to={url} className={'button button--' + mod}>{iconEl()}{textEl()}</Link>}
 		</>
 	)
 };

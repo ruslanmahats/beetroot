@@ -28,6 +28,12 @@ function App() {
 		Request.get('https://648d6dee2de8d0ea11e7d552.mockapi.io/products').then(data => setProducts(data));
 	}, []);
 
+	useEffect(() => {
+		if (localStorage.getItem('cart') !== null) {
+			const productsFromStoradge = JSON.parse(localStorage.getItem("cart"));
+			setCart(productsFromStoradge);
+		}
+	}, [])
 
 
 	const handleScroll = () => {

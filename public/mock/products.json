@@ -1,6 +1,6 @@
 [
 	{
-		"id": 215467,
+		"id": "215467",
 		"title": "Oranges",
 		"descShort": "Sweet and tangy citrus fruit",
 		"descFull": "Oranges are round citrus fruits with a bright orange color and a sweet, tangy flavor. They are rich in vitamin C and are a popular choice for juicing.",
@@ -16,7 +16,7 @@
 		"unit": 0.5
 	},
 	{
-		"id": 467523,
+		"id": "467523",
 		"title": "Bananas",
 		"descShort": "Yellow tropical fruit",
 		"descFull": "Bananas are elongated tropical fruits with a creamy texture and a sweet taste. They are a good source of potassium and are often used in smoothies or as a quick snack.",
@@ -32,7 +32,7 @@
 		"unit": 0.7
 	},
 	{
-		"id": 876549,
+		"id": "876549",
 		"title": "Apples",
 		"descShort": "Crunchy and juicy fruit",
 		"descFull": "Apples are round fruits with a crisp texture and a sweet or tart flavor. They come in various colors and are a popular choice for snacking, baking, and making apple-based dishes.",
@@ -48,7 +48,7 @@
 		"unit": 0.9
 	},
 	{
-		"id": 321678,
+		"id": "321678",
 		"title": "Lemons",
 		"descShort": "Sour citrus fruit",
 		"descFull": "Lemons are small, yellow citrus fruits known for their sour taste. They are rich in vitamin C and are commonly used in cooking, baking, and making refreshing drinks like lemonade.",
@@ -64,7 +64,7 @@
 		"unit": 0.3
 	},
 	{
-		"id": 987645,
+		"id": "987645",
 		"title": "Mangoes",
 		"descShort": "Tropical fruit with sweet and juicy flesh",
 		"descFull": "Mangoes are juicy fruits with a sweet, tropical flavor. They have a unique texture and are often enjoyed fresh, used in smoothies, or added to various dishes for a burst of flavor.",
@@ -80,7 +80,7 @@
 		"unit": 0.4
 	},
 	{
-		"id": 135792,
+		"id": "135792",
 		"title": "Grapes",
 		"descShort": "Small and juicy berries",
 		"descFull": "Grapes are small, juicy berries that come in various colors such as green, red, or purple. They are often eaten fresh, used in salads, or made into wine.",
@@ -96,7 +96,7 @@
 		"unit": 0.2
 	},
 	{
-		"id": 754159,
+		"id": "754159",
 		"title": "Pears",
 		"descShort": "Juicy and sweet fruit",
 		"descFull": "Pears are fruits that have a sweet and juicy flesh. They come in various shapes and colors and are often enjoyed fresh or used in desserts, salads, and preserves.",
@@ -112,7 +112,7 @@
 		"unit": 0.8
 	},
 	{
-		"id": 246813,
+		"id": "246813",
 		"title": "Cherries",
 		"descShort": "Small and sweet fruits",
 		"descFull": "Cherries are small fruits with a sweet and slightly tart flavor. They are often enjoyed fresh or used in desserts, jams, and baked goods like pies and tarts.",
@@ -128,7 +128,7 @@
 		"unit": 0.6
 	},
 	{
-		"id": 369258,
+		"id": "369258",
 		"title": "Apricots",
 		"descShort": "Small and velvety fruits",
 		"descFull": "Apricots are small fruits with a velvety skin and a sweet, tangy flavor. They are a good source of vitamins A and C and are often enjoyed fresh, dried, or used in various dishes.",
@@ -144,7 +144,7 @@
 		"unit": 0.9
 	},
 	{
-		"id": 961753,
+		"id": "961753",
 		"title": "Sour cherries",
 		"descShort": "Tart and tangy berries",
 		"descFull": "Sour cherries, also known as tart cherries, have a bright red color and a tart, tangy taste. They are often used in pies, preserves, and desserts.",
@@ -160,7 +160,7 @@
 		"unit": 0.3
 	},
 	{
-		"id": 785421,
+		"id": "785421",
 		"title": "Peaches",
 		"descShort": "Sweet and juicy fruits",
 		"descFull": "Peaches are sweet and juicy fruits with a fuzzy skin and a delicate aroma. They are rich in vitamins A and C and are often enjoyed fresh, used in desserts, or grilled for a caramelized flavor.",
@@ -176,7 +176,7 @@
 		"unit": 0.2
 	},
 	{
-		"id": 258369,
+		"id": "258369",
 		"title": "Strawberries",
 		"descShort": "Juicy and sweet berries",
 		"descFull": "Strawberries are juicy and sweet berries that have a bright red color and a fragrant aroma. They are commonly enjoyed fresh, used in desserts, or added to salads for a burst of flavor.",
@@ -192,7 +192,7 @@
 		"unit": 0.6
 	},
 	{
-		"id": 955753,
+		"id": "955753",
 		"title": "Guava",
 		"descShort": "Tropical fruit with pink flesh",
 		"descFull": "Guava is a tropical fruit with a unique flavor and pink, juicy flesh. It is rich in vitamin C and is often enjoyed fresh, used in juices, or added to salads and desserts.",
@@ -208,7 +208,7 @@
 		"unit": 0.4
 	},
 	{
-		"id": 753051,
+		"id": "753051",
 		"title": "Dragon fruit",
 		"descShort": "Exotic fruit with vibrant colors",
 		"descFull": "Dragon fruit, also known as pitaya, is an exotic fruit with vibrant colors and a mild, sweet taste. It is often enjoyed fresh, used in smoothies, or added to fruit salads.",
@@ -224,7 +224,7 @@
 		"unit": 0.9
 	},
 	{
-		"id": 157903,
+		"id": "157903",
 		"title": "Lychee",
 		"descShort": "Small and fragrant tropical fruit",
 		"descFull": "Lychee is a small tropical fruit with a sweet, floral flavor and a fragrant aroma. It has a rough, textured skin that is easily peeled to reveal a juicy, translucent flesh.",
@@ -240,7 +240,7 @@
 		"unit": 0.3
 	},
 	{
-		"id": 357958,
+		"id": "357958",
 		"title": "Star fruit",
 		"descShort": "Star-shaped tropical fruit",
 		"descFull": "Star fruit, also known as carambola, is a tropical fruit with a unique star shape and a sweet-tart taste. It is often used as a garnish, added to fruit salads, or juiced.",
@@ -256,7 +256,7 @@
 		"unit": 0.7
 	},
 	{
-		"id": 951357,
+		"id": "951357",
 		"title": "Pomegranates",
 		"descShort": "Red, juicy arils",
 		"descFull": "Pomegranates are fruits with a tough outer skin and juicy red arils inside. They have a sweet and tart flavor and are rich in antioxidants. Pomegranate seeds can be enjoyed on their own or used in salads, desserts, or as a topping for yogurt.",
@@ -272,7 +272,7 @@
 		"unit": 0.4
 	},
 	{
-		"id": 752159,
+		"id": "752159",
 		"title": "Grapes",
 		"descShort": "Small and juicy berries",
 		"descFull": "Grapes are small, juicy berries that come in various colors such as green, red, or purple. They are often eaten fresh, used in salads, or made into wine.",
@@ -288,7 +288,7 @@
 		"unit": 0.2
 	},
 	{
-		"id": 951763,
+		"id": "951763",
 		"title": "Oranges",
 		"descShort": "Sweet and tangy citrus fruit",
 		"descFull": "Oranges are round citrus fruits with a bright orange color and a sweet, tangy flavor. They are rich in vitamin C and are a popular choice for juicing.",
@@ -304,7 +304,7 @@
 		"unit": 0.3
 	},
 	{
-		"id": 357941,
+		"id": "357941",
 		"title": "Pineapple",
 		"descShort": "Tropical fruit with a sweet and tangy flavor",
 		"descFull": "Pineapple is a tropical fruit with a sweet and tangy flavor. It has a prickly exterior and a juicy, fibrous flesh. Pineapple is commonly eaten fresh, used in smoothies, or added to savory dishes.",
@@ -320,7 +320,7 @@
 		"unit": 0.8
 	},
 	{
-		"id": 135975,
+		"id": "135975",
 		"title": "Watermelon",
 		"descShort": "Juicy and refreshing fruit",
 		"descFull": "Watermelon is a large, juicy fruit with a refreshing taste. It has a green rind and a sweet, red or pink flesh with black seeds. Watermelon is often enjoyed chilled, used in fruit salads, or blended into refreshing beverages.",
@@ -336,7 +336,7 @@
 		"unit": 0.9
 	},
 	{
-		"id": 753169,
+		"id": "753169",
 		"title": "Blueberries",
 		"descShort": "Small and flavorful berries",
 		"descFull": "Blueberries are small, round berries with a dark blue or purple color. They have a sweet and tangy flavor and are rich in antioxidants. Blueberries are often enjoyed fresh, added to smoothies, or used in baked goods.",
@@ -352,7 +352,7 @@
 		"unit": 0.2
 	},
 	{
-		"id": 151753,
+		"id": "151753",
 		"title": "Raspberries",
 		"descShort": "Small and tart berries",
 		"descFull": "Raspberries are small, tart berries with a delicate texture and a vibrant red color. They have a sweet and tangy taste and are often enjoyed fresh, used in desserts, or added to yogurt.",
@@ -368,7 +368,7 @@
 		"unit": 0.3
 	},
 	{
-		"id": 353951,
+		"id": "353951",
 		"title": "Mango chunks",
 		"descShort": "Sweet and tropical fruit pieces",
 		"descFull": "Mango chunks are pieces of ripe, sweet mango fruit. Mangoes have a juicy, orange flesh with a tropical flavor. Mango chunks are commonly used in smoothies, desserts, or enjoyed on their own.",
@@ -384,7 +384,7 @@
 		"unit": 0.4
 	},
 	{
-		"id": 150953,
+		"id": "150953",
 		"title": "Mixed berries",
 		"descShort": "Assortment of berries",
 		"descFull": "Mixed berries are a combination of various berries such as strawberries, blueberries, raspberries, and blackberries. They offer a mix of flavors and are commonly used in smoothies, desserts, or enjoyed as a topping.",
@@ -400,7 +400,7 @@
 		"unit": 0.5
 	},
 	{
-		"id": 703951,
+		"id": "703951",
 		"title": "Blackcurrants",
 		"descShort": "Small and tangy berries",
 		"descFull": "Blackcurrants are small berries with a deep purple color and a tangy taste. They are rich in vitamin C and are often used in jams, jellies, and desserts.",
@@ -416,7 +416,7 @@
 		"unit": 0.3
 	},
 	{
-		"id": 951553,
+		"id": "951553",
 		"title": "Cherries",
 		"descShort": "Sweet and juicy stone fruit",
 		"descFull": "Cherries are small, round stone fruits with a sweet and juicy flesh. They come in various colors such as red, yellow, or black. Cherries are often enjoyed fresh, used in pies, or added to cocktails.",
@@ -432,7 +432,7 @@
 		"unit": 0.4
 	},
 	{
-		"id": 352551,
+		"id": "352551",
 		"title": "Sour cherries",
 		"descShort": "Tart and tangy stone fruit",
 		"descFull": "Sour cherries are small stone fruits with a tart and tangy flavor. They are commonly used in baking, preserves, or enjoyed as a snack. Sour cherries are also used to make delicious cherry pies and tarts.",
@@ -448,7 +448,7 @@
 		"unit": 0.5
 	},
 	{
-		"id": 157593,
+		"id": "157593",
 		"title": "Apricots",
 		"descShort": "Small and velvety stone fruit",
 		"descFull": "Apricots are small stone fruits with a velvety skin and a sweet, tangy flavor. They are rich in vitamins A and C and are often enjoyed fresh, used in jams, or added to salads.",
