@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .we-are {
 	padding: 0 0 70px;
@@ -12,9 +12,9 @@
 
 	&__container {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		gap: 30px;
 		@include tablet-l {
 			justify-content: space-between;
@@ -24,18 +24,18 @@
 	}
 
 	&__video-container {
-		width: 100%;
-		position: relative;
 		flex: 0 0 100%;
+		width: 100%;
 		padding-bottom: 70%;
 		border-radius: 10px;
+		position: relative;
 		overflow: hidden;
 		@include phone-l {
 			padding-bottom: 55%;
 		}
 		@include tablet-l {
-			padding-bottom: 35%;
 			flex: 0 0 calc(50% - 30px);
+			padding-bottom: 35%;
 			border-radius: 30% 70% 68% 32% / 71% 33% 67% 29%;
 		}
 	}
@@ -51,12 +51,12 @@
 	}
 
 	&__video-blur {
-		background: $color-bg-5;
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		top: 0px;
 		left: 0px;
+		background: $color-bg-5;
 		object-fit: cover;
 		object-position: center;
 	}
@@ -67,19 +67,19 @@
 		align-items: center;
 		width: 80px;
 		height: 80px;
+		border-radius: 50%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: $color-text-2;
-		background-color: $color-bg-3;
-		border-radius: 50%;
-		font-size: 30px;
 		transition: all 0.3s ease-in-out;
+		background-color: $color-bg-3;
 		cursor: pointer;
+		color: $color-text-2;
+		font-size: 30px;
 		&:hover {
-			background-color: $color-bg-1;
 			box-shadow: 0 0 5px $color-bg-2;
+			background-color: $color-bg-1;
 		}
 		& svg {
 			margin-left: 5px;
@@ -91,27 +91,27 @@
 	}
 
 	&__pre-title {
-		font-size: 15px;
 		color: $color-text-6;
+		font-size: 15px;
 	}
 
 	&__title {
 		margin-top: 20px;
-		color: $color-text-1;
-		font-family: "Poppins", sans-serif;
-		font-size: 40px;
-		font-weight: 700;
 		padding-bottom: 15px;
 		line-height: 2.25rem;
+		color: $color-text-1;
+		font-family: 'Poppins', sans-serif;
+		font-size: 40px;
+		font-weight: 700;
 		& span {
 			color: $color-text-3;
 		}
 	}
 
 	&__text {
-		font-family: "Poppins", sans-serif;
-		line-height: 1.8;
 		margin-top: 20px;
+		line-height: 1.8;
+		font-family: 'Poppins', sans-serif;
 		font-size: 14px;
 
 		@include tablet-l {
@@ -123,28 +123,28 @@
 	}
 
 	&__button {
-		margin-top: 30px;
 		width: fit-content;
+		margin-top: 30px;
 	}
 }
 
 .we-are {
 	&__modal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 		height: 100%;
 		position: fixed;
 		top: 0px;
 		left: 0px;
 		z-index: 10;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		visibility: hidden;
 		transition: background-color 0.3s ease-in-out;
+		visibility: hidden;
 	}
 	&--active &__modal {
-		background-color: $color-bg-5;
 		visibility: visible;
+		background-color: $color-bg-5;
 	}
 
 	&__modal-video {
@@ -174,17 +174,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
 		position: absolute;
 		top: 0px;
 		right: 0px;
-		width: 30px;
-		height: 30px;
+		transform: translate(50%, -50%);
 		background-color: $color-bg-3;
+		cursor: pointer;
 		color: $color-bg-2;
 		font-size: 18px;
-		border-radius: 50%;
-		cursor: pointer;
-		transform: translate(50%, -50%);
 		&:hover {
 			background-color: $color-bg-1;
 		}

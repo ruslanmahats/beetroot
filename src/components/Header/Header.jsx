@@ -1,33 +1,36 @@
 import './Header.scss';
-import { CartActive, MenuActive } from '../../context/context';
+
+import { Cart } from './Cart/Cart';
 import { Logo } from './Logo/Logo';
 import { Menu } from './Menu/Menu';
+import { MenuContext } from '../../context/MenuContextProvider';
+import { ScrollContext } from '../../context/ScrollContextProvider';
 import { Tools } from './Tools/Tools';
-import { useState } from 'react';
-import { Cart } from './Cart/Cart';
+import { useContext } from 'react';
 
-export const Header = ({ scroll, menuItems }) => {
-	const [burgerClick, setBurgerClick] = useState(false);
-	const [cartActive, setCartActive] = useState(false);
-
-
+export const Header = ({ menuItems }) => {
+	const { menuIsOpen, toggleMenuIsOpen } = useContext(MenuContext);
+	const scroll = useContext(ScrollContext);
 
 	return (
 		<>
-			<CartActive.Provider value={{ cartActive, setCartActive }}>
-				<MenuActive.Provider value={{ burgerClick, setBurgerClick }}>
-					<header className={(scroll === 0 ? "header" : "header header--fixed") + (!burgerClick ? "" : " header--active")}>
-						<div className='wrapper'>
-							<div className="header__inner">
-								<div className="header__logo"><Logo /></div>
-								<div className="header__menu"><Menu menuItems={menuItems} /></div>
-								<div className="header__tools"><Tools /></div>
-							</div>
+			<header
+				className={(scroll === 0 ? 'header' : 'header header--fixed') + (!menuIsOpen ? '' : ' header--active')}>
+				<div className='wrapper'>
+					<div className='header__inner'>
+						<div className='header__logo'>
+							<Logo />
 						</div>
-					</header >
-					<Cart />
-				</MenuActive.Provider>
-			</CartActive.Provider>
+						<div className='header__menu'>
+							<Menu menuItems={menuItems} menuIsOpen={menuIsOpen} toggleMenuIsOpen={toggleMenuIsOpen} />
+						</div>
+						<div className='header__tools'>
+							<Tools menuIsOpen={menuIsOpen} toggleMenuIsOpen={toggleMenuIsOpen} />
+						</div>
+					</div>
+				</div>
+			</header>
+			<Cart />
 		</>
-	)
+	);
 };

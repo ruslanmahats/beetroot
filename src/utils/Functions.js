@@ -10,10 +10,9 @@ export const cutTextAfterNSymbols = (text, nSymbols) => {
 
 export const makeTextToPText = (text) => {
 	const newText = text.split('\n');
-	return (newText.map(item => {
-		return <p>{item}</p>
-	})
-	)
+	return newText.map((item) => {
+		return <p>{item}</p>;
+	});
 };
 
 export const getNRandomItems = (number, arr, setFunc) => {

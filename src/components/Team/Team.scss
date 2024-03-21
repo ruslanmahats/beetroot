@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .team {
 	padding: 70px 0;
@@ -7,8 +7,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 30px;
 		flex-wrap: wrap;
+		gap: 30px;
 		@include tablet-l {
 			flex-wrap: nowrap;
 		}
@@ -20,8 +20,8 @@
 	}
 
 	&__image-container {
-		position: relative;
 		padding-bottom: 130%;
+		position: relative;
 	}
 
 	&__image {
@@ -37,19 +37,19 @@
 	&__name {
 		margin-top: 20px;
 		text-align: center;
-		font-family: $font-family-1;
-		font-weight: 700;
-		font-size: 18px;
-		color: $color-bg-1;
 		letter-spacing: 1px;
+		color: $color-bg-1;
+		font-family: $font-family-1;
+		font-size: 18px;
+		font-weight: 700;
 	}
 
 	&__position {
 		margin-top: 10px;
 		text-align: center;
-		font-family: $font-family-1;
-		font-weight: 600;
-		font-size: 16px;
 		color: $color-text-6;
+		font-family: $font-family-1;
+		font-size: 16px;
+		font-weight: 600;
 	}
 }

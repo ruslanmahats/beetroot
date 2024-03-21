@@ -1,14 +1,14 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .slider-comment {
 	text-align: center;
 	&__avatar-container {
 		display: inline-block;
-		overflow: hidden;
-		border-radius: 50%;
 		width: 110px;
 		height: 110px;
+		border-radius: 50%;
+		overflow: hidden;
 	}
 
 	&__image {
@@ -18,28 +18,28 @@
 
 	&__name {
 		margin-top: 15px;
-		font-family: "Poppins", sans-serif;
+		letter-spacing: 1px;
+		font-family: 'Poppins', sans-serif;
 		font-size: 20px;
 		font-weight: 600;
-		letter-spacing: 1px;
 	}
 
 	&__position {
 		margin-top: 15px;
-		font-family: "Poppins", sans-serif;
-		font-size: 15px;
-		font-weight: 600;
 		letter-spacing: 1px;
 		color: $color-text-4;
+		font-family: 'Poppins', sans-serif;
+		font-size: 15px;
+		font-weight: 600;
 	}
 
 	&__text {
 		margin-top: 20px;
-		font-style: italic;
-		font-size: 16px;
 		line-height: 2;
-		color: $color-text-4;
 		letter-spacing: 1px;
+		color: $color-text-4;
+		font-size: 16px;
+		font-style: italic;
 	}
 
 	&__icon {

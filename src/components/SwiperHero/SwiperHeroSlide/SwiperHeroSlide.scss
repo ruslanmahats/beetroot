@@ -1,25 +1,25 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .slide-hero {
 	&__container {
-		height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		height: 100svh;
 		position: relative;
 	}
 	&__image-conteainer,
 	&__blur {
+		width: 100%;
+		height: 100%;
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		width: 100%;
-		height: 100%;
 	}
 	&__blur {
-		background-color: $color-bg-1;
 		opacity: 0.7;
+		background-color: $color-bg-1;
 	}
 	&__image {
 		width: 100%;
@@ -28,9 +28,9 @@
 		object-position: center;
 	}
 	&__text-container {
-		z-index: 3;
-		padding: 30px 15px;
 		max-width: 920px;
+		padding: 30px 15px;
+		z-index: 3;
 		text-align: center;
 		@include tablet-p {
 			padding: 60px;
@@ -38,11 +38,11 @@
 		}
 	}
 	&__pre-title {
-		color: #f28123;
-		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 7px;
+		color: #f28123;
 		font-size: 14px;
+		font-weight: 700;
 		@include tablet-p {
 			font-size: 15px;
 		}
@@ -52,10 +52,10 @@
 	}
 	&__title {
 		margin-top: 10px;
-		font-size: 34px;
-		font-weight: 700;
 		line-height: 1.3;
 		color: #fff;
+		font-size: 34px;
+		font-weight: 700;
 		@include tablet-p {
 			font-size: 44px;
 		}
@@ -64,10 +64,10 @@
 		}
 	}
 	&__buttons {
-		margin-top: 40px;
 		display: flex;
 		justify-content: center;
 		gap: 20px;
+		margin-top: 40px;
 		@include tablet-p {
 			justify-content: flex-end;
 		}

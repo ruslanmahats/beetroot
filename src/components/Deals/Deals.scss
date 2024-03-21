@@ -1,22 +1,22 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .deals {
-	background-color: $color-bg-2;
 	padding: 40px 0;
+	background-color: $color-bg-2;
 	@include phone-l {
 		padding: 80px 0;
 	}
 	&__container {
-		position: relative;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		gap: 50px;
+		position: relative;
 		@include tablet-p {
-			gap: 0px;
 			flex-direction: row;
+			gap: 0px;
 		}
 	}
 	&__image-container {
@@ -28,8 +28,8 @@
 	}
 	&__image {
 		width: 100%;
-		height: 100%;
 		max-width: 500px;
+		height: 100%;
 		object-fit: cover;
 		object-position: center;
 	}
@@ -42,55 +42,55 @@
 		}
 	}
 	&__btn {
-		margin-top: 50px;
 		width: fit-content;
+		margin-top: 50px;
 	}
 	&__title {
-		font-size: 40px;
-		font-family: $font-family-1;
-		font-weight: 700;
 		line-height: 2.25rem;
 		color: $color-text-1;
+		font-family: $font-family-1;
+		font-size: 40px;
+		font-weight: 700;
 		& span {
 			color: $color-text-3;
 		}
 	}
 	&__title-after {
-		font-size: 20px;
-		font-family: $font-family-1;
-		line-height: 22px;
-		font-weight: 300;
-		text-transform: uppercase;
 		margin-top: 20px;
+		text-transform: uppercase;
+		line-height: 22px;
+		font-family: $font-family-1;
+		font-size: 20px;
+		font-weight: 300;
 	}
 	&__text {
 		margin-top: 35px;
-		font-size: 14px;
 		line-height: 1.5;
+		font-size: 14px;
 	}
 	&__off-outer {
+		width: 110px;
+		height: 110px;
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		width: 110px;
-		height: 110px;
 	}
 	&_ &__off {
-		position: relative;
 		width: 100%;
 		height: 100%;
+		position: relative;
 	}
 	&__off-under {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		border-radius: 50%;
-		border: 5px dotted $color-bg-12;
-		width: 110px;
-		height: 110px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 110px;
+		height: 110px;
+		border: 5px dotted $color-bg-12;
+		border-radius: 50%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
 		animation: 10s pulse infinite linear;
 		@include phone-l {
 			top: -36px;
@@ -113,16 +113,16 @@
 		}
 	}
 	&__off-inner {
-		position: absolute;
-		top: 8px;
-		left: 8px;
-		width: 94px;
-		height: 94px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		width: 94px;
+		height: 94px;
 		border-radius: 50%;
+		position: absolute;
+		top: 8px;
+		left: 8px;
 		background-color: $color-bg-3;
 		@include phone-l {
 			top: -28px;
@@ -151,45 +151,45 @@
 }
 
 .counter {
-	margin-top: 25px;
 	display: flex;
 	justify-content: flex-start;
 	gap: 4px;
+	margin-top: 25px;
 	&__completed {
-		border: 2px solid $color-bg-3;
-		font-size: 30px;
-		line-height: 1.4em;
-		color: $color-text-3;
-		font-weight: 700;
-		letter-spacing: 1px;
 		padding: 20px;
+		border: 2px solid $color-bg-3;
+		line-height: 1.4em;
+		letter-spacing: 1px;
+		color: $color-text-3;
+		font-size: 30px;
+		font-weight: 700;
 	}
 	&__item {
-		width: 65px;
-		height: 65px;
-		text-align: center;
-		padding: 20px;
-		border: 2px solid $color-bg-3;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
+		width: 65px;
+		height: 65px;
+		padding: 20px;
+		border: 2px solid $color-bg-3;
+		text-align: center;
 		@include phone-l {
 			width: 82px;
 			height: 82px;
 		}
 	}
 	&__number {
-		font-size: 30px;
 		line-height: 1.4em;
-		color: $color-text-3;
-		font-weight: 700;
 		letter-spacing: 1px;
+		color: $color-text-3;
+		font-size: 30px;
+		font-weight: 700;
 	}
 	&__text {
-		font-size: 13px;
-		line-height: 1em;
 		text-transform: capitalize;
+		line-height: 1em;
+		font-size: 13px;
 	}
 }
 @keyframes pulse {

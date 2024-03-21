@@ -1,4 +1,4 @@
-@use "./src/styles/variables" as *;
+@use './src/styles/variables' as *;
 
 @mixin phone-l {
 	@media (min-width: $max-width-phone) {

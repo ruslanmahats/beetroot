@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .page-contacts {
 	&__contact-section {
@@ -12,16 +12,16 @@
 		}
 	}
 	&__location-title {
-		background-color: $color-bg-14;
 		padding: 95px 0;
+		background-color: $color-bg-14;
 		text-align: center;
 		font-size: 40px;
 		font-weight: 600;
 	}
 
 	&__location-title-icon {
-		color: $color-text-3;
 		margin-right: 20px;
+		color: $color-text-3;
 	}
 
 	&__location-title-text {

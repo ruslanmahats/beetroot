@@ -1,33 +1,33 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .page-blog {
 	margin: 100px 0;
 	&__posts {
+		display: grid;
+		justify-content: center;
+		gap: 40px 40px;
+		grid-template-columns: 1fr;
 		width: fit-content;
 		margin: 0 auto;
 		margin-top: 50px;
-		display: grid;
-		justify-content: center;
-		grid-template-columns: 1fr;
-		gap: 40px 40px;
 		@include phone-l {
-			grid-template-columns: 1fr 1fr;
 			gap: 60px 40px;
+			grid-template-columns: 1fr 1fr;
 		}
 		@include tablet-l {
+			gap: 80px 40px;
 			grid-template-columns: 1fr 1fr 1fr;
 			margin-top: 80px;
-			gap: 80px 40px;
 		}
 	}
 	&__buttons-container {
-		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 30px;
+		margin-top: 40px;
 	}
 	&__buttons {
 		display: flex;
@@ -37,13 +37,13 @@
 		gap: 10px;
 	}
 	&__buttons-item {
-		cursor: pointer;
-		background-color: $color-bg-2;
 		padding: 8px 15px;
 		border-radius: 10px;
+		transition: all 0.2s ease-in-out;
+		background-color: $color-bg-2;
+		cursor: pointer;
 		font-family: $font-family-1;
 		font-weight: 600;
-		transition: all 0.2s ease-in-out;
 		&:hover {
 			background-color: $color-bg-3;
 			color: $color-bg-10;
@@ -58,22 +58,22 @@
 		justify-content: flex-end;
 	}
 	&__search-inner {
-		max-width: 400px;
-		width: 100%;
-		height: 40px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 20px;
+		width: 100%;
+		max-width: 400px;
+		height: 40px;
 		padding: 0 20px;
 		border: 1px solid $color-bg-9;
 		border-radius: 20px;
 		color: $color-text-4;
 	}
 	& input {
-		border: none;
-		outline: none;
 		width: 100%;
+		outline: none;
+		border: none;
 	}
 	& input:focus::placeholder {
 		color: transparent;

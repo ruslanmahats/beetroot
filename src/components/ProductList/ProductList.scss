@@ -1,0 +1,17 @@
+@use '../../styles/mixins' as *;
+
+.product-list {
+	display: grid;
+	gap: 50px 30px;
+	grid-template-columns: 1fr;
+	margin-top: 50px;
+	@media screen and (min-width: 670px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include tablet-l {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@include desktop-big {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}

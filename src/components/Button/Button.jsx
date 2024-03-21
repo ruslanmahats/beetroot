@@ -1,23 +1,33 @@
-import { Link } from 'react-router-dom';
 import './Button.scss';
 
-export const Button = ({ icon, text, mod, url, addToCart }) => {
+import { Link } from 'react-router-dom';
 
+export const Button = ({ icon, text, mod, url, onClickHandler }) => {
 	const iconEl = () => {
 		if (icon) {
 			return <span className='button__icon'>{icon}</span>;
 		}
-	}
+	};
 
 	const textEl = () => {
 		if (text) {
 			return <span className='button__text'>{text}</span>;
 		}
-	}
+	};
 
-	return (
-		<>
-			{addToCart ? <button className={'button button--' + mod} onClick={addToCart}>{iconEl()}{textEl()}</button> : <Link to={url} className={'button button--' + mod}>{iconEl()}{textEl()}</Link>}
-		</>
-	)
+	if (!url) {
+		return (
+			<button className={'button button--' + mod} onClick={onClickHandler}>
+				{iconEl()}
+				{textEl()}
+			</button>
+		);
+	} else {
+		return (
+			<Link to={url} className={'button button--' + mod}>
+				{iconEl()}
+				{textEl()}
+			</Link>
+		);
+	}
 };

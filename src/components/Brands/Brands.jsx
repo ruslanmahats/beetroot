@@ -1,19 +1,19 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
 import './Brands.scss';
 import 'swiper/css/autoplay';
 import 'swiper/scss';
 import './Brands.scss';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { Autoplay } from 'swiper';
 import { BrandsItem } from './BrandsItem/BrandsItem';
 
 export const Brands = () => {
-
-	const brandItems = ["1.png", "2.png", "3.png", "4.png", "5.png", "1.png", "2.png", "3.png", "4.png", "5.png"];
-
+	const brandItems = ['1.png', '2.png', '3.png', '4.png', '5.png', '1.png', '2.png', '3.png', '4.png', '5.png'];
 
 	return (
 		<>
-			<section className="slider-brands">
+			<section className='slider-brands'>
 				<div className='wrapper'>
 					<Swiper
 						modules={[Autoplay]}
@@ -27,18 +27,19 @@ export const Brands = () => {
 							768: {
 								slidesPerView: 5,
 								slidesPerGroup: 1,
-								spaceBetween: 50
-							}
-						}}
-					>
-
+								spaceBetween: 50,
+							},
+						}}>
 						{brandItems.map((item, n) => {
-							return <SwiperSlide key={n} ><BrandsItem photoUrl={item}></BrandsItem></SwiperSlide>
+							return (
+								<SwiperSlide key={n}>
+									<BrandsItem photoUrl={item}></BrandsItem>
+								</SwiperSlide>
+							);
 						})}
-
-					</Swiper >
+					</Swiper>
 				</div>
 			</section>
 		</>
-	)
+	);
 };

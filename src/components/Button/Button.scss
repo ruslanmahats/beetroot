@@ -1,40 +1,40 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: $font-family-1;
+	gap: 10px;
 	padding: 10px 20px;
 	transition: all 0.3s ease-in-out;
 	text-transform: capitalize;
 	letter-spacing: 0.5px;
-	gap: 10px;
+	font-family: $font-family-1;
 	&--solid {
-		background-color: $color-bg-3;
 		border: 2px solid $color-bg-3;
 		border-radius: 50px;
+		background-color: $color-bg-3;
 		color: $color-text-2;
 		&:hover {
-			background-color: $color-bg-1;
 			border: 2px solid $color-bg-1;
+			background-color: $color-bg-1;
 			color: $color-text-3;
 		}
 	}
 	&--regular {
-		background-color: transparent;
 		border: 2px solid $color-bg-3;
 		border-radius: 50px;
+		background-color: transparent;
 		color: $color-text-2;
 		&:hover {
 			background-color: $color-bg-3;
 		}
 	}
 	&--orange {
-		background-color: transparent;
 		border: 2px solid $color-bg-3;
 		border-radius: 50px;
+		background-color: transparent;
 		color: $color-text-3;
 		&:hover {
 			background-color: $color-bg-3;
@@ -43,6 +43,6 @@
 	}
 }
 .slider-hero .button {
-	font-size: 14px;
 	padding: 10px 15px;
+	font-size: 14px;
 }

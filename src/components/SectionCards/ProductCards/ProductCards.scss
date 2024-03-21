@@ -1,14 +1,14 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .product-cards {
+	display: grid;
+	justify-content: center;
+	gap: 40px 40px;
+	grid-template-columns: 1fr;
 	width: fit-content;
 	margin: 0 auto;
 	margin-top: 80px;
-	display: grid;
-	justify-content: center;
-	grid-template-columns: 1fr;
-	gap: 40px 40px;
 	@media screen and (min-width: 670px) {
 		grid-template-columns: 1fr 1fr;
 	}

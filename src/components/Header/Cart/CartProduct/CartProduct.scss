@@ -1,0 +1,73 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.cart-product {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	padding: 5px 10px;
+	background-color: $color-bg-6;
+	color: $color-text-2;
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__title {
+	}
+
+	&__title-link {
+		color: $color-text-3;
+	}
+
+	&__image-container {
+		width: 75px;
+		height: 75px;
+		position: relative;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		object-fit: cover;
+	}
+
+	&__input-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+	}
+
+	&__price {
+	}
+
+	&__amount {
+	}
+
+	&__btn-remove {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+		outline: none;
+		border: none;
+		transition: all 0.3s ease-in-out;
+		background-color: $color-bg-1;
+		color: $color-text-2;
+		&:hover {
+			background-color: $color-bg-3;
+		}
+		&:active {
+			background-color: $color-bg-1;
+		}
+	}
+}

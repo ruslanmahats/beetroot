@@ -5,5 +5,5 @@ export const ErrorContainer = ({ msg }) => {
 		<>
 			<p className='error-container'>{msg}</p>
 		</>
-	)
+	);
 };

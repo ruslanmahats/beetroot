@@ -1,20 +1,20 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .pagination {
-	margin: 50px auto 0;
 	width: fit-content;
+	margin: 50px auto 0;
 	&__btn {
 		display: inline-block;
-		border: 1px solid $color-bg-3;
-		background-color: transparent;
 		width: 50px;
 		height: 50px;
-		transition: all 0.3s ease-in-out;
+		border: 1px solid $color-bg-3;
 		border-radius: 50%;
-		font-weight: 700;
-		font-family: $font-family-1;
+		transition: all 0.3s ease-in-out;
+		background-color: transparent;
 		color: $color-text-3;
+		font-family: $font-family-1;
+		font-weight: 700;
 		&:hover {
 			border: 1px solid $color-bg-1;
 			background-color: $color-bg-1;
@@ -25,8 +25,8 @@
 			color: $color-text-2;
 		}
 		&--disable {
-			visibility: hidden;
 			transition: all 0s ease-in-out;
+			visibility: hidden;
 		}
 	}
 	&__btn + &__btn {

@@ -1,11 +1,11 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .blog-preview-item {
 	&__image-container {
-		position: relative;
 		padding-bottom: 60%;
 		border-radius: 10px;
+		position: relative;
 		overflow: hidden;
 	}
 
@@ -35,26 +35,26 @@
 	}
 
 	&__title-link {
+		transition: all 0.3s ease-in-out;
+		line-height: 1.2;
 		color: $color-text-1;
 		font-family: $font-family-1;
-		font-weight: 700;
 		font-size: 24px;
-		line-height: 1.2;
-		transition: all 0.3s ease-in-out;
+		font-weight: 700;
 		&:hover {
 			color: $color-text-3;
 		}
 	}
 
 	&__info-container {
-		margin-top: 20px;
-		color: $color-text-5;
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
-		gap: 5px;
-		font-size: 15px;
 		flex-wrap: wrap;
+		gap: 5px;
+		margin-top: 20px;
+		color: $color-text-5;
+		font-size: 15px;
 		@include phone-l {
 			justify-content: space-between;
 			flex-direction: row;
@@ -69,8 +69,8 @@
 	&__text {
 		margin-top: 20px;
 		& p {
-			font-family: $font-family-1;
 			line-height: 1.8;
+			font-family: $font-family-1;
 		}
 		& p + p {
 			margin-top: 10px;
@@ -86,11 +86,11 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap: 10px;
+		transition: all 0.3s ease-in-out;
 		color: $color-text-1;
+		font-family: $font-family-1;
 		font-size: 18px;
 		font-weight: 700;
-		font-family: $font-family-1;
-		transition: all 0.3s ease-in-out;
 		&:hover {
 			color: $color-text-3;
 		}

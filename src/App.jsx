@@ -1,79 +1,56 @@
 import './App.scss';
-import { Routes, Route } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Shop } from './pages/Shop/Shop';
-import { Blog } from './pages/Blog/Blog';
-import { About } from './pages/About/About';
-import { Contacts } from './pages/Contacts/Contacts';
-import { Header } from './components/Header/Header';
-import { useEffect, useState } from 'react';
-import { Footer } from './components/Footer/Footer';
-import { Request } from './utils/Request';
-import { Product } from './pages/Product';
-import { BlogPost } from './pages/BlogPost';
-import { ProductsInCart } from './context/context';
 
+import { Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
+import { About } from './pages/About/About';
+import { Blog } from './pages/Blog/Blog';
+import { BlogPost } from './pages/BlogPost';
+import { Contacts } from './pages/Contacts/Contacts';
+import ContextProviders from './context/ContextProviders';
+import Favorite from './pages/Favorite/Favorite';
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
+import { Home } from './pages/Home';
+import { Product } from './pages/Product';
+import { Request } from './utils/Request';
+import { Shop } from './pages/Shop/Shop';
 
 function App() {
-	const [cart, setCart] = useState([]);
-	const [scroll, setScroll] = useState(0);
 	const [menuItems, setMenuItems] = useState([]);
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		Request.get('https://648d6dee2de8d0ea11e7d552.mockapi.io/menu').then(data => setMenuItems(data));
+		Request('https://648d6dee2de8d0ea11e7d552.mockapi.io/menu').then((data) => setMenuItems(data));
+		Request('https://648d6dee2de8d0ea11e7d552.mockapi.io/products').then((data) => setProducts(data));
 	}, []);
 
-	useEffect(() => {
-		Request.get('https://648d6dee2de8d0ea11e7d552.mockapi.io/products').then(data => setProducts(data));
-	}, []);
-
-	useEffect(() => {
-		if (localStorage.getItem('cart') !== null) {
-			const productsFromStoradge = JSON.parse(localStorage.getItem("cart"));
-			setCart(productsFromStoradge);
-		}
-	}, [])
-
-
-	const handleScroll = () => {
-		setScroll(window.scrollY);
-	};
-
-	// const handleUpButton = () => {
-	// 	window.scrollTo(0, 0);
-	// };
-
-	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	console.log('App render!');
 
 	return (
-		<>
-			<ProductsInCart.Provider value={{ cart, setCart }}>
-				<div className='mockup'>
-					<div className='mockup__section'>
-						<Header scroll={scroll} menuItems={menuItems} />
-					</div>
-					<div className='mockup__section--main'>
-						<Routes>
-							<Route path="/" element={<Home products={products} />} />
-							<Route path="/shop" element={<Shop products={products} />} />
-							<Route path="/shop/:id" element={<Product products={products} />} />
-							<Route path="/blog" element={<Blog />} />
-							<Route path="/blog/:id" element={<BlogPost />} />
-							<Route path="/about" element={<About />} />
-							<Route path="/contacts" element={<Contacts />} />
-						</Routes>
-					</div>
-					<div className='mockup__section'>
-						<Footer menuItems={menuItems} />
-					</div>
+		<ContextProviders>
+			<div className='mockup'>
+				<div className='mockup__section'>
+					<Header menuItems={menuItems} />
 				</div>
-			</ProductsInCart.Provider>
-		</>
-	)
-};
+				<div className='mockup__section--main'>
+					<Routes>
+						<Route path='/' element={<Home products={products} />} />
+						<Route path='/shop' element={<Shop products={products} />} />
+						<Route path='/shop/:id' element={<Product products={products} />} />
+						<Route path='/blog' element={<Blog />} />
+						<Route path='/blog/:id' element={<BlogPost />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/contacts' element={<Contacts />} />
+						<Route path='/favorite' element={<Favorite />} />
+					</Routes>
+				</div>
+				<div className='mockup__section'>
+					<Footer menuItems={menuItems} />
+				</div>
+			</div>
+		</ContextProviders>
+	);
+}
 
 export default App;

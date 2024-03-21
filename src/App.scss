@@ -1,7 +1,7 @@
-@use "./styles/variables" as *;
-@use "./styles/mixins" as *;
-@import "./styles/reset";
-@import "./styles/fonts";
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+@import './styles/reset';
+@import './styles/fonts';
 
 html {
 	scroll-behavior: smooth;
@@ -9,15 +9,25 @@ html {
 
 html,
 body {
-	font-family: "Open Sans", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.4;
-	min-height: 100vh;
 	height: 100%;
+	min-height: 100vh;
+	line-height: 1.4;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
 }
 
-.lock {
+body {
+	overflow-y: scroll;
+}
+
+.menu-lock {
+	margin-right: var(--scrollbar-width);
+	overflow: hidden;
+}
+
+.cart-lock {
+	margin-right: var(--scrollbar-width);
 	overflow: hidden;
 }
 
@@ -26,20 +36,20 @@ body {
 }
 
 .wrapper {
-	max-width: 1380px;
-	padding: 0 10px;
-	margin: 0 auto;
 	width: 100%;
+	max-width: 1380px;
+	margin: 0 auto;
+	padding: 0 10px;
 	@include phone-l {
 		padding: 0 30px;
 	}
 }
 
 .page-content {
-	margin-top: 50px;
 	display: flex;
 	justify-content: space-between;
 	gap: 50px;
+	margin-top: 50px;
 }
 
 .mockup {

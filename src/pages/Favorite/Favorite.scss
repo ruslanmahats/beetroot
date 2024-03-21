@@ -1,0 +1,13 @@
+.favorite {
+	margin-bottom: 50px;
+	&__warn {
+		margin-top: 50px;
+		text-align: center;
+	}
+	&-center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 50px;
+	}
+}

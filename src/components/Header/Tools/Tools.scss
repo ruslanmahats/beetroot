@@ -1,5 +1,5 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .tools {
 	display: flex;
@@ -8,30 +8,53 @@
 	position: relative;
 	z-index: 5;
 	&__item {
-		display: block;
-		color: $color-text-2;
-		cursor: pointer;
-		padding: 20px 10px;
-		transition: all 0.3s ease-in-out;
-		font-size: 20px;
-		width: 30px;
-		height: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 30px;
+		height: 30px;
+		padding: 20px 10px;
+		position: relative;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+		color: $color-text-2;
+		font-size: 20px;
 		@include phone-l {
-			font-size: 26px;
 			width: 40px;
 			height: 40px;
+			font-size: 26px;
 		}
 		@include tablet-l {
-			font-size: 30px;
 			width: 50px;
 			height: 50px;
+			font-size: 30px;
 		}
 		&:hover {
 			color: $color-text-3;
 		}
+	}
+
+	&__label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20px;
+		height: 20px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		position: absolute;
+		top: 0px;
+		right: -5px;
+		transition: all 0.3s ease-in-out;
+		background-color: $color-bg-3;
+		color: $color-text-2;
+		font-size: 14px;
+		.tools__item:hover & {
+			border: 1px solid $color-bg-2;
+		}
+	}
+	&__fav {
+		right: 0;
 	}
 }
 

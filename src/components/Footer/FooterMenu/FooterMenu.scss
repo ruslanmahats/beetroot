@@ -1,5 +1,5 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .footer-menu {
 	display: flex;
@@ -12,20 +12,20 @@
 		display: block;
 	}
 	&__item {
-		margin-bottom: 10px;
 		width: 50%;
+		margin-bottom: 10px;
 
 		@include tablet-l {
 		}
 	}
 	&__link {
-		width: fit-content;
 		display: inline-block;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: $color-text-5;
+		width: fit-content;
 		transition: all 0.3s ease-in-out;
+		color: $color-text-5;
 		@include phone-l {
 			justify-content: flex-start;
 		}
@@ -36,10 +36,10 @@
 			}
 		}
 		& span {
-			transition: all 0.3s ease-in-out;
 			display: block;
-			color: $color-text-3;
 			margin-right: 12px;
+			transition: all 0.3s ease-in-out;
+			color: $color-text-3;
 		}
 	}
 }

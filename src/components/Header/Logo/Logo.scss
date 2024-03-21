@@ -1,13 +1,13 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .logo {
 	position: relative;
 	z-index: 5;
 	&__link {
 		display: inline-block;
-		transition: all 0.3s ease-in-out;
 		padding: 5px;
+		transition: all 0.3s ease-in-out;
 		&:hover {
 			opacity: 0.7;
 		}

@@ -1,19 +1,19 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .subscribe {
 	display: flex;
 	justify-content: space-between;
 	gap: 5px;
 	&__input {
-		width: 100%;
 		display: block;
 		flex-grow: 1;
-		background-color: $color-bg-6;
+		width: 100%;
+		padding: 15px 10px;
 		outline: 1px solid $color-bg-6;
 		border: 1px solid $color-bg-6;
 		border-radius: 5px 0 0 5px;
-		padding: 15px 10px;
+		background-color: $color-bg-6;
 		color: $color-bg-2;
 		&:focus {
 			outline: 1px solid $color-bg-2;
@@ -26,17 +26,17 @@
 	}
 	&__btn {
 		display: block;
-		background-color: $color-bg-6;
+		padding: 15px 10px;
 		outline: 1px solid $color-bg-6;
 		border: 1px solid $color-bg-6;
 		border-radius: 0 5px 5px 0;
-		padding: 15px 10px;
-		color: $color-text-3;
 		transition: all 0.3s ease-in-out;
+		background-color: $color-bg-6;
+		color: $color-text-3;
 		&:hover {
-			background-color: $color-bg-3;
 			outline: 1px solid $color-bg-3;
 			border: 1px solid $color-bg-3;
+			background-color: $color-bg-3;
 			color: $color-text-1;
 		}
 	}

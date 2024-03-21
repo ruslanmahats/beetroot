@@ -1,24 +1,26 @@
-import { NavLink } from 'react-router-dom';
 import './Menu.scss';
-import { useContext } from 'react';
-import { MenuActive } from '../../../context/context';
 
-export const Menu = ({ menuItems }) => {
-	const { burgerClick, setBurgerClick } = useContext(MenuActive);
+import { NavLink } from 'react-router-dom';
 
+export const Menu = ({ menuItems, menuIsOpen, toggleMenuIsOpen }) => {
 	const onClickLink = () => {
-		setBurgerClick(false);
+		if (menuIsOpen) {
+			toggleMenuIsOpen();
+		}
 		window.scrollTo(0, 0);
-		document.querySelector('body').classList.remove("lock");
-	}
+	};
 
 	return (
-		<>
-			<ul className={!burgerClick ? "menu" : "menu menu--active"}>
-				{menuItems.map(item => {
-					return <li className="menu__item" key={item.id}><NavLink to={item.url} className="menu__link" onClick={onClickLink}>{item.name}</NavLink></li>
-				})}
-			</ul>
-		</>
-	)
+		<ul className={!menuIsOpen ? 'menu' : 'menu menu--active'}>
+			{menuItems.map((item) => {
+				return (
+					<li className='menu__item' key={item.id}>
+						<NavLink to={item.url} className='menu__link' onClick={onClickLink}>
+							{item.name}
+						</NavLink>
+					</li>
+				);
+			})}
+		</ul>
+	);
 };

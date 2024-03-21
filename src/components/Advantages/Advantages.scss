@@ -1,19 +1,19 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .advatages {
 	background-color: $color-bg-2;
 	&__container {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 50px 0;
+		flex-direction: column;
 		gap: 30px;
+		padding: 50px 0;
 		@include tablet-p {
-			padding: 80px 0;
-			flex-direction: row;
 			justify-content: space-between;
+			flex-direction: row;
+			padding: 80px 0;
 		}
 	}
 }

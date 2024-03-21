@@ -1,5 +1,5 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .contact-section {
 	display: flex;
@@ -29,9 +29,9 @@
 	}
 
 	&__adress-container {
-		background-color: $color-bg-2;
 		flex: 0 0 340px;
 		padding: 40px 20px;
+		background-color: $color-bg-2;
 		@include phone-l {
 			padding: 50px 40px;
 		}
@@ -62,12 +62,12 @@
 			margin-top: 10px;
 		}
 		li {
+			padding-top: 5px;
 			color: $color-text-4;
 			font-size: 14px;
-			padding-top: 5px;
 			a {
-				color: $color-text-3;
 				transition: all 0.3s ease-in-out;
+				color: $color-text-3;
 				&:hover {
 					color: $color-text-4;
 				}
@@ -76,8 +76,8 @@
 	}
 
 	&__adress-title {
+		font-family: $font-family-1;
 		font-size: 20px;
 		font-weight: 600;
-		font-family: $font-family-1;
 	}
 }

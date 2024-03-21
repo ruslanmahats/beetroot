@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .socials {
 	display: flex;
@@ -11,14 +11,13 @@
 		font-size: 24px;
 	}
 	&__item a {
-		display: inline-block;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	&__item a:hover {
-		font-size: 24px;
-		transition: all 0.3 ease-in-out;
 		transform: rotateZ(360deg);
+		transition: all 0.3 ease-in-out;
+		font-size: 24px;
 	}
 }

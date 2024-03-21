@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .pages-header {
 	padding: 200px 0 150px;
@@ -9,16 +9,16 @@
 	}
 
 	&__pre-title {
-		color: $color-text-3;
-		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 7px;
+		color: $color-text-3;
+		font-weight: 700;
 	}
 
 	&__title {
+		margin-top: 20px;
+		color: $color-text-2;
 		font-size: 50px;
 		font-weight: 900;
-		color: $color-text-2;
-		margin-top: 20px;
 	}
 }

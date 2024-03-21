@@ -1,22 +1,22 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, Parallax } from 'swiper';
 import './SwiperHero.scss';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/css/parallax';
 import 'swiper/css/autoplay';
-import { SwiperHeroSlide } from './SwiperHeroSlide/SwiperHeroSlide';
+
+import { Autoplay, Navigation, Pagination, Parallax } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
-import { Request } from '../../utils/Request'
+
+import { Request } from '../../utils/Request';
+import { SwiperHeroSlide } from './SwiperHeroSlide/SwiperHeroSlide';
 
 export const SwiperHero = () => {
 	const [sliderHeroItems, setSliderHeroItems] = useState([]);
 
-
-
 	useEffect(() => {
-		Request.get('/beetroot/mock/slider-hero.json').then(data => setSliderHeroItems(data));
+		Request('/beetroot/mock/slider-hero.json').then((data) => setSliderHeroItems(data));
 	}, []);
 
 	return (
@@ -30,13 +30,16 @@ export const SwiperHero = () => {
 					slidesPerView={1}
 					loop={true}
 					autoplay={{ delay: 3800, disableOnInteraction: false }}
-					parallax
-				>
-					{sliderHeroItems.map(item => {
-						return <SwiperSlide key={item.id}><SwiperHeroSlide {...item} key={item.id} /></SwiperSlide>
+					parallax>
+					{sliderHeroItems.map((item) => {
+						return (
+							<SwiperSlide key={item.id}>
+								<SwiperHeroSlide {...item} key={item.id} />
+							</SwiperSlide>
+						);
 					})}
-				</Swiper >
+				</Swiper>
 			</section>
 		</>
-	)
+	);
 };

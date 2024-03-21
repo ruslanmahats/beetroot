@@ -1,9 +1,11 @@
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import './SwiperComm.scss';
 import 'swiper/css/autoplay';
 import 'swiper/scss';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
+
+import { Autoplay } from 'swiper';
 import { Request } from '../../utils/Request';
 import { SwiperCommItem } from './SwiperCommItem/SwiperCommItem';
 
@@ -11,14 +13,12 @@ export const SwiperComm = () => {
 	const [comments, setComments] = useState([]);
 
 	useEffect(() => {
-		Request.get('/beetroot/mock/comments.json').then(data => setComments(data));
+		Request('/beetroot/mock/comments.json').then((data) => setComments(data));
 	}, []);
-
-
 
 	return (
 		<>
-			<section className="swiper-comm">
+			<section className='swiper-comm'>
 				<div className='wrapper'>
 					<Swiper
 						modules={[Autoplay]}
@@ -31,16 +31,19 @@ export const SwiperComm = () => {
 						breakpoints={{
 							768: {
 								slidesPerView: 2,
-								slidesPerGroup: 2
-							}
-						}}
-					>
-						{comments.map(item => {
-							return <SwiperSlide key={item.id}><SwiperCommItem {...item} /></SwiperSlide>
+								slidesPerGroup: 2,
+							},
+						}}>
+						{comments.map((item) => {
+							return (
+								<SwiperSlide key={item.id}>
+									<SwiperCommItem {...item} />
+								</SwiperSlide>
+							);
 						})}
-					</Swiper >
+					</Swiper>
 				</div>
 			</section>
 		</>
-	)
+	);
 };
